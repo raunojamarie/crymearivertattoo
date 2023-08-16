@@ -1,0 +1,18 @@
+#root {
+  height: 100vh
+}
+
+.main-content {
+  height: 100%;
+  background-color: black;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.plakat {
+  height: 99%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
