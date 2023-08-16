@@ -11,7 +11,18 @@
   align-items: center;
 }
 .plakat {
+  height: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media only screen and (max-width: 360px) {
+  .plakat {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
