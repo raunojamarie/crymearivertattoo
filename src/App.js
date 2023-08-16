@@ -5,7 +5,7 @@ import plakat from "./plakat.jpg"
 function App() {
   return (
     <div className="main-content">
-      <img src={plakat} width="500" height="600" className="plakat" />
+      <img src={plakat} width="500" className="plakat" />
     </div>
   );
 }
