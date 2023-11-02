@@ -1,28 +1,21 @@
 #root {
-  height: 100vh
+  height: 100vh;
+  width: 100%;
+  background-color: white;
 }
 
-.main-content {
-  height: 100%;
-  background-color: black;
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.plakat {
-  height: 80%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@media only screen and (max-width: 360px) {
-  .plakat {
-    height: auto;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@media only screen and (max-width: 990px) {
+  .navbar {
+    display: none !important;
   }
+}
+
+.navbar-menu > p {
+  margin: auto 20px;
+}
+
+.navbar-menu > p:hover {
+  cursor: pointer;
+  margin: auto 20px;
+  color: #fb8300;
 }
