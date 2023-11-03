@@ -91,21 +91,12 @@ const App = () => {
                   <p style={{ margin: 0}}>SEKUNDI</p>
                 </div>
               </div>
-              <div style={{ paddingRight: 12, display: "grid", justifyContent: "end" }}>
+              <div style={{ display: "grid", justifyContent: "end" }}>
                 <p style={{ color: "white", padding: 0, margin: 0, fontSize: 20}}>PÄRAST</p>
               </div>
             </div>
           </div>
         </div>
-
-      </div>
-      <div className="main-content" style={{ height: 2400}}>
-        <div></div>
-      </div>
-      <div className="main-footer" style={{ height: 300, backgroundColor: "black", display: "grid", justifyContent: "center"}}>
-        <p style={{margin: "auto 0", color: "white", fontSize: 30, fontWeight: 900}}>
-          FOOTER
-        </p>
       </div>
     </div>
   );
