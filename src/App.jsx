@@ -1,6 +1,4 @@
 import './App.css';
-import plakat from "./assets/Pilt4.jpg";
-import logo from "./assets/logo.png";
 import headerText from "./assets/header.png";
 import tattooFest from "./assets/tattoofest.png";
 import { FlipDate } from './FlipDate';
@@ -69,13 +67,13 @@ const App = () => {
           marginTop: 100,
           width: isBreakpoint ? width - 20 : width - 200
         }}>
-          <div style={{ flex: 1, display: "grid", justifyContent: "center", alignContent: "center" }}>
+          <div style={{ flex: 1, display: "grid", justifyContent: "center", alignContent: "center", zIndex: 3 }}>
             <div style={{ width: "100%" }}>
               <img style={{ width: "100%" }} src={headerText}></img>
               <img style={{ marginTop: navbarCollapse ? -40 : -60, width: "100%" }} src={tattooFest}></img>
             </div>
           </div>
-          <div style={{ flex: 1, display: "grid", justifyContent: "center", alignContent: navbarCollapse ? "" : "center" }}>
+          <div style={{ flex: 1, display: "grid", justifyContent: "center", alignContent: navbarCollapse ? "" : "center", zIndex: 3 }}>
             <div className="counter-wrapper" style={{ width: "fit-content" }}>
               <p style={{ paddingLeft: 12, color: "white", padding: 0, margin: 0, fontSize: 20}}>ALGAB JUBA</p>
               <FlipDate />
