@@ -26,7 +26,8 @@ const App = () => {
         display: "flex",
         paddingLeft: 40,
         paddingRight: 40,
-        zIndex: 999
+        zIndex: 999,
+        opacity: isMobile ? 0 : 1
       }}>
         <div className="navbar-menu" style={{
           display: "flex",
@@ -34,7 +35,7 @@ const App = () => {
           fontSize: 28,
           fontWeight: 900,
           justifyContent: "center",
-          color: "white"
+          color: "white",
         }}>
           {navbarCollapse
             ? <div className="navbar-logo" style={{
