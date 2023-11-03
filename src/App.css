@@ -1,7 +1,7 @@
 #root {
   height: 100vh;
   width: 100%;
-  background-color: black;
+  background-color: white;
 }
 
 @media only screen and (max-width: 990px) {
@@ -31,6 +31,17 @@
   background-color: rgba(0, 0, 0, 0); /* Change the color and opacity as needed */
 }
 
+.main-header {
+  background-image: url("https://www.gannett-cdn.com/-mm-/05e97d16e7fb53439a4222e53dcba47d4d31dde8/c=0-97-1280-584/local/-/media/USATODAY/USATODAY/2014/06/04/1401911998000-AP-Color-Cosmos.jpg?width=3200&height=1680&fit=crop");
+  top: 100%;
+  background-position: center;
+  color: black;
+  background-repeat: no-repeat;
+  height: 400px;
+  background-size: cover;
+  width: 100%;
+}
+
 .main-header-text > p {
   margin: 0;
   padding: 0;
@@ -47,7 +58,7 @@
 
 
 .tick-flip {
-  width: 80px;
+  width: 100px;
 }
 
 .tick {
@@ -78,10 +89,6 @@
   margin:0 .5em;text-align:center;
 }
 
-body {
-   background-color: rgb(0, 0, 0) !important; 
-}
-
 .tick-text-inline {
    color: rgb(90, 93, 99) !important; 
 }
@@ -108,4 +115,8 @@ body {
 
 .tick-flip {
    border-radius:0.12em !important; 
+}
+
+.tick-credits {
+  display: none !important;
 }

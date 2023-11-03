@@ -24,9 +24,12 @@ export const FlipDate = ({ value }) => {
 
   useEffect(() => {
     const offset = new Date();
-    const timeDuration = Tick.helper.duration(48, "hours");
+    const date2 = new Date("2024-05-24T12:00:00")
+    var diff = date2.valueOf() - new Date().valueOf();
+    var diffInHours = diff/1000/60/60;
+    const timeDuration = Tick.helper.duration(diffInHours, "hours");
 
-    // add 24 hours to get final deadline
+    // final deadline
     const deadline = new Date(
       offset.setMilliseconds(offset.getMilliseconds() + timeDuration)
     );
