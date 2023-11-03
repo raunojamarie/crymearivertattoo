@@ -8,9 +8,9 @@ function AppProd() {
     const isMobile = width <= 425;
 
   return (
-    <div style={{ height: window.innerHeight }} className="app-maintenance-mode">
+    <div style={{ height: window.innerHeight, width: "100%" }} className="app-maintenance-mode">
         {isMobile
-            ? <img src={plakat} className="app-maintenance-mode-center" style={{ width: width - 10, maxHeight: height }} />
+            ? <img src={plakat} className="app-maintenance-mode-center" style={{ width: width - 40, maxHeight: height }} />
             : <img src={plakat} className="app-maintenance-mode-center" style={{ maxWidth: width, height: height - 40 }} />
         }
     </div>
