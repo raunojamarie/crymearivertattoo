@@ -1,7 +1,7 @@
 #root {
-  height: 100vh;
-  width: 100vw;
-  background-color: white;
+  height: 100%;
+  width: 100%;
+  background-color: #f0f0f0;
 }
 
 .app-maintenance-mode {
@@ -139,4 +139,13 @@
 
 .tick-credits {
   display: none !important;
+}
+
+
+
+.timeline-outer-circle:hover .timeline-inner-circle {
+  cursor: pointer;
+  transform: scale(2);
+  transition: transform 0.5s;
+  transition-timing-function:cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
