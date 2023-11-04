@@ -9,7 +9,8 @@ export const ORANGE_COLOR = "#fb8300";
 const App = () => {
   const { height, width } = useWindowDimensions();
 
-  const isMobile = width <= 425;
+  const isMobile = width <= 600;
+  const isTablet = width <= 768;
   const isBreakpoint = width <= 1100;
   const isBreakpoint2 = width <= 540;
   const navbarCollapse = width <= 990;
@@ -58,10 +59,10 @@ const App = () => {
           </div>
         </div>
       </div>
-      <div className="main-header" style={{ width: "100%", height: height, overflow: "hidden" }}>
+      <div className="main-header" style={{ width: "100%", height: window.innerHeight, overflow: "hidden" }}>
         <div style={{
           display: "flex",
-          flexDirection: navbarCollapse ? "column" : "row",
+          flexDirection: isMobile ? "column" : "row",
           height: "calc(100% - 100px)",
           margin: "0 auto",
           marginTop: 100,
@@ -70,10 +71,10 @@ const App = () => {
           <div style={{ flex: 1, display: "grid", justifyContent: "center", alignContent: "center", zIndex: 3 }}>
             <div style={{ width: "100%" }}>
               <img style={{ width: "100%" }} src={headerText}></img>
-              <img style={{ marginTop: navbarCollapse ? -40 : -60, width: "100%" }} src={tattooFest}></img>
+              <img style={{ marginTop: isMobile ? -40 : -60, width: "100%" }} src={tattooFest}></img>
             </div>
           </div>
-          <div style={{ flex: 1, display: "grid", justifyContent: "center", alignContent: navbarCollapse ? "" : "center", zIndex: 3 }}>
+          <div style={{ flex: 1, display: "grid", justifyContent: "center", alignContent: isMobile ? "" : "center", zIndex: 3 }}>
             <div className="counter-wrapper" style={{ width: "fit-content" }}>
               <p style={{ paddingLeft: 12, color: "white", padding: 0, margin: 0, fontSize: 20}}>ALGAB JUBA</p>
               <FlipDate />
