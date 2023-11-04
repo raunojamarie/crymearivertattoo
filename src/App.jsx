@@ -122,6 +122,45 @@ const App = () => {
           <TimelineSlot width={width} left={false} top={780} time={"23:30"} title={"afterparty"} text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mauris massa, condimentum at consectetur ac, fermentum a libero."} />
         </div>
       </div>
+
+      <div style={{ width: "100%", padding: "0 0", textAlign: "center", position: "relative" }}>
+        <p style={{ position: "relative", backgroundColor: ORANGE_COLOR, fontSize: 32, width: "fit-content", margin: "0 auto", marginBottom: 40, border: "6px solid black", padding: "4px 40px", zIndex: 4 }}>ARTISTID</p>
+        <div style={{ position: "absolute", width: "100%", borderTop: "6px solid black", top: 30, zIndex: 1 }}></div>
+        <div style={{ position: "relative", width: navbarCollapse ? isMobile ? "95%" : "90%" : width - 400, margin: "0 auto 40px auto" }}>
+          <div style={{ display: "flex", height: 350, padding: !isMobile && "0 80px" }}>
+            <div style={{ flex: 1, marginRight: isMobile ? 20 : 40, display: "grid", justifyContent: isMobile ? "stretch" : "end", alignContent: "center" }}>
+              <div style={{ border: "6px solid black", height: 300, width: isMobile ? "auto" : width/5, backgroundColor: ORANGE_COLOR + "33" }}>
+              </div>
+            </div>
+            <div style={{ flex: 1, textAlign: "left", height: "auto", overflow: "hidden", margin: "40px 0 60px 0" }}>
+              <p style={{ fontSize: isMobile ? 24 : 34, margin: 0 }}>Artisti Nimi</p>
+              <p style={{ fontSize: isMobile ? 14 : 16, fontFamily: "arial" }}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque justo enim, consectetur vel dapibus eget, ullamcorper et mi. Cras commodo, nunc vel condimentum facilisis, nisi dui placerat mi, sit amet tempor felis neque a dui. Proin id ultrices massa, facilisis gravida eros. Nulla at luctus neque. Nunc maximus sollicitudin volutpat. Cras fringilla nunc sit amet risus semper, in suscipit elit interdum. Quisque cursus dolor vitae mattis volutpat.
+            </p>
+            </div>
+
+          </div>
+
+          <div style={{ display: "flex", height: 350, padding: !isMobile && "0 80px" }}>
+            <div style={{ flex: 1, textAlign: "right", height: "auto", overflow: "hidden", margin: "40px 0 60px 0" }}>
+              <p style={{ fontSize: isMobile ? 24 : 34, margin: 0 }}>Artisti Nimi</p>
+              <p style={{ fontSize: isMobile ? 14 : 16, fontFamily: "arial" }}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque justo enim, consectetur vel dapibus eget, ullamcorper et mi. Cras commodo, nunc vel condimentum facilisis, nisi dui placerat mi, sit amet tempor felis neque a dui. Proin id ultrices massa, facilisis gravida eros. Nulla at luctus neque. Nunc maximus sollicitudin volutpat. Cras fringilla nunc sit amet risus semper, in suscipit elit interdum. Quisque cursus dolor vitae mattis volutpat.
+            </p>
+            </div>
+            <div style={{ flex: 1, marginLeft: isMobile ? 20 : 40, display: "grid", justifyContent: isMobile ? "stretch" : "start", alignContent: "center" }}>
+              <div style={{ border: "6px solid black", height: 300, width: isMobile ? "auto" : width/5, backgroundColor: ORANGE_COLOR + "33" }}>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      
+      {/* FOOTER */}
+      <div style={{ width: "100%", height: 300, backgroundColor: "black", color: "white", display: "grid", justifyContent: "center", alignContent: "center" }}>
+          <p style={{ fontSize: 36, color: ORANGE_COLOR }}>crymearivertattoo</p>
+      </div>
     </div>
   );
 }
@@ -171,13 +210,13 @@ export const TimelineSlot = ({ width, left, top, title, text, time }) => {
           height: 25,
           width: 25,
           position: "absolute",
-          left: left ? 0 : "auto",
-          right: left ? "auto" : 0,
+          left: left ? -5 : "auto",
+          right: left ? "auto" : -5,
           top: -14,
           borderRadius: "50%",
           backgroundColor: ORANGE_COLOR,
         }}>
-          <p style={{ margin: 0, marginLeft: left ? -110 : 40, marginTop: -10, fontSize: 28 }}>{time}</p>
+          <p style={{ margin: 0, marginLeft: left ? -105 : 35, marginTop: -10, fontSize: 28 }}>{time}</p>
         </div>
         <div style={{
           overflow: "hidden",
