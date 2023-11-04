@@ -99,9 +99,10 @@ const App = () => {
           </div>
         </div>
       </div>
+      
       <div style={{ width: "100%", padding: "40px 0", textAlign: "center" }}>
         <p style={{ fontSize: 32, width: "fit-content", margin: "0 auto", border: "6px solid black", padding: "4px 40px", backgroundColor: ORANGE_COLOR + "33" }}>AJAKAVA</p>
-        <div style={{ position: "relative", width: width - 400, margin: "0 auto 0 auto", backgroundColor: ORANGE_COLOR + "33", height: 900 }}>
+        <div style={{ position: "relative", width: navbarCollapse ? isMobile ? "100%" : "90%" : width - 400, margin: "0 auto 0 auto", backgroundColor: ORANGE_COLOR + "33", height: 980 }}>
           <div style={{
             borderLeft: "6px solid black",
             height: "100%",
@@ -118,7 +119,7 @@ const App = () => {
           <TimelineSlot width={width} left={true} top={420} time={"15:30"} title={"mingi neljas asi"} text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mauris massa, condimentum at consectetur ac, fermentum a libero."} />
           <TimelineSlot width={width} left={false} top={540} time={"17:45"} title={"mingi muu asi"} text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mauris massa, condimentum at consectetur ac, fermentum a libero."} />
           <TimelineSlot width={width} left={true} top={660} time={"19:30"} title={"pidu"} text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mauris massa, condimentum at consectetur ac, fermentum a libero."} />
-
+          <TimelineSlot width={width} left={false} top={780} time={"23:30"} title={"afterparty"} text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mauris massa, condimentum at consectetur ac, fermentum a libero."} />
         </div>
       </div>
     </div>
@@ -128,6 +129,8 @@ const App = () => {
 export default App;
 
 export const TimelineSlot = ({ width, left, top, title, text, time }) => {
+  const isMobile = width <= 600;
+  const navbarCollapse = width <= 990;
   return (
     <div>
       <div className="timeline-outer-circle" style={{
@@ -140,7 +143,7 @@ export const TimelineSlot = ({ width, left, top, title, text, time }) => {
         marginLeft: -31,
         borderRadius: "50%",
         backgroundColor: "white",
-        border: "6px solid black"
+        border: "6px solid black",
       }}>
         <div className="timeline-inner-circle" style={{
           height: "50%",
@@ -176,9 +179,18 @@ export const TimelineSlot = ({ width, left, top, title, text, time }) => {
         }}>
           <p style={{ margin: 0, marginLeft: left ? -110 : 40, marginTop: -10, fontSize: 28 }}>{time}</p>
         </div>
-        <div style={{ overflow: "hidden", textAlign: left ? "left" : "right", position: "absolute", left: left ? -75 : "auto", right: left ? "auto" : -75, top: 20, width: "70%", height: 110 }}>
+        <div style={{
+          overflow: "hidden",
+          textAlign: left ? "left" : "right",
+          position: "absolute",
+          left: left ? -75 : "auto",
+          right: left ? "auto" : -75,
+          top: 20,
+          width: isMobile ? "160%" : navbarCollapse ? "100%" : "70%",
+          height: 110
+        }}>
           <div style={{ backgroundColor: ORANGE_COLOR }}>
-            <p style={{ margin: 0, fontSize: 18, padding: "0 6px" }}>{title}</p>
+            <p style={{ margin: 0, fontSize: isMobile ? 16 : 18, padding: "6px 6px" }}>{title}</p>
           </div>
           <div style={{ padding: 4 }}>
             <p style={{ margin: 0, fontSize: 12, fontFamily: "arial" }}>{text}</p>
