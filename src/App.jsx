@@ -165,7 +165,7 @@ export const TimelineSlot = ({ width, left, top, title, text, time }) => {
         right: left ? "50%" : "auto",
         height: 200,
         top: top + 27,
-        width: width / 5
+        width: isMobile ? (width/5) + 10 : width/5
       }}>
         <div style={{
           height: 25,
@@ -186,7 +186,7 @@ export const TimelineSlot = ({ width, left, top, title, text, time }) => {
           left: left ? -75 : "auto",
           right: left ? "auto" : -75,
           top: 20,
-          width: isMobile ? "160%" : navbarCollapse ? "100%" : "70%",
+          width: isMobile ? "150%" : navbarCollapse ? "100%" : "70%",
           height: 110
         }}>
           <div style={{ backgroundColor: ORANGE_COLOR }}>
