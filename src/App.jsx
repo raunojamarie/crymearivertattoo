@@ -105,7 +105,7 @@ const App = () => {
         <div style={{ position: "relative", width: navbarCollapse ? isMobile ? "100%" : "90%" : width - 400, margin: "0 auto 0 auto", backgroundColor: ORANGE_COLOR + "33", height: 980 }}>
           <div style={{
             borderLeft: "6px solid black",
-            height: "100%",
+            height: "80%",
             position: "absolute",
             left: "50%",
             marginLeft: -3,
