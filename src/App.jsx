@@ -2,12 +2,13 @@ import './App.css';
 import headerText from "./assets/header.png";
 import tattooFest from "./assets/tattoofest.png";
 import { FlipDate } from './FlipDate';
-import useWindowDimensions from './useWindowDimensions.jsx';
+import useWindowDimensions, { useOrientationChange } from './useWindowDimensions.jsx';
 
 export const ORANGE_COLOR = "#fb8300";
 
 const App = () => {
   const { height, width } = useWindowDimensions();
+  const { orientation } = useOrientationChange();
 
   const isMobile = width <= 600;
   const isTablet = width <= 768;
@@ -16,7 +17,7 @@ const App = () => {
   const navbarCollapse = width <= 990;
 
   return (
-    <div className="app-root">
+    <div className="app-root" style={{ height: "100%", width: isTablet && orientation.type.includes("landscape") ? "100vw" : "100%" }}>
       <div className="navbar" style={{
         position: "fixed",
         top: 0, right: 0, left: 0,
@@ -212,7 +213,7 @@ export const TimelineSlot = ({ width, left, top, title, text, time }) => {
           position: "absolute",
           left: left ? -5 : "auto",
           right: left ? "auto" : -5,
-          top: -14,
+          top: -15,
           borderRadius: "50%",
           backgroundColor: ORANGE_COLOR,
         }}>
