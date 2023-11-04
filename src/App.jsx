@@ -59,7 +59,7 @@ const App = () => {
           </div>
         </div>
       </div>
-      <div className="main-header" style={{ width: "100%", height: height, overflow: "hidden" }}>
+      <div className="main-header" style={{ width: "100%", height: "100vh", overflow: "hidden" }}>
         <div style={{
           display: "flex",
           flexDirection: isMobile ? "column" : "row",
