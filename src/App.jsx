@@ -2,13 +2,12 @@ import './App.css';
 import headerText from "./assets/header.png";
 import tattooFest from "./assets/tattoofest.png";
 import { FlipDate } from './FlipDate';
-import useWindowDimensions, { useOrientationChange } from './useWindowDimensions.jsx';
+import useWindowDimensions from './useWindowDimensions.jsx';
 
 export const ORANGE_COLOR = "#fb8300";
 
 const App = () => {
   const { height, width } = useWindowDimensions();
-  const { orientation } = useOrientationChange();
 
   const isMobile = width <= 600;
   const isTablet = width <= 768;
@@ -17,7 +16,7 @@ const App = () => {
   const navbarCollapse = width <= 990;
 
   return (
-    <div className="app-root" style={{ height: "100%", width: isTablet && orientation.type.includes("landscape") ? "100vw" : "100%" }}>
+    <div className="app-root" style={{ height: "100%", width: "100%" }}>
       <div className="navbar" style={{
         position: "fixed",
         top: 0, right: 0, left: 0,
@@ -101,8 +100,9 @@ const App = () => {
         </div>
       </div>
       
-      <div style={{ width: "100%", padding: "40px 0", textAlign: "center" }}>
-        <p style={{ fontSize: 32, width: "fit-content", margin: "0 auto", border: "6px solid black", padding: "4px 40px", backgroundColor: ORANGE_COLOR + "33" }}>AJAKAVA</p>
+      <div style={{ width: "100%", padding: "50px 0", textAlign: "center", position: "relative" }}>
+        <div style={{ position: "absolute", top: 0, left: "50%", marginLeft: -3, height: 50, borderRight: "6px solid black" }}></div>
+        <p style={{ fontSize: 32, width: "fit-content", margin: "0 auto", border: "6px solid black", padding: "4px 40px", backgroundColor: ORANGE_COLOR }}>AJAKAVA</p>
         <div style={{ position: "relative", width: navbarCollapse ? isMobile ? "100%" : "90%" : width - 400, margin: "0 auto 0 auto", backgroundColor: ORANGE_COLOR + "33", height: 980 }}>
           <div style={{
             borderLeft: "6px solid black",
