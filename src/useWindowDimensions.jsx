@@ -8,6 +8,13 @@ function getWindowDimensions() {
   };
 }
 
+function getWindowOrientation() {
+  const { orientation } = window.screen;
+  return {
+    orientation
+  };
+}
+
 export default function useWindowDimensions() {
   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
 
@@ -21,4 +28,19 @@ export default function useWindowDimensions() {
   }, []);
 
   return windowDimensions;
+}
+
+export function useOrientationChange() {
+  const [windowOrientation, setWindowOrientation] = useState(getWindowOrientation());
+
+  useEffect(() => {
+    function handleChange() {
+      setWindowOrientation(getWindowOrientation());
+    }
+
+    window.addEventListener('orientationchange', handleChange);
+    return () => window.removeEventListener('orientationchange', handleChange);
+  }, []);
+
+  return windowOrientation;
 }
