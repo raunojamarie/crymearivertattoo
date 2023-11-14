@@ -1,8 +1,13 @@
 import './App.css';
 import headerText from "./assets/header.png";
 import tattooFest from "./assets/tattoofest.png";
+import barbwire from "./assets/barbwire.png";
+import kett from "./assets/kett.png";
+import needleLeft from "./assets/needle_left.png";
+import needleRight from "./assets/needle_right.png";
 import { FlipDate } from './FlipDate';
 import useWindowDimensions from './useWindowDimensions.jsx';
+
 
 export const ORANGE_COLOR = "#fb8300";
 
@@ -59,7 +64,7 @@ const App = () => {
           </div>
         </div>
       </div>
-      <div className="main-header" style={{ width: "100%", height: "100vh", overflow: "hidden" }}>
+      <div className="main-header" style={{ height: "100vh", overflow: "hidden" }}>
         <div style={{
           display: "flex",
           flexDirection: isMobile ? "column" : "row",
@@ -99,9 +104,12 @@ const App = () => {
           </div>
         </div>
       </div>
+
+
       
       <div style={{ width: "100%", padding: "50px 0", textAlign: "center", position: "relative" }}>
-        <div style={{ position: "absolute", top: 0, left: "50%", marginLeft: -3, height: 50, borderRight: "6px solid black" }}></div>
+        <img src={kett} style={{ position: "absolute", left: 0, top: -50, width: "100%", zIndex: 998 }} alt=""></img>
+        {/* <div style={{ position: "absolute", top: 0, left: "50%", marginLeft: -3, height: 50, borderRight: "6px solid black" }}></div> */}
         <p style={{ fontSize: 32, width: "fit-content", margin: "0 auto", border: "6px solid black", padding: "4px 40px", backgroundColor: ORANGE_COLOR }}>AJAKAVA</p>
         <div style={{ position: "relative", width: navbarCollapse ? isMobile ? "100%" : "90%" : width - 400, margin: "0 auto 0 auto", backgroundColor: ORANGE_COLOR + "33", height: 980 }}>
           <div style={{
@@ -127,7 +135,7 @@ const App = () => {
       <div style={{ width: "100%", padding: "0 0", textAlign: "center", position: "relative" }}>
         <p style={{ position: "relative", backgroundColor: ORANGE_COLOR, fontSize: 32, width: "fit-content", margin: "0 auto", marginBottom: 40, border: "6px solid black", padding: "4px 40px", zIndex: 4 }}>ARTISTID</p>
         <div style={{ position: "absolute", width: "100%", borderTop: "6px solid black", top: 30, zIndex: 1 }}></div>
-        <div style={{ position: "relative", width: navbarCollapse ? isMobile ? "95%" : "90%" : width - 400, margin: "0 auto 40px auto" }}>
+        <div style={{ position: "relative", width: navbarCollapse ? isMobile ? "95%" : "90%" : width - 400, maxWidth: 1100, margin: "0 auto 40px auto" }}>
           <div style={{ display: "flex", height: 350, padding: !isMobile && "0 80px" }}>
             <div style={{ flex: 1, marginRight: isMobile ? 20 : 40, display: "grid", justifyContent: isMobile ? "stretch" : "end", alignContent: "center" }}>
               <div style={{ border: "6px solid black", height: 300, width: isMobile ? "auto" : width/5, backgroundColor: ORANGE_COLOR + "33" }}>
@@ -157,6 +165,51 @@ const App = () => {
 
         </div>
       </div>
+
+
+      <div style={{ width: "100%", padding: "0 0", textAlign: "center", position: "relative" }}>
+        <p style={{ position: "relative", backgroundColor: ORANGE_COLOR, fontSize: 32, width: "fit-content", margin: "0 auto", marginBottom: 40, border: "6px solid black", padding: "4px 40px", zIndex: 4 }}>KONTAKT</p>
+        <div style={{ position: "absolute", width: "100%", borderTop: "6px solid black", top: 30, zIndex: 1 }}></div>
+        <div style={{ display: "flex", flexDirection: isTablet ? "column" : "row",
+              width: "80%", maxWidth: 1200, margin: "0 auto", marginBottom: 40, alignItems: "center" }}>
+          <div style={{ flex: 1, height: "100%" }}>
+            <form style={{ width: 300, margin: "auto", textAlign: isTablet ? "center" : "left" }}>
+              <div style={{ display: "flex", flexDirection: "column" }}>
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required />
+              </div>
+              <br />
+            
+              <div style={{ display: "flex", flexDirection: "column" }}>
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <br />
+            
+              <div style={{ display: "flex", flexDirection: "column" }}>
+                <label for="message">Message:</label>
+                <textarea  style={{ height: 100 }} id="message" name="message" required></textarea>
+              </div>
+              <br />
+            
+              <input type="submit" value="Send" />
+            </form>
+          </div>
+          <div style={{ flex: 1, height: "100%" }}>
+            <iframe
+              width="100%"
+              height={350}
+              style={{border: "6px solid " + ORANGE_COLOR}}
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCS0QexUfZnKgG0siTOuOwlVCFGmOSVfwI
+                &q=Harbour+Theatre,Tartu+Estonia">
+            </iframe>
+          </div>
+        </div>
+
+      </div>
       
       {/* FOOTER */}
       <div style={{ width: "100%", height: 300, backgroundColor: "black", color: "white", display: "grid", justifyContent: "center", alignContent: "center" }}>
@@ -182,8 +235,8 @@ export const TimelineSlot = ({ width, left, top, title, text, time }) => {
         top: top,
         marginLeft: -31,
         borderRadius: "50%",
-        backgroundColor: "white",
-        border: "6px solid black",
+
+        border: "6px solid rgb(0,0,0,0)",
       }}>
         <div className="timeline-inner-circle" style={{
           height: "50%",
@@ -194,6 +247,7 @@ export const TimelineSlot = ({ width, left, top, title, text, time }) => {
           margin: "-25% 0 0 -25%",
           borderRadius: "50%",
           backgroundColor: ORANGE_COLOR,
+          opacity: 1,
         }}>
         </div>
       </div>
@@ -207,6 +261,7 @@ export const TimelineSlot = ({ width, left, top, title, text, time }) => {
         top: top + 27,
         width: isMobile ? (width/5) + 10 : width/5
       }}>
+        <img src={left ? needleLeft : needleRight} style={{ position: "absolute", left: !left ? -33 : "auto", right: left ? -30 : "auto", top: -43, width: "calc(100% + 40px)", zIndex: 998 }} alt=""></img>
         <div style={{
           height: 25,
           width: 25,
