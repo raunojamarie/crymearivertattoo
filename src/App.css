@@ -44,11 +44,23 @@
 }
 
 .main-header {
-  background-image: url("https://www.gannett-cdn.com/-mm-/05e97d16e7fb53439a4222e53dcba47d4d31dde8/c=0-97-1280-584/local/-/media/USATODAY/USATODAY/2014/06/04/1401911998000-AP-Color-Cosmos.jpg?width=3200&height=1680&fit=crop");
+  /*background-image: url("https://www.gannett-cdn.com/-mm-/05e97d16e7fb53439a4222e53dcba47d4d31dde8/c=0-97-1280-584/local/-/media/USATODAY/USATODAY/2014/06/04/1401911998000-AP-Color-Cosmos.jpg?width=3200&height=1680&fit=crop");
+  */
+  background-color: #202124;
   top: 100%;
   background-position: center;
   color: black;
   background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+.header-right-side {
+  background-image: url("./assets/loss.png");
+  top: 100%;
+  background-position: center;
+  color: black;
+  background-repeat: repeat;
   background-size: cover;
   width: 100%;
 }

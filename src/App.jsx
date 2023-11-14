@@ -3,6 +3,7 @@ import headerText from "./assets/header.png";
 import tattooFest from "./assets/tattoofest.png";
 import barbwire from "./assets/barbwire.png";
 import kett from "./assets/kett.png";
+import loss from "./assets/loss.png"
 import needleLeft from "./assets/needle_left.png";
 import needleRight from "./assets/needle_right.png";
 import { FlipDate } from './FlipDate';
@@ -79,8 +80,17 @@ const App = () => {
               <img style={{ marginTop: isMobile ? -40 : -60, width: "100%" }} src={tattooFest}></img>
             </div>
           </div>
-          <div style={{ flex: 1, display: "grid", justifyContent: "center", alignContent: isMobile ? "" : "center", zIndex: 3 }}>
-            <div className="counter-wrapper" style={{ width: "fit-content" }}>
+          <div className="" style={{ position: "relative", flex: 1, display: "grid", justifyContent: "center", alignContent: isMobile ? "" : "center", zIndex: 3 }}>
+            <img src={loss} style={{ width: "calc(100%)", opacity: 0.5 }}></img>
+            <div className="counter-wrapper" style={{
+                position: "absolute",
+                marginLeft: "auto",
+                marginRight: "auto",
+                top: "50%",
+                left: 0,
+                right: 0,
+                textAlign: "center",
+                width: "fit-content" }}>
               <p style={{ paddingLeft: 12, color: "white", padding: 0, margin: 0, fontSize: 20 }}>ALGAB JUBA</p>
               <FlipDate />
               <div style={{ display: "flex", height: 30, width: "100%", fontSize: 18, color: ORANGE_COLOR, textTransform: "lowercase" }}>
@@ -103,12 +113,12 @@ const App = () => {
             </div>
           </div>
         </div>
+        <img src={kett} style={{ position: "absolute", left: 0, bottom: -20, width: "100%", zIndex: 998 }} alt=""></img>
       </div>
 
 
       
       <div style={{ width: "100%", padding: "50px 0", textAlign: "center", position: "relative" }}>
-        <img src={kett} style={{ position: "absolute", left: 0, top: -50, width: "100%", zIndex: 998 }} alt=""></img>
         {/* <div style={{ position: "absolute", top: 0, left: "50%", marginLeft: -3, height: 50, borderRight: "6px solid black" }}></div> */}
         <p style={{ fontSize: 32, width: "fit-content", margin: "0 auto", border: "6px solid black", padding: "4px 40px", backgroundColor: ORANGE_COLOR }}>AJAKAVA</p>
         <div style={{ position: "relative", width: navbarCollapse ? isMobile ? "100%" : "90%" : width - 400, margin: "0 auto 0 auto", backgroundColor: ORANGE_COLOR + "33", height: 980 }}>
@@ -246,14 +256,14 @@ export const TimelineSlot = ({ width, left, top, title, text, time }) => {
           top: "50%",
           margin: "-25% 0 0 -25%",
           borderRadius: "50%",
-          backgroundColor: ORANGE_COLOR,
+          backgroundColor: "rgb(0,0,0,0)", //ORANGE_COLOR
           opacity: 1,
         }}>
         </div>
       </div>
       <div style={{
         zIndex: 1,
-        borderTop: "6px solid " + ORANGE_COLOR,
+        borderTop: "6px solid " + "rgb(0,0,0,0)", //ORANGE_COLOR
         position: "absolute",
         left: left ? "auto" : "50%",
         right: left ? "50%" : "auto",
@@ -261,7 +271,7 @@ export const TimelineSlot = ({ width, left, top, title, text, time }) => {
         top: top + 27,
         width: isMobile ? (width/5) + 10 : width/5
       }}>
-        <img src={left ? needleLeft : needleRight} style={{ position: "absolute", left: !left ? -33 : "auto", right: left ? -30 : "auto", top: -43, width: "calc(100% + 40px)", zIndex: 998 }} alt=""></img>
+        <img src={left ? needleLeft : needleRight} style={{ position: "absolute", left: !left ? -26 : "auto", right: left ? -26 : "auto", top: -31, width: "calc(100% + 26px)", zIndex: 998 }} alt=""></img>
         <div style={{
           height: 25,
           width: 25,
@@ -270,7 +280,7 @@ export const TimelineSlot = ({ width, left, top, title, text, time }) => {
           right: left ? "auto" : -5,
           top: -15,
           borderRadius: "50%",
-          backgroundColor: ORANGE_COLOR,
+          backgroundColor: "rgb(0,0,0,0)"//ORANGE_COLOR,
         }}>
           <p style={{ margin: 0, marginLeft: left ? -105 : 35, marginTop: -10, fontSize: 28 }}>{time}</p>
         </div>
