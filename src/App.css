@@ -4,6 +4,25 @@
   background-color: #f0f0f0;
 }
 
+
+/* GLOBAL CLASSES */
+.big-title {
+  font-size: 40px;
+  margin: 0;
+}
+
+.sub-title {
+  font-size: 34px;
+  margin: 0;
+}
+
+.regular-text {
+  font-size: 16px;
+  font-family: arial;
+}
+/* GLOBAL CLASSES */
+
+
 .app-maintenance-mode {
   display: grid;
   width: 100%;
@@ -88,86 +107,14 @@
 }
 
 
-
-
-.tick-flip {
-  width: 100px;
-}
-
-.tick-flip,.tick-text-inline {
-  font-size:2.5em;
-}
-
-@media only screen and (max-width: 990px) {
-  .tick-flip {
-    width: 60px;
-  }
-  .tick-flip,.tick-text-inline {
-    font-size:1.5em;
-  }
-}
-
-.tick {
-  font-size:1rem; white-space:nowrap; 
-}
-
-.tick-label {
-  margin-top:1em;font-size:1em;
-}
-
-.tick-char {
-  width:1.5em;
-}
-
-.tick-text-inline {
-  display:inline-block;text-align:center;min-width:1em;
-}
-
-.tick-text-inline+.tick-text-inline {
-  margin-left:-.325em;
-}
-
-.tick-group {
-  margin:0 .5em;text-align:center;
-}
-
-.tick-text-inline {
-   color: rgb(90, 93, 99) !important; 
-}
-
-.tick-label {
-   color: rgb(90, 93, 99) !important; 
-}
-
-.tick-flip-panel {
-   color: rgb(0, 0, 0) !important; 
-}
-
-.tick-flip {
-   font-family:inherit !important; 
-}
-
-.tick-flip-panel-text-wrapper {
-   line-height: 1.45 !important; 
-}
-
-.tick-flip-panel {
-   background-color: rgb(247, 255, 247) !important; 
-}
-
-.tick-flip {
-   border-radius:0.12em !important; 
-}
-
-.tick-credits {
-  display: none !important;
-}
-
-
-
 .timeline-outer-circle:hover .timeline-inner-circle {
   cursor: pointer;
   transform: scale(2);
   transition: transform 0.5s;
   transition-timing-function:cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.contact-icon:hover {
+  cursor: pointer;
+  color: #fb8300
 }

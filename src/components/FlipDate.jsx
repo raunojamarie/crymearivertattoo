@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import Tick from "@pqina/flip";
 import "@pqina/flip/dist/flip.min.css";
+import './flipdate.css';
 
 export const FlipDate = ({ value }) => {
   const divRef = useRef();

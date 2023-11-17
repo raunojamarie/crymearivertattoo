@@ -13,39 +13,38 @@ const Artists = () => {
   const isBreakpoint2 = width <= 540;
   const navbarCollapse = width <= 990;
   return (
-    <div style={{ width: "100%", padding: "40px 0", textAlign: "center", position: "relative" }}>
-        <p style={{ position: "relative", backgroundColor: ORANGE_COLOR, fontSize: 32, width: "fit-content", margin: "0 auto", marginBottom: 40, border: "6px solid black", padding: "4px 40px", zIndex: 4 }}>ARTISTID</p>
-        <div style={{ position: "relative", width: navbarCollapse ? isMobile ? "95%" : "90%" : width - 400, maxWidth: 1100, margin: "0 auto 40px auto" }}>
-          <div style={{ display: "flex", height: 350, padding: !isMobile && "0 80px" }}>
-            <div style={{ flex: 1, marginRight: isMobile ? 20 : 40, display: "grid", justifyContent: "center", alignContent: "center" }}>
-              <div className="circular">
-                <img className="" alt="" src={stock1} ></img>
-              </div>
+    <div style={{ padding: "40px 0" }}>
+      <p className="big-title orange-box-title">ARTISTID</p>
+      <div className="artists-content" style={{ width: navbarCollapse ? isMobile ? "95%" : "90%" : width - 400 }}>
+        <div className="artist-content">
+          <div className="artist-content-img">
+            <div className="circular">
+              <img className="artist-img" alt="" src={stock1}></img>
             </div>
-            <div style={{ flex: 1, textAlign: "left", height: "auto", overflow: "hidden", margin: "40px 0 60px 0" }}>
-              <p style={{ fontSize: isMobile ? 24 : 34, margin: 0 }}>Artisti Nimi</p>
-              <p style={{ fontSize: isMobile ? 14 : 16, fontFamily: "arial" }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque justo enim, consectetur vel dapibus eget, ullamcorper et mi. Cras commodo, nunc vel condimentum facilisis, nisi dui placerat mi, sit amet tempor felis neque a dui. Proin id ultrices massa, facilisis gravida eros. Nulla at luctus neque. Nunc maximus sollicitudin volutpat. Cras fringilla nunc sit amet risus semper, in suscipit elit interdum. Quisque cursus dolor vitae mattis volutpat.
-            </p>
-            </div>
-
           </div>
-
-          <div style={{ display: "flex", height: 350, padding: !isMobile && "0 80px" }}>
-            <div style={{ flex: 1, textAlign: "right", height: "auto", overflow: "hidden", margin: "40px 0 60px 0" }}>
-              <p style={{ fontSize: isMobile ? 24 : 34, margin: 0 }}>Artisti Nimi</p>
-              <p style={{ fontSize: isMobile ? 14 : 16, fontFamily: "arial" }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque justo enim, consectetur vel dapibus eget, ullamcorper et mi. Cras commodo, nunc vel condimentum facilisis, nisi dui placerat mi, sit amet tempor felis neque a dui. Proin id ultrices massa, facilisis gravida eros. Nulla at luctus neque. Nunc maximus sollicitudin volutpat. Cras fringilla nunc sit amet risus semper, in suscipit elit interdum. Quisque cursus dolor vitae mattis volutpat.
+          <div className="artist-content-text">
+            <p className="sub-title" style={{ fontSize: isMobile ? 24 : 34 }}>Artisti Nimi</p>
+            <p className="regular-text" style={{ fontSize: isMobile ? 14 : 16 }}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque justo enim, consectetur vel dapibus eget, ullamcorper et mi. Cras commodo, nunc vel condimentum facilisis, nisi dui placerat mi, sit amet tempor felis neque a dui. Proin id ultrices massa, facilisis gravida eros. Nulla at luctus neque. Nunc maximus sollicitudin volutpat. Cras fringilla nunc sit amet risus semper, in suscipit elit interdum. Quisque cursus dolor vitae mattis volutpat.
             </p>
-            </div>
-            <div style={{ flex: 1, marginLeft: isMobile ? 20 : 40, display: "grid", justifyContent: "center", alignContent: "center" }}>
-              <div className="circular">
-                <img className="" alt="" src={stock2} ></img>
-              </div>
+          </div>
+        </div>
+
+        <div className="artist-content">
+          <div className="artist-content-text" style={{ textAlign: "right" }}>
+            <p className="sub-title" style={{ fontSize: isMobile ? 24 : 34 }}>Artisti Nimi</p>
+            <p className="regular-text" style={{ fontSize: isMobile ? 14 : 16 }}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque justo enim, consectetur vel dapibus eget, ullamcorper et mi. Cras commodo, nunc vel condimentum facilisis, nisi dui placerat mi, sit amet tempor felis neque a dui. Proin id ultrices massa, facilisis gravida eros. Nulla at luctus neque. Nunc maximus sollicitudin volutpat. Cras fringilla nunc sit amet risus semper, in suscipit elit interdum. Quisque cursus dolor vitae mattis volutpat.
+            </p>
+          </div>
+          <div className="artist-content-img">
+            <div className="circular">
+              <img className="artist-img" alt="" src={stock2}></img>
             </div>
           </div>
         </div>
       </div>
+    </div>
   );
 }
 

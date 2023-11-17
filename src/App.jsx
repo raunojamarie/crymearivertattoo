@@ -7,7 +7,7 @@ import loss from "./assets/loss.png"
 import drip from "./assets/drip.png";
 import needleLeft from "./assets/needle_left.png";
 import needleRight from "./assets/needle_right.png";
-import { FlipDate } from './FlipDate';
+import { FlipDate } from './components/FlipDate';
 import useWindowDimensions from './useWindowDimensions.jsx';
 import Artists from './pages/Artists';
 import Timeline from './pages/Timeline';
@@ -76,6 +76,7 @@ const App = () => {
           </div>
         </div>
       </div>
+
       <div className="main-header" style={{ position: "relative", height: "100vh"}}>
         {dripEnabled() && <img src={drip} alt="" style={{ position: "absolute", width: "100%", height: 268, bottom: -268, left: 0, zIndex: 1}}></img>}
         <div style={{
@@ -83,7 +84,7 @@ const App = () => {
           flexDirection: isMobile ? "column" : "row",
           height: "calc(100% - 100px)",
           margin: "0 auto",
-          marginTop: 100,
+          marginTop: isMobile ? 0 : 100,
           width: isBreakpoint ? width - 20 : width - 200
         }}>
           <div style={{ flex: 1, display: "grid", justifyContent: "center", alignContent: "center", zIndex: 3 }}>
@@ -135,37 +136,17 @@ const App = () => {
 
 
       <div style={{ width: "100%", padding: "0 0", textAlign: "center", position: "relative" }}>
-        <p style={{ position: "relative", backgroundColor: ORANGE_COLOR, fontSize: 32, width: "fit-content", margin: "0 auto", marginBottom: 40, border: "6px solid black", padding: "4px 40px", zIndex: 4 }}>KONTAKT</p>
+        <p style={{ position: "relative", backgroundColor: ORANGE_COLOR, fontSize: 32, width: "fit-content", margin: "0 auto", marginBottom: 40, border: "6px solid black", padding: "4px 40px", zIndex: 4 }}>
+          KUS ME ASUME
+        </p>
         <div style={{ position: "absolute", width: "100%", borderTop: "6px solid black", top: 30, zIndex: 1 }}></div>
         <div style={{ display: "flex", flexDirection: isTablet ? "column" : "row",
               width: "80%", maxWidth: 1200, margin: "0 auto", marginBottom: 40, alignItems: "center" }}>
-          <div style={{ flex: 1, height: "100%" }}>
-            <form style={{ width: 300, margin: "auto", textAlign: isTablet ? "center" : "left" }}>
-              <div style={{ display: "flex", flexDirection: "column" }}>
-                <label for="firstName">First Name:</label>
-                <input type="text" id="firstName" name="firstName" required />
-              </div>
-              <br />
-            
-              <div style={{ display: "flex", flexDirection: "column" }}>
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required />
-              </div>
-              <br />
-            
-              <div style={{ display: "flex", flexDirection: "column" }}>
-                <label for="message">Message:</label>
-                <textarea  style={{ height: 100 }} id="message" name="message" required></textarea>
-              </div>
-              <br />
-            
-              <input type="submit" value="Send" />
-            </form>
-          </div>
+          
           <div style={{ flex: 1, height: "100%" }}>
             <iframe
               width="100%"
-              height={350}
+              height={450}
               style={{border: "6px solid rgb(0,0,0,0)"}}
               loading="lazy"
               allowfullscreen
@@ -173,6 +154,30 @@ const App = () => {
               src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCS0QexUfZnKgG0siTOuOwlVCFGmOSVfwI
                 &q=Harbour+Theatre,Tartu+Estonia">
             </iframe>
+          </div>
+        </div>
+
+      </div>
+
+      <div style={{ width: "100%", padding: "0 0", textAlign: "center", position: "relative" }}>
+        <p style={{ position: "relative", backgroundColor: ORANGE_COLOR, fontSize: 32, width: "fit-content", margin: "0 auto", marginBottom: 40, border: "6px solid black", padding: "4px 40px", zIndex: 4 }}>
+          KONTAKT
+        </p>
+        <div style={{ position: "absolute", width: "100%", borderTop: "6px solid black", top: 30, zIndex: 1 }}></div>
+        
+        <div style={{ display: "flex", flexDirection: "row", width: "80%", maxWidth: 600,
+            margin: "0 auto", marginBottom: 40, alignItems: "center", height: 200 }}>
+          <div className="contact-icon" style={{ flex: 1 }}>
+            <i class="fa-brands fa-instagram" style={{ fontSize: 60, padding: 20, borderRadius: "50%" }}></i>
+            <p style={{ margin: 0, marginTop: -10 }}>@crymearivertattoo</p>
+          </div>
+          <div className="contact-icon" style={{ flex: 1 }}>
+            <i class="fa-brands fa-facebook" style={{ fontSize: 60, padding: 20, borderRadius: "50%" }}></i>
+            <p style={{ margin: 0, marginTop: -10 }}>@crymearivertattoo</p>
+          </div>
+          <div className="contact-icon" style={{ flex: 1 }}>
+            <i class="fa-regular fa-envelope" style={{ fontSize: 60, padding: 20, borderRadius: "50%" }}></i>
+            <p style={{ margin: 0, marginTop: -10 }}>@crymearivertattoo</p>
           </div>
         </div>
 

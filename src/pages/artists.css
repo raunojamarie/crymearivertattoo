@@ -1,3 +1,42 @@
+.orange-box-title {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background-color: #fb8300;
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  border: 6px solid black;
+  padding: 4px 40px;
+  z-Index: 4;
+}
+
+.artists-content {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: var(--primary-color);
+}
+
+.artist-content {
+  display: flex;
+  height: 350px;
+  gap: 40px;
+}
+
+.artist-content-img {
+  flex: 1;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.artist-content-text {
+  flex: 1;
+  text-align: left;
+  overflow: hidden;
+  margin: auto 0;
+}
+
 .circular {
   width: 300px;
   height: 300px;
