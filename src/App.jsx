@@ -11,6 +11,9 @@ import { FlipDate } from './components/FlipDate';
 import useWindowDimensions from './useWindowDimensions.jsx';
 import Artists from './pages/Artists';
 import Timeline from './pages/Timeline';
+import Footer from './components/Footer';
+import Haaletus from './pages/haaletus';
+import Tartu from './pages/tartu';
 
 
 export const ORANGE_COLOR = "#fb8300";
@@ -69,6 +72,7 @@ const App = () => {
           <div className="navbar-menu-options" style={{ fontSize: 20, display: "flex", width: "100%", justifyContent: "end", textTransform: "uppercase" }}>
             <p>AVALEHT</p>
             <p>ARTISTID</p>
+            <p>AJAKAVA</p>
             <p>RAHVAHÄÄLETUS</p>
             <p>TARTU 2024</p>
             <p>KONTAKT</p>
@@ -133,17 +137,22 @@ const App = () => {
         
       <Artists />
       <Timeline />
+      <Haaletus />
+      <Tartu />
 
 
       <div style={{ width: "100%", padding: "0 0", textAlign: "center", position: "relative" }}>
         <p style={{ position: "relative", backgroundColor: ORANGE_COLOR, fontSize: 32, width: "fit-content", margin: "0 auto", marginBottom: 40, border: "6px solid black", padding: "4px 40px", zIndex: 4 }}>
-          KUS ME ASUME
+          KONTAKT
         </p>
         <div style={{ position: "absolute", width: "100%", borderTop: "6px solid black", top: 30, zIndex: 1 }}></div>
         <div style={{ display: "flex", flexDirection: isTablet ? "column" : "row",
               width: "80%", maxWidth: 1200, margin: "0 auto", marginBottom: 40, alignItems: "center" }}>
           
           <div style={{ flex: 1, height: "100%" }}>
+          <p style={{ position: "relative", /* backgroundColor: ORANGE_COLOR, */ fontSize: 32, width: "fit-content", margin: "0 auto", marginBottom: 40, /* border: "6px solid black", */ padding: "4px 40px", zIndex: 4 }}>
+          KUS ME ASUME?
+        </p>
             <iframe
               width="100%"
               height={450}
@@ -160,10 +169,10 @@ const App = () => {
       </div>
 
       <div style={{ width: "100%", padding: "0 0", textAlign: "center", position: "relative" }}>
-        <p style={{ position: "relative", backgroundColor: ORANGE_COLOR, fontSize: 32, width: "fit-content", margin: "0 auto", marginBottom: 40, border: "6px solid black", padding: "4px 40px", zIndex: 4 }}>
-          KONTAKT
+        <p style={{ position: "relative", /* backgroundColor: ORANGE_COLOR , */ fontSize: 32, width: "fit-content", margin: "0 auto", marginBottom: 40,/*  border: "6px solid black", */ padding: "4px 40px", zIndex: 4 }}>
+          KIRJUTA MEILE!
         </p>
-        <div style={{ position: "absolute", width: "100%", borderTop: "6px solid black", top: 30, zIndex: 1 }}></div>
+        {/* <div style={{ position: "absolute", width: "100%", borderTop: "6px solid black", top: 30, zIndex: 1 }}></div> */}
         
         <div style={{ display: "flex", flexDirection: "row", width: "80%", maxWidth: 600,
             margin: "0 auto", marginBottom: 40, alignItems: "center", height: 200 }}>
@@ -184,9 +193,7 @@ const App = () => {
       </div>
       
       {/* FOOTER */}
-      <div style={{ width: "100%", height: 300, backgroundColor: "black", color: "white", display: "grid", justifyContent: "center", alignContent: "center" }}>
-          <p style={{ fontSize: 36, color: ORANGE_COLOR }}>crymearivertattoo</p>
-      </div>
+      <Footer />
     </div>
   );
 }

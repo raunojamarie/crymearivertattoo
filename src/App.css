@@ -115,6 +115,6 @@
 }
 
 .contact-icon:hover {
-  cursor: pointer;
-  color: #fb8300
+  cursor: pointer !important;
+  color: #fb8300 !important;
 }
