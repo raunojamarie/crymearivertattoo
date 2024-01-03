@@ -13,8 +13,8 @@ const Artists = () => {
   const isBreakpoint2 = width <= 540;
   const navbarCollapse = width <= 990;
   return (
-    <div style={{ padding: "40px 0" }}>
-      <p className="big-title orange-box-title">ARTISTID</p>
+    <div style={{ padding: "0px 0" }}>
+      <p className="big-title-orange">artistid</p>
       <div className="artists-content" style={{ width: navbarCollapse ? isMobile ? "95%" : "90%" : width - 400 }}>
         <div className="artist-content">
           <div className="artist-content-img">
@@ -23,8 +23,8 @@ const Artists = () => {
             </div>
           </div>
           <div className="artist-content-text">
-            <p className="sub-title" style={{ fontSize: isMobile ? 24 : 34 }}>Artisti Nimi</p>
-            <p className="regular-text" style={{ fontSize: isMobile ? 14 : 16 }}>
+            <p className="artists-sub-title" style={{ fontSize: isMobile ? 24 : 24}}>Rauno Paluvee</p>
+            <p className="text-black" style={{ fontSize: isMobile ? 14 : 18 }}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque justo enim, consectetur vel dapibus eget, ullamcorper et mi. Cras commodo, nunc vel condimentum facilisis, nisi dui placerat mi, sit amet tempor felis neque a dui. Proin id ultrices massa, facilisis gravida eros. Nulla at luctus neque. Nunc maximus sollicitudin volutpat. Cras fringilla nunc sit amet risus semper, in suscipit elit interdum. Quisque cursus dolor vitae mattis volutpat.
             </p>
           </div>
@@ -32,8 +32,8 @@ const Artists = () => {
 
         <div className="artist-content">
           <div className="artist-content-text" style={{ textAlign: "right" }}>
-            <p className="sub-title" style={{ fontSize: isMobile ? 24 : 34 }}>Artisti Nimi</p>
-            <p className="regular-text" style={{ fontSize: isMobile ? 14 : 16 }}>
+            <p className="artists-sub-title" style={{ fontSize: isMobile ? 24 : 24}}>Marie Vabamägi</p>
+            <p className="text-black" style={{ fontSize: isMobile ? 14 : 18 }}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque justo enim, consectetur vel dapibus eget, ullamcorper et mi. Cras commodo, nunc vel condimentum facilisis, nisi dui placerat mi, sit amet tempor felis neque a dui. Proin id ultrices massa, facilisis gravida eros. Nulla at luctus neque. Nunc maximus sollicitudin volutpat. Cras fringilla nunc sit amet risus semper, in suscipit elit interdum. Quisque cursus dolor vitae mattis volutpat.
             </p>
           </div>

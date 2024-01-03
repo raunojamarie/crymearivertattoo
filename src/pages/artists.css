@@ -1,14 +1,29 @@
-.orange-box-title {
+.big-title-orange {
+  font-size: 80px;
+  color:#fb8300;
+  font-family: 'Rubik Mono One', monospace;
+  position: "relative";
+  width: fit-content;
+  z-index: 4;
   display: grid;
   justify-content: center;
   align-content: center;
-  background-color: #fb8300;
-  width: fit-content;
+  padding-top: 40px !important;
   margin: 0 auto;
-  margin-bottom: 40px;
-  border: 6px solid black;
-  padding: 4px 40px;
-  z-Index: 4;
+}
+
+.text-black {
+  font-weight: 300;
+  font-size: 18px;
+  color: black;
+  width: 720px;
+  margin: 20px 0px 45px 0px;
+}
+
+.artists-sub-title {
+  font-size: 24px;
+  margin: 0;
+  font-family: 'Rubik Mono One';
 }
 
 .artists-content {

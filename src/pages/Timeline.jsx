@@ -1,4 +1,4 @@
-import { ORANGE_COLOR } from "../App";
+import { GREEN_COLOR, ORANGE_COLOR } from "../App";
 import useWindowDimensions from "../useWindowDimensions";
 
 const Timeline = () => {
@@ -11,14 +11,14 @@ const Timeline = () => {
   const navbarCollapse = width <= 990;
 
   return (
-    <div style={{ paddingBottom: 80 }}>
+    <div style={{ paddingBottom: 80, backgroundColor:"#000000" }}>
       <div style={{ position: "relative"}}>
-        <p style={{ position: "relative", backgroundColor: ORANGE_COLOR, fontSize: 32, width: "fit-content", margin: "0 auto", marginBottom: 40, border: "6px solid black", padding: "4px 40px", zIndex: 4 }}>AJAKAVA</p>
-        <div style={{ position: "absolute", width: "100%", borderTop: "6px solid black", top: 30, zIndex: 1 }}></div>
+        <p  className="big-title-green">AJAKAVA</p>
+        <div style={{ position: "absolute", width: "100%", top: 30, zIndex: 1 }}></div>
       </div>
-      <div style={{ position: "relative", width: navbarCollapse ? isMobile ? "100%" : "90%" : width - 400, margin: "0 auto 0 auto", backgroundColor: ORANGE_COLOR + "33", height: 980 }}>
+      <div style={{ position: "relative", width: navbarCollapse ? isMobile ? "100%" : "90%" : width - 400, margin: "0 auto 0 auto", marginTop: 40, backgroundColor: GREEN_COLOR + "33", height: 980 }}>
         <div style={{
-          borderLeft: "6px solid " + ORANGE_COLOR,
+          borderLeft: "6px solid " + GREEN_COLOR,
           height: "88%",
           position: "absolute",
           left: "50%",
@@ -65,14 +65,14 @@ export const TimelineSlot = ({ width, left, top, title, text, time }) => {
           top: "50%",
           margin: "-25% 0 0 -25%",
           borderRadius: "50%",
-          backgroundColor: ORANGE_COLOR,
+          backgroundColor: GREEN_COLOR,
           opacity: 1,
         }}>
         </div>
       </div>
       <div style={{
         zIndex: 1,
-        borderTop: "6px solid " + ORANGE_COLOR,
+        borderTop: "6px solid " + GREEN_COLOR,
         position: "absolute",
         left: left ? "auto" : "50%",
         right: left ? "50%" : "auto",
@@ -89,9 +89,9 @@ export const TimelineSlot = ({ width, left, top, title, text, time }) => {
           right: left ? "auto" : -5,
           top: -15,
           borderRadius: "50%",
-          backgroundColor: ORANGE_COLOR,
+          backgroundColor: GREEN_COLOR,
         }}>
-          <p style={{ margin: 0, marginLeft: left ? -65 : 35, marginTop: -10, fontSize: 28 }}>{time}</p>
+          <p style={{ margin: 0, marginLeft: left ? -65 : 35, marginTop: -10, fontSize: 28, color:"white", fontWeight: 800, fontFamily: 'Kanit'  }}>{time}</p>
         </div>
         <div style={{
           overflow: "hidden",
@@ -103,11 +103,11 @@ export const TimelineSlot = ({ width, left, top, title, text, time }) => {
           width: isMobile ? "150%" : navbarCollapse ? "100%" : "70%",
           height: 110
         }}>
-          <div style={{ backgroundColor: ORANGE_COLOR }}>
-            <p style={{ margin: 0, fontSize: isMobile ? 16 : 18, padding: "6px 6px" }}>{title}</p>
+          <div style={{ backgroundColor: GREEN_COLOR }}>
+            <p style={{ margin: 0, fontSize: isMobile ? 16 : 22, padding: "6px 6px", color:"white", fontFamily: "Kanit", fontWeight: 900, }}>{title}</p>
           </div>
           <div style={{ padding: 4 }}>
-            <p style={{ margin: 0, fontSize: 12, fontFamily: "arial" }}>{text}</p>
+            <p style={{ margin: 0, fontSize: 14, fontFamily: "Kanit", color:"white" }}>{text}</p>
           </div>
         </div>
       </div>

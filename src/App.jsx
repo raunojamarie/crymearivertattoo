@@ -14,9 +14,12 @@ import Timeline from './pages/Timeline';
 import Footer from './components/Footer';
 import Haaletus from './pages/haaletus';
 import Tartu from './pages/tartu';
+import Info from './pages/info.jsx';
+import Live from './pages/live.jsx';
 
 
 export const ORANGE_COLOR = "#fb8300";
+export const GREEN_COLOR = "#789301";
 
 const dripEnabled = () => {
   const queryString = window.location.search;
@@ -60,17 +63,18 @@ const App = () => {
             ? <div className="navbar-logo" style={{
               height: 100, display: "flex", color: ORANGE_COLOR, margin: 0
             }}>
-              <p>crymearivertattoo</p>
+              <p style={{ fontSize: 24 }}>crymearivertattoo</p>
             </div>
             : <div className="navbar-logo" style={{
               width: 100, height: 100, display: "flex", paddingRight: 60, color: ORANGE_COLOR
             }}>
-              <p>crymearivertattoo</p>
+              <p className="navbar-logo">crymearivertattoo</p>
             </div>
 
           }
-          <div className="navbar-menu-options" style={{ fontSize: 20, display: "flex", width: "100%", justifyContent: "end", textTransform: "uppercase" }}>
-            <p>AVALEHT</p>
+          <div className="navbar-menu-options" style={{ fontSize: 20, display: "flex", width: "100%", justifyContent: "end"}}>
+            <p>INFO</p>
+            <p>LIVE</p>
             <p>ARTISTID</p>
             <p>AJAKAVA</p>
             <p>RAHVAHÄÄLETUS</p>
@@ -108,9 +112,9 @@ const App = () => {
                 right: 0,
                 textAlign: "center",
                 width: "fit-content" }}>
-              <p style={{ textAlign: "left", paddingLeft: 12, color: "white", padding: 0, margin: 0, fontSize: 20 }}>ALGAB JUBA</p>
+              <p style={{ textAlign: "left", paddingLeft: 12, color: "white", padding: 0, margin: 0, fontSize: 20, fontWeight: 800 }}>ALGAB JUBA</p>
               <FlipDate />
-              <div style={{ display: "flex", height: 30, width: "100%", fontSize: 18, color: ORANGE_COLOR, textTransform: "lowercase" }}>
+              <div style={{ display: "flex", height: 30, width: "100%", fontSize: 20, color: ORANGE_COLOR, textTransform: "lowercase", fontWeight: 800 }}>
                 <div style={{ flex: 1, margin: 4, display: "grid", alignContent: "center", justifyContent: "center" }}>
                   <p style={{ margin: 0 }}>PÄEVA</p>
                 </div>
@@ -125,7 +129,7 @@ const App = () => {
                 </div>
               </div>
               <div style={{ display: "grid", justifyContent: "end" }}>
-                <p style={{ color: "white", padding: 0, margin: 0, fontSize: 20 }}>PÄRAST</p>
+                <p style={{ color: "white", padding: 0, margin: 0, fontSize: 20, fontWeight: 800 }}>PÄRAST</p>
               </div>
             </div>
           </div>
@@ -135,6 +139,8 @@ const App = () => {
 
       
         
+      <Info />
+      <Live />
       <Artists />
       <Timeline />
       <Haaletus />
@@ -142,15 +148,15 @@ const App = () => {
 
 
       <div style={{ width: "100%", padding: "0 0", textAlign: "center", position: "relative" }}>
-        <p style={{ position: "relative", backgroundColor: ORANGE_COLOR, fontSize: 32, width: "fit-content", margin: "0 auto", marginBottom: 40, border: "6px solid black", padding: "4px 40px", zIndex: 4 }}>
+        <p className="big-title-orange">
           KONTAKT
         </p>
-        <div style={{ position: "absolute", width: "100%", borderTop: "6px solid black", top: 30, zIndex: 1 }}></div>
+        <div style={{ position: "absolute", width: "100%", top: 30, zIndex: 1 }}></div>
         <div style={{ display: "flex", flexDirection: isTablet ? "column" : "row",
               width: "80%", maxWidth: 1200, margin: "0 auto", marginBottom: 40, alignItems: "center" }}>
           
           <div style={{ flex: 1, height: "100%" }}>
-          <p style={{ position: "relative", /* backgroundColor: ORANGE_COLOR, */ fontSize: 32, width: "fit-content", margin: "0 auto", marginBottom: 40, /* border: "6px solid black", */ padding: "4px 40px", zIndex: 4 }}>
+          <p className='sub-title'>
           KUS ME ASUME?
         </p>
             <iframe
@@ -169,10 +175,9 @@ const App = () => {
       </div>
 
       <div style={{ width: "100%", padding: "0 0", textAlign: "center", position: "relative" }}>
-        <p style={{ position: "relative", /* backgroundColor: ORANGE_COLOR , */ fontSize: 32, width: "fit-content", margin: "0 auto", marginBottom: 40,/*  border: "6px solid black", */ padding: "4px 40px", zIndex: 4 }}>
+        <p className='sub-title'>
           KIRJUTA MEILE!
         </p>
-        {/* <div style={{ position: "absolute", width: "100%", borderTop: "6px solid black", top: 30, zIndex: 1 }}></div> */}
         
         <div style={{ display: "flex", flexDirection: "row", width: "80%", maxWidth: 600,
             margin: "0 auto", marginBottom: 40, alignItems: "center", height: 200 }}>
