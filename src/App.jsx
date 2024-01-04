@@ -17,16 +17,16 @@ import Live from './pages/Live.jsx';
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import Haaletus from './pages/Haaletus.jsx';
 import Tartu from './pages/Tartu.jsx';
+import { useEffect } from 'react';
+import Accordion from './components/accordion.jsx';
 
-export const ORANGE_COLOR = "#fb8300";
-export const GREEN_COLOR = "#789301";
+export const ORANGE_COLOR = "#ef880e";
+export const GREEN_COLOR = "#7d922b";
 
 const dripEnabled = () => {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
-  console.log(urlParams)
   return urlParams.toString().includes("drip");
-
 }
 
 const App = () => {
@@ -40,24 +40,22 @@ const App = () => {
 
   return (
     <div id="home" className="app-root" style={{ height: "100%", width: "100%" }}>
-      <div className="navbar" style={{
+      <div className="navbar black-bacgkround" style={{
         position: "fixed",
         top: 0, right: 0, left: 0,
         height: 100,
-        backgroundColor: "black",
         display: "flex",
         paddingLeft: 40,
         paddingRight: 40,
         zIndex: 999,
         opacity: isMobile ? 0 : 1
       }}>
-        <div className="navbar-menu" style={{
+        <div className="navbar-menu color-white" style={{
           display: "flex",
           width: "100%",
           fontSize: 28,
           fontWeight: 900,
           justifyContent: "center",
-          color: "white",
         }}>
           {navbarCollapse
             ? <div className="navbar-logo" style={{
@@ -65,10 +63,10 @@ const App = () => {
             }}>
               <p style={{ fontSize: 24 }}>crymearivertattoo</p>
             </div>
-            : <AnchorLink offset={90} className="nav-option navbar-logo" style={{color: ORANGE_COLOR}} href='#home'>crymearivertattoo</AnchorLink>
+            : <AnchorLink offset={90} className="nav-option navbar-logo" style={{ color: ORANGE_COLOR }} href='#home'>crymearivertattoo</AnchorLink>
           }
-          <div className="navbar-menu-options" style={{ fontSize: 20, display: "flex", width: "100%", justifyContent: "end"}}>
-            <AnchorLink offset={90} className="nav-option" style={{}} href='#info'>INFO</AnchorLink>
+          <div className="navbar-menu-options" style={{ fontSize: 20, display: "flex", width: "100%", justifyContent: "end" }}>
+            <AnchorLink offset={90} className="nav-option" style={{}} href='#info'>INFO JA PILETID</AnchorLink>
             <AnchorLink offset={90} className="nav-option" style={{}} href='#live'>LIVE</AnchorLink>
             <AnchorLink offset={90} className="nav-option" style={{}} href='#artistid'>ARTISTID</AnchorLink>
             <AnchorLink offset={90} className="nav-option" style={{}} href='#ajakava'>AJAKAVA</AnchorLink>
@@ -80,8 +78,8 @@ const App = () => {
         </div>
       </div>
 
-      <div className="main-header" style={{ position: "relative", height: "100vh"}}>
-        {dripEnabled() && <img src={drip} alt="" style={{ position: "absolute", width: "100%", height: 268, bottom: -268, left: 0, zIndex: 1}}></img>}
+      <div className="main-header" style={{ position: "relative", height: "100vh" }}>
+        {dripEnabled() && <img src={drip} alt="" style={{ position: "absolute", width: "100%", height: 268, bottom: -268, left: 0, zIndex: 1 }}></img>}
         <div style={{
           display: "flex",
           flexDirection: isMobile ? "column" : "row",
@@ -93,38 +91,35 @@ const App = () => {
           <div style={{ flex: 1, display: "grid", justifyContent: "center", alignContent: "center", zIndex: 3 }}>
             <div style={{ width: "100%" }}>
               <img style={{ width: "100%" }} src={headerText}></img>
-              <img style={{ marginTop: isMobile ? -40 : -60, width: "100%" }} src={tattooFest}></img>
             </div>
           </div>
           <div className="" style={{ position: "relative", flex: 1, display: "grid", justifyContent: "center", alignContent: isMobile ? "" : "center", zIndex: 3 }}>
             <img src={loss} style={{ width: "calc(100%)", opacity: 0.5, marginTop: -40 }}></img>
             <div className="counter-wrapper" style={{
-                position: "absolute",
-                marginLeft: "auto",
-                marginRight: "auto",
-                top: "40%",
-                left: 0,
-                right: 0,
-                textAlign: "center",
-                width: "fit-content" }}>
-              <p style={{ textAlign: "left", paddingLeft: 12, color: "white", padding: 0, margin: 0, fontSize: 20, fontWeight: 800 }}>ALGAB JUBA</p>
+              position: "absolute",
+              marginLeft: "auto",
+              marginRight: "auto",
+              top: "40%",
+              left: 0,
+              right: 0,
+              textAlign: "center",
+              width: "fit-content"
+            }}>
+              <p className='color-white' style={{ textAlign: "left", paddingLeft: 12, padding: 0, margin: 0, fontSize: 24, fontWeight: 800 }}>ALGUSENI ON JÄÄNUD</p>
               <FlipDate />
-              <div style={{ display: "flex", height: 30, width: "100%", fontSize: 20, color: ORANGE_COLOR, textTransform: "lowercase", fontWeight: 800 }}>
+              <div style={{ display: "flex", height: 30, width: "100%", fontSize: 18, color: ORANGE_COLOR, textTransform: "lowercase", fontWeight: 800 }}>
                 <div style={{ flex: 1, margin: 4, display: "grid", alignContent: "center", justifyContent: "center" }}>
                   <p style={{ margin: 0 }}>PÄEVA</p>
                 </div>
                 <div style={{ flex: 1, margin: 4, display: "grid", alignContent: "center", justifyContent: "center" }}>
-                  <p style={{ margin: 0 }}>TUNNI</p>
+                  <p style={{ margin: 0 }}>TUNDI</p>
                 </div>
                 <div style={{ flex: 1, margin: 4, display: "grid", alignContent: "center", justifyContent: "center" }}>
-                  <p style={{ margin: 0 }}>MINUTI</p>
+                  <p style={{ margin: 0 }}>MINUTIT</p>
                 </div>
                 <div style={{ flex: 1, margin: 4, display: "grid", alignContent: "center", justifyContent: "center" }}>
-                  <p style={{ margin: 0 }}>SEKUNDI</p>
+                  <p style={{ margin: 0 }}>SEKUNDIT</p>
                 </div>
-              </div>
-              <div style={{ display: "grid", justifyContent: "end" }}>
-                <p style={{ color: "white", padding: 0, margin: 0, fontSize: 20, fontWeight: 800 }}>PÄRAST</p>
               </div>
             </div>
           </div>
@@ -132,7 +127,7 @@ const App = () => {
       </div>
 
 
-      
+
       <div id="info">
         <Info />
       </div>
@@ -159,17 +154,19 @@ const App = () => {
             KONTAKT
           </p>
           <div style={{ position: "absolute", width: "100%", top: 30, zIndex: 1 }}></div>
-          <div style={{ display: "flex", flexDirection: isTablet ? "column" : "row",
-                width: "80%", maxWidth: 1200, margin: "0 auto", marginBottom: 40, alignItems: "center" }}>
-            
-            <div style={{ flex: 1, height: "100%" }}>
-            <p className='sub-title'>
-            KUS ME ASUME?
-          </p>
+          <div style={{
+            display: "flex", flexDirection: isTablet ? "column" : "row",
+            width: "80%", maxWidth: 1200, margin: "0 auto", marginBottom: 40, alignItems: "center"
+          }}>
+
+            <div style={{ flex: 1, height: "100%", paddingTop: "20px" }}>
+              <p className='sub-title'>
+                KUS ME ASUME?
+              </p>
               <iframe
                 width="100%"
                 height={450}
-                style={{border: "6px solid rgb(0,0,0,0)"}}
+                style={{ border: "6px solid rgb(0,0,0,0)" }}
                 loading="lazy"
                 allowfullscreen
                 referrerpolicy="no-referrer-when-downgrade"
@@ -181,29 +178,54 @@ const App = () => {
         </div>
       </div>
 
+      <div style={{ height: "100%", width: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
+        <div style={{ width: "100%", padding: "0 0", textAlign: "center", position: "relative" }}>
+          <p className='sub-title'>
+            KORDUMA KIPPUVAD KÜSIMUSED
+          </p>
+        </div>
+
+        <div className="accordion" style={{ width: "100%", maxWidth: "720px", margin: "15px 0px 45px 0px "}}>
+          <Accordion title="Lühike küsimus" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+          <Accordion title="Üks hästi pikk küsimus mis tahab väga palju asju teada" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />
+          <Accordion title="Keskmise pikkusega küsimus" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+        </div>
+      </div>
+
+
       <div style={{ width: "100%", padding: "0 0", textAlign: "center", position: "relative" }}>
         <p className='sub-title'>
           KIRJUTA MEILE!
         </p>
-        
-        <div style={{ display: "flex", flexDirection: "row", width: "80%", maxWidth: 600,
-            margin: "0 auto", marginBottom: 40, alignItems: "center", height: 200 }}>
-          <div className="contact-icon" style={{ flex: 1 }}>
-            <i class="fa-brands fa-instagram" style={{ fontSize: 60, padding: 20, borderRadius: "50%" }}></i>
-            <p style={{ margin: 0, marginTop: -10 }}>@crymearivertattoo</p>
+
+        <div style={{
+          display: "flex", flexDirection: "row", width: "80%", maxWidth: 600,
+          margin: "0 auto", marginBottom: 60, alignItems: "center", height: 105
+        }}>
+          <div className="contact-icon" style={{ width: "200px" }}>
+
+            <a href="https://www.instagram.com/crymeariver.tartu/" className="contact-icon icon" target="blank">
+              <i class="fa-brands fa-instagram" style={{ fontSize: 60, padding: 20, borderRadius: "50%" }}></i>
+              @crymeariver.tartu
+            </a>
           </div>
-          <div className="contact-icon" style={{ flex: 1 }}>
-            <i class="fa-brands fa-facebook" style={{ fontSize: 60, padding: 20, borderRadius: "50%" }}></i>
-            <p style={{ margin: 0, marginTop: -10 }}>@crymearivertattoo</p>
+
+          <div className="contact-icon" style={{ width: "300px" }}>
+            <a href="mailto:tartu.alternativearts@gmail.com" className="contact-icon icon" target="blank">
+              <i class="fa-regular fa-envelope" style={{ fontSize: 60, padding: 20, borderRadius: "50%" }}></i>
+              tartu.alternativearts@gmail.com
+            </a>
           </div>
-          <div className="contact-icon" style={{ flex: 1 }}>
-            <i class="fa-regular fa-envelope" style={{ fontSize: 60, padding: 20, borderRadius: "50%" }}></i>
-            <p style={{ margin: 0, marginTop: -10 }}>@crymearivertattoo</p>
+          <div className="contact-icon" style={{ width: "200px" }}>
+            <a href="https://www.facebook.com/crymeariver.tattoofest" className="contact-icon icon" target="blank">
+              <i class="fa-brands fa-facebook" style={{ fontSize: 60, padding: 20, borderRadius: "50%" }}></i>
+              @crymeariver.tattoofest
+            </a>
           </div>
         </div>
 
       </div>
-      
+
       {/* FOOTER */}
       <Footer />
     </div>

@@ -11,7 +11,7 @@ const Timeline = () => {
   const navbarCollapse = width <= 990;
 
   return (
-    <div style={{ paddingBottom: 80, backgroundColor:"#000000" }}>
+    <div className="black-bacgkround" style={{ paddingBottom: 80}}>
       <div style={{ position: "relative"}}>
         <p  className="big-title-green">AJAKAVA</p>
         <div style={{ position: "absolute", width: "100%", top: 30, zIndex: 1 }}></div>
@@ -91,7 +91,7 @@ export const TimelineSlot = ({ width, left, top, title, text, time }) => {
           borderRadius: "50%",
           backgroundColor: GREEN_COLOR,
         }}>
-          <p style={{ margin: 0, marginLeft: left ? -75 : 35, marginTop: -10, fontSize: 28, color:"white", fontWeight: 800, fontFamily: 'Kanit'  }}>{time}</p>
+          <p className="color-white" style={{ margin: 0, marginLeft: left ? -75 : 35, marginTop: -10, fontSize: 28, fontWeight: 800, fontFamily: 'Kanit'  }}>{time}</p>
         </div>
         <div style={{
           overflow: "hidden",
@@ -104,10 +104,10 @@ export const TimelineSlot = ({ width, left, top, title, text, time }) => {
           height: 110
         }}>
           <div style={{ backgroundColor: GREEN_COLOR }}>
-            <p style={{ margin: 0, fontSize: isMobile ? 16 : 22, padding: "6px 6px", color:"white", fontFamily: "Kanit", fontWeight: 900, }}>{title}</p>
+            <p className="color-white" style={{ margin: 0, fontSize: isMobile ? 16 : 24, padding: "6px 6px", fontFamily: "Kanit", fontWeight: 900, }}>{title}</p>
           </div>
           <div style={{ padding: 4 }}>
-            <p style={{ margin: 0, fontSize: 14, fontFamily: "Kanit", color:"white" }}>{text}</p>
+            <p className="color-white" style={{ margin: 0, fontSize: 18, fontFamily: "Kanit" }}>{text}</p>
           </div>
         </div>
       </div>

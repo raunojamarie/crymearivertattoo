@@ -24,8 +24,11 @@ const Artists = () => {
           </div>
           <div className="artist-content-text">
             <p className="artists-sub-title" style={{ fontSize: isMobile ? 24 : 24}}>Rauno Paluvee</p>
-            <p className="text-black" style={{ fontSize: isMobile ? 14 : 18 }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque justo enim, consectetur vel dapibus eget, ullamcorper et mi. Cras commodo, nunc vel condimentum facilisis, nisi dui placerat mi, sit amet tempor felis neque a dui. Proin id ultrices massa, facilisis gravida eros. Nulla at luctus neque. Nunc maximus sollicitudin volutpat. Cras fringilla nunc sit amet risus semper, in suscipit elit interdum. Quisque cursus dolor vitae mattis volutpat.
+            <p className="text-black container" style={{ fontSize: isMobile ? 14 : 18 }}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque justo enim, 
+              consectetur vel dapibus eget, ullamcorper et mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque justo enim, 
+              consectetur vel dapibus eget, ullamcorper et mi.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque justo enim, 
+              consectetur vel dapibus eget, ullamcorper et mi.
             </p>
           </div>
         </div>
@@ -33,8 +36,8 @@ const Artists = () => {
         <div className="artist-content">
           <div className="artist-content-text" style={{ textAlign: "right" }}>
             <p className="artists-sub-title" style={{ fontSize: isMobile ? 24 : 24}}>Marie Vabamägi</p>
-            <p className="text-black" style={{ fontSize: isMobile ? 14 : 18 }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque justo enim, consectetur vel dapibus eget, ullamcorper et mi. Cras commodo, nunc vel condimentum facilisis, nisi dui placerat mi, sit amet tempor felis neque a dui. Proin id ultrices massa, facilisis gravida eros. Nulla at luctus neque. Nunc maximus sollicitudin volutpat. Cras fringilla nunc sit amet risus semper, in suscipit elit interdum. Quisque cursus dolor vitae mattis volutpat.
+            <p className="text-black container" style={{ fontSize: isMobile ? 14 : 18 }}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque justo enim, consectetur vel dapibus eget, ullamcorper et mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque justo enim, consectetur vel dapibus eget, ullamcorper et mi.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque justo enim, consectetur vel dapibus eget, ullamcorper et mi.
             </p>
           </div>
           <div className="artist-content-img">

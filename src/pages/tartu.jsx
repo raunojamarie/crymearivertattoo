@@ -7,7 +7,14 @@ const Tartu = () => {
       <div className="black-bacgkround">
         <div style={{ width: "100%", padding: "0 0", textAlign: "center", position: "relative", }}>
           <p className="big-title-green">
-            TARTU 2024
+            <span>
+              <span>
+                TARTU
+              </span>
+            <span style={{ padding: "0px 20px"}}>
+            2024
+          </span>
+            </span>
           </p>
         </div>
 

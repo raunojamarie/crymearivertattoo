@@ -7,7 +7,18 @@ const Info = () => {
 
       <div style={{ width: "100%", padding: "0 0", textAlign: "center", position: "relative" }}>
         <p className="big-title-orange">
-          info
+          <span>
+          <span>
+            info
+          </span>
+          <span style={{ padding: "0px 20px"}}>
+            ja
+          </span>
+          <span>
+            piletid
+          </span>
+          </span>
+
         </p>
       </div>
 
@@ -17,6 +28,10 @@ const Info = () => {
           Festivali peamiseks fookuseks on tätoveeringud, mis sünnivad ürituse ajal, ning mida tehakse külastajatele.
           Kohapeal saavad olema artistid nii Eestist kui ka kaugemalt, kes jagavad teiega oma loometööd ning astuvad võistlustulle, et välja selgitada kahe päeva jooksul tehtud tätoveeringutest parimad.
         </p>
+      </div>
+
+      <div className="align padding-bottom">
+        <a href="https://www.piletilevi.ee/" target="blank" className="button-orange">Piletid</a>
       </div>
 
       <div className="video">

@@ -1,6 +1,6 @@
 .big-title-orange {
   font-size: 80px;
-  color:#fb8300;
+  color:var(--orange);
   font-family: 'Rubik Mono One', monospace;
   position: "relative";
   width: fit-content;
@@ -15,7 +15,7 @@
 .text-black {
   font-weight: 300;
   font-size: 18px;
-  color: black;
+  color: var(--black);
   width: 720px;
   margin: 20px 0px 45px 0px;
 }
@@ -24,6 +24,7 @@
   font-size: 24px;
   margin: 0;
   font-family: 'Rubik Mono One';
+  color: var(--black);
 }
 
 .artists-content {
@@ -71,4 +72,9 @@
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+.container {
+  width: 430px; /* Set your desired width */
+  overflow: hidden;
+  white-space: pre-wrap;
 }
