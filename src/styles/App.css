@@ -68,6 +68,17 @@
   }
 }
 
+.nav-option {
+  color: white;
+  text-decoration: none;
+  margin: auto 20px;
+}
+
+.nav-option:hover {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
 .navbar-menu > div p {
   margin: auto 20px;
 }
@@ -114,7 +125,7 @@
 }
 
 .header-right-side {
-  background-image: url("./assets/loss.png");
+  background-image: url("../assets/loss.png");
   top: 100%;
   background-position: center;
   color: black;
@@ -124,7 +135,7 @@
 }
 
 .chain {
-  background-image: url("./assets/barbwire.png");
+  background-image: url("../assets/barbwire.png");
   top: 100%;
   background-position: center;
   color: black;

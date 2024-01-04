@@ -1,4 +1,4 @@
-import './App.css';
+import './styles/App.css';
 import headerText from "./assets/logo.png";
 import tattooFest from "./assets/tattoofest.png";
 import barbwire from "./assets/barbwire.png";
@@ -12,11 +12,11 @@ import useWindowDimensions from './useWindowDimensions.jsx';
 import Artists from './pages/Artists';
 import Timeline from './pages/Timeline';
 import Footer from './components/Footer';
-import Haaletus from './pages/haaletus';
-import Tartu from './pages/tartu';
-import Info from './pages/info.jsx';
-import Live from './pages/live.jsx';
-
+import Info from './pages/Info.jsx';
+import Live from './pages/Live.jsx';
+import AnchorLink from 'react-anchor-link-smooth-scroll'
+import Haaletus from './pages/Haaletus.jsx';
+import Tartu from './pages/Tartu.jsx';
 
 export const ORANGE_COLOR = "#fb8300";
 export const GREEN_COLOR = "#789301";
@@ -39,7 +39,7 @@ const App = () => {
   const navbarCollapse = width <= 990;
 
   return (
-    <div className="app-root" style={{ height: "100%", width: "100%" }}>
+    <div id="home" className="app-root" style={{ height: "100%", width: "100%" }}>
       <div className="navbar" style={{
         position: "fixed",
         top: 0, right: 0, left: 0,
@@ -65,22 +65,17 @@ const App = () => {
             }}>
               <p style={{ fontSize: 24 }}>crymearivertattoo</p>
             </div>
-            : <div className="navbar-logo" style={{
-              width: 100, height: 100, display: "flex", paddingRight: 60, color: ORANGE_COLOR
-            }}>
-              <p className="navbar-logo">crymearivertattoo</p>
-            </div>
-
+            : <AnchorLink offset={90} className="nav-option navbar-logo" style={{color: ORANGE_COLOR}} href='#home'>crymearivertattoo</AnchorLink>
           }
           <div className="navbar-menu-options" style={{ fontSize: 20, display: "flex", width: "100%", justifyContent: "end"}}>
-            <p>INFO</p>
-            <p>LIVE</p>
-            <p>ARTISTID</p>
-            <p>AJAKAVA</p>
-            <p>RAHVAHÄÄLETUS</p>
-            <p>TARTU 2024</p>
-            <p>KONTAKT</p>
-            <p>ET</p>
+            <AnchorLink offset={90} className="nav-option" style={{}} href='#info'>INFO</AnchorLink>
+            <AnchorLink offset={90} className="nav-option" style={{}} href='#live'>LIVE</AnchorLink>
+            <AnchorLink offset={90} className="nav-option" style={{}} href='#artistid'>ARTISTID</AnchorLink>
+            <AnchorLink offset={90} className="nav-option" style={{}} href='#ajakava'>AJAKAVA</AnchorLink>
+            <AnchorLink offset={90} className="nav-option" style={{}} href='#rahvahaaletus'>RAHVAHÄÄLETUS</AnchorLink>
+            <AnchorLink offset={90} className="nav-option" style={{}} href='#tartu'>TARTU 2024</AnchorLink>
+            <AnchorLink offset={90} className="nav-option" style={{}} href='#kontakt'>KONTAKT</AnchorLink>
+            <p className="nav-option">ET</p>
           </div>
         </div>
       </div>
@@ -138,40 +133,52 @@ const App = () => {
 
 
       
-        
-      <Info />
-      <Live />
-      <Artists />
-      <Timeline />
-      <Haaletus />
-      <Tartu />
+      <div id="info">
+        <Info />
+      </div>
+      <div id="live">
+        <Live />
+      </div>
+      <div id="artistid">
+        <Artists />
+      </div>
+      <div id="ajakava">
+        <Timeline />
+      </div>
+      <div id="rahvahaaletus">
+        <Haaletus />
+      </div>
+      <div id="tartu">
+        <Tartu />
+      </div>
 
 
-      <div style={{ width: "100%", padding: "0 0", textAlign: "center", position: "relative" }}>
-        <p className="big-title-orange">
-          KONTAKT
-        </p>
-        <div style={{ position: "absolute", width: "100%", top: 30, zIndex: 1 }}></div>
-        <div style={{ display: "flex", flexDirection: isTablet ? "column" : "row",
-              width: "80%", maxWidth: 1200, margin: "0 auto", marginBottom: 40, alignItems: "center" }}>
-          
-          <div style={{ flex: 1, height: "100%" }}>
-          <p className='sub-title'>
-          KUS ME ASUME?
-        </p>
-            <iframe
-              width="100%"
-              height={450}
-              style={{border: "6px solid rgb(0,0,0,0)"}}
-              loading="lazy"
-              allowfullscreen
-              referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCS0QexUfZnKgG0siTOuOwlVCFGmOSVfwI
-                &q=Harbour+Theatre,Tartu+Estonia">
-            </iframe>
+      <div id="kontakt">
+        <div style={{ width: "100%", padding: "0 0", textAlign: "center", position: "relative" }}>
+          <p className="big-title-orange">
+            KONTAKT
+          </p>
+          <div style={{ position: "absolute", width: "100%", top: 30, zIndex: 1 }}></div>
+          <div style={{ display: "flex", flexDirection: isTablet ? "column" : "row",
+                width: "80%", maxWidth: 1200, margin: "0 auto", marginBottom: 40, alignItems: "center" }}>
+            
+            <div style={{ flex: 1, height: "100%" }}>
+            <p className='sub-title'>
+            KUS ME ASUME?
+          </p>
+              <iframe
+                width="100%"
+                height={450}
+                style={{border: "6px solid rgb(0,0,0,0)"}}
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCS0QexUfZnKgG0siTOuOwlVCFGmOSVfwI
+                  &q=Harbour+Theatre,Tartu+Estonia">
+              </iframe>
+            </div>
           </div>
         </div>
-
       </div>
 
       <div style={{ width: "100%", padding: "0 0", textAlign: "center", position: "relative" }}>

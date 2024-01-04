@@ -91,7 +91,7 @@ export const TimelineSlot = ({ width, left, top, title, text, time }) => {
           borderRadius: "50%",
           backgroundColor: GREEN_COLOR,
         }}>
-          <p style={{ margin: 0, marginLeft: left ? -65 : 35, marginTop: -10, fontSize: 28, color:"white", fontWeight: 800, fontFamily: 'Kanit'  }}>{time}</p>
+          <p style={{ margin: 0, marginLeft: left ? -75 : 35, marginTop: -10, fontSize: 28, color:"white", fontWeight: 800, fontFamily: 'Kanit'  }}>{time}</p>
         </div>
         <div style={{
           overflow: "hidden",

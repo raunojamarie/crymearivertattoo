@@ -2,7 +2,7 @@ import { ORANGE_COLOR } from "../App";
 import stock1 from "../assets/stock-photo-1.jpg"
 import stock2 from "../assets/stock-photo-2.jpg"
 import useWindowDimensions from "../useWindowDimensions";
-import './artists.css';
+import '../styles/artists.css';
 
 const Artists = () => {
   const { height, width } = useWindowDimensions();

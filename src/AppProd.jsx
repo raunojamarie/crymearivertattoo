@@ -1,4 +1,4 @@
-import './App.css';
+import './styles/App.css';
 import plakat from "./assets/plakat.jpg"
 import useWindowDimensions from './useWindowDimensions';
 

@@ -20,7 +20,7 @@ const Live = () => {
         </div>
 
         <div className="video">
-        <iframe width="720" height="360" src="https://www.youtube.com/embed/P9C25Un7xaM?si=p2HIoqE_rVVUnhCk&autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay=0;" allowfullscreen>
+        <iframe width="720" height="360" src="https://www.youtube.com/embed/vHOv3sJWkUs?si=eOOkGBwAfc42Amin&autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay=0;" allowfullscreen>
         </iframe>
         </div>
       </div>
