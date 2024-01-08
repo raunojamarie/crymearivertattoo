@@ -73,6 +73,12 @@
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+@media only screen and (max-width: 850px) {
+  .circular {
+    width: 200px;
+    height: 200px;
+  }
+}
 
 .container {
   width: 430px; /* Set your desired width */
@@ -90,6 +96,12 @@
   position: absolute;
   top: calc(50% - 85px)
 }
+@media only screen and (max-width: 1610px) {
+  .carousel-btn {
+    display: none !important;
+  }
+}
+
 
 .carousel-btn:hover {
   cursor: pointer;/* 
