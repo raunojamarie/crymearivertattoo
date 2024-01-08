@@ -23,7 +23,7 @@ const Timeline = () => {
         <p  className="big-title-green">AJAKAVA</p>
         <div style={{ display: "flex", justifyContent: "center", alignContent: "center", gap: 10 }}>
           <button onClick={() => handleDayClick(1)} className={`timeline-btn ${day === 1 ? "timeline-btn-active" : ""}`}>
-            <p style={{ }}>PÄEV 1</p>
+            <p style={{ }}>24.05</p>
             {day === 1 && <>
               <div style={{
                 borderLeft: "6px solid " + GREEN_COLOR,
@@ -44,7 +44,7 @@ const Timeline = () => {
             </>}
           </button>
           <button onClick={() => handleDayClick(2)} className={`timeline-btn ${day === 2 ? "timeline-btn-active" : ""}`}>
-            <p>PÄEV 2</p>
+            <p>25.05</p>
             {day === 2 && <>
               <div style={{
                 borderLeft: "6px solid " + GREEN_COLOR,
@@ -58,7 +58,7 @@ const Timeline = () => {
             </>}
           </button>
           <button onClick={() => handleDayClick(3)} className={`timeline-btn ${day === 3 ? "timeline-btn-active" : ""}`}>
-            <p>PÄEV 3</p>
+            <p>26.05</p>
             {day === 3 && <>
               <div style={{
                 borderLeft: "6px solid " + GREEN_COLOR,
@@ -84,7 +84,7 @@ const Timeline = () => {
       <div style={{ position: "relative", width: navbarCollapse ? isMobile ? "100%" : "90%" : width - 400, margin: "0 auto 0 auto", marginTop: 40, backgroundColor: GREEN_COLOR + "33", height: 980 }}>
         <div style={{
           borderLeft: "6px solid " + GREEN_COLOR,
-          height: "88%",
+          height: "80%",
           position: "absolute",
           left: "50%",
           marginLeft: -3,

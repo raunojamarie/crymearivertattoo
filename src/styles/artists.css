@@ -83,38 +83,46 @@
 .carousel-btn {
   border: none;
   border-radius: 50%;
+  color: var(--black);
   background-color: var(--background);
-  height: 80px;
-  width: 80px;
+  height: 20px;
+  width: 20px;
   position: absolute;
-  top: calc(50% - 25px)
+  top: calc(50% - 85px)
 }
 
 .carousel-btn:hover {
-  cursor: pointer;
-  background-color: var(--orange) !important;
-  color: var(--background);
+  cursor: pointer;/* 
+  background-color: var(--orange) !important; */
+  color: var(--orange);
 }
 
 .pagination-btn {
-  border: none;
-  background-color: white;
+  border: 3px solid var(--orange);
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 20px;
+  height: 20px;
   display: grid;
   align-content: center;
   justify-content: center;
   margin: 4px;
+  color: var(--background);
+  font-weight: 100 !important;
+  font-family: 'Rubik Mono One', monospace;
+
+ 
 }
 
 .pagination-btn:hover {
   cursor: pointer;
+  color: var(--orange) !important;
   background-color: var(--orange);
-  color: white;
+  border: 4px solid var(--orange);
 }
 
 .pagination-btn-active {
-  background-color: var(--orange) !important;
-  color: white !important
+  color: var(--orange) !important;
+  background-color: inherit;
+  background-color: var(--orange);
+  
 }
