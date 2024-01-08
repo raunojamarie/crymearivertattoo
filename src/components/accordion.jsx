@@ -1,4 +1,3 @@
-// Accordion.js
 import React, { useState } from 'react';
 
 const Accordion = ({ title, content }) => {
