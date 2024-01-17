@@ -65,7 +65,7 @@ const App = () => {
             </div>
             : <AnchorLink offset={90} className="nav-option navbar-logo" style={{ color: ORANGE_COLOR }} href='#home'>crymearivertattoo</AnchorLink>
           }
-          <div className="navbar-menu-options" style={{ fontSize: 20, display: "flex", width: "100%", justifyContent: "end" }}>
+          <div className="navbar-menu-options" style={{ }}>
             <AnchorLink offset={90} className="nav-option" style={{}} href='#info'>INFO JA PILETID</AnchorLink>
             <AnchorLink offset={90} className="nav-option" style={{}} href='#live'>LIVE</AnchorLink>
             <AnchorLink offset={90} className="nav-option" style={{}} href='#artistid'>ARTISTID</AnchorLink>
