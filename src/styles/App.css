@@ -326,3 +326,46 @@
 .color-black {
   color: var(--black);
 }
+
+.text-center-black {
+  position: "relative";
+  z-index: 4;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  font-weight: 300;
+  font-size: 18px;
+  color: var(--black);
+  margin: 20px 0px 45px 0px;
+}
+.text-center-white {
+  position: "relative";
+  z-index: 4;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  font-weight: 300;
+  font-size: 18px;
+  color: var(--white);
+  margin: 20px 0px 45px 0px;
+}
+.blur {
+  filter: blur(0.75rem);
+  -webkit-filter: blur(0.75rem);
+}
+.video-blur {
+  filter: blur(2rem);
+  -webkit-filter: blur(2rem);
+}
+
+
+.disabled {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.6;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}

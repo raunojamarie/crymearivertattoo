@@ -18,8 +18,11 @@ const Tartu = () => {
           </p>
         </div>
 
-        <div className="align">
-          <p className="text-white">
+        <div className="align" style={{ position: "relative"}}>
+        <p className="text-white" style={{ fontSize: 28, color:"white", fontWeight:"500", position: "absolute", top: "calc(50% - 80px)", left:"calc(50% - 100px)"}}>
+            Info peagi tulekul!
+        </p>
+          <p className="text-white blur disabled">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Possimus debitis, impedit quos libero, voluptate doloremque eos expedita,
             iste beatae quam totam itaque laborum sint iusto modi. Perferendis ducimus quod doloremque.
@@ -31,7 +34,8 @@ const Tartu = () => {
           </p>
           <div className="align padding-bottom">
 
-          <a href="https://tartu2024.ee/" target="blank" className="button-green">Link</a>
+          {/* <a href="https://tartu2024.ee/" disabled target="blank" className="button-green">Link</a> */}
+          <a href="#" class="disabled button-green blur">link</a>
           </div>
           </div>
       </div>

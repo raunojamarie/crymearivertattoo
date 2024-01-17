@@ -132,50 +132,56 @@ const Artists = () => {
   return (
     <div style={{ padding: "0px 0" }}>
       <p className="big-title-orange" style={{ paddingBottom: 20 }}>artistid</p>
-      <div className="artists-content" style={{ position: "relative", width: navbarCollapse ? isMobile ? "95%" : "90%" : width - 400 }}>
-        <button className="carousel-btn" onClick={handleClickLeft} style={{ left: -150 }}>
-          <i className="fas fa-chevron-left" style={{fontSize: 24}}></i>
-        </button>
-        <button className="carousel-btn" onClick={handleClickRight} style={{ right: -150 }}>
-          <i className="fas fa-chevron-right" style={{ fontSize: 24 }}></i>
-        </button>
-        {ARTISTS_DATA.slice(currentPage, currentPage + 2).map((artist, index) => {
-          return index % 2 === 0 
-              ? <div className="artist-content">
-                  <div className="artist-content-img">
-                    <div className="circular">
-                      <img className="artist-img" alt="" src={artist.img}></img>
-                    </div>
-                  </div>
-                  <div className="artist-content-text">
-                    <p className="artists-sub-title" style={{ fontSize: isMobile ? 24 : 24}}>{artist.name}</p>
-                    <p className="text-black container" style={{ fontSize: isMobile ? 14 : 18 }}>
-                      {artist.text}
-                    </p>
-                  </div>
-                </div>
-              : <div className="artist-content">
-                  <div className="artist-content-text" style={{ textAlign: "right" }}>
-                    <p className="artists-sub-title" style={{ fontSize: isMobile ? 24 : 24}}>{artist.name}</p>
-                    <p className="text-black container" style={{ fontSize: isMobile ? 14 : 18 }}>
-                      {artist.text}
-                    </p>
-                  </div>
-                  <div className="artist-content-img">
-                    <div className="circular">
-                      <img className="artist-img" alt="" src={artist.img}></img>
-                    </div>
-                  </div>
-                </div>
-        })}
 
-        <div style={{ display: "flex", justifyContent: "center", alignContent: "center", marginBottom: 40 }}>
-          {[...Array(9).keys()].slice(1).map(i =>
-            <button onClick={() => handlePaginationClick(i)} className={`pagination-btn ${i === currentIndex ? "pagination-btn-active" : ""}`} style={{  }}>
-              {i}
-            </button>
-          )}
+
+      <div className="align " style={{ position: "relative" }}>
+        <p style={{ fontSize: 28, color: "black", fontWeight: "500", position: "absolute", top: "calc(50% - 80px)", left: "calc(50% - 150px)", zIndex: 99 }}>
+          Kuulutatakse peagi välja!
+        </p>
+        <div className="artists-content artist-blur disabled" style={{ position: "relative", width: navbarCollapse ? isMobile ? "95%" : "90%" : width - 400 }}>
+          <button className="carousel-btn" onClick={handleClickLeft} style={{ left: -150 }}>
+            <i className="fas fa-chevron-left" style={{ fontSize: 40 }}></i>
+          </button>
+          <button className="carousel-btn" onClick={handleClickRight} style={{ right: -150 }}>
+            <i className="fas fa-chevron-right" style={{ fontSize: 40 }}></i>
+          </button>
+          {ARTISTS_DATA.slice(currentPage, currentPage + 2).map((artist, index) => {
+            return index % 2 === 0
+              ? <div className="artist-content">
+                <div className="artist-content-img">
+                  <div className="circular">
+                    <img className="artist-img" alt="" src={artist.img}></img>
+                  </div>
+                </div>
+                <div className="artist-content-text">
+                  <p className="artists-sub-title" style={{ fontSize: isMobile ? 24 : 24 }}>{artist.name}</p>
+                  <p className="text-black container" style={{ fontSize: isMobile ? 14 : 18 }}>
+                    {artist.text}
+                  </p>
+                </div>
+              </div>
+              : <div className="artist-content">
+                <div className="artist-content-text" style={{ textAlign: "right" }}>
+                  <p className="artists-sub-title" style={{ fontSize: isMobile ? 24 : 24 }}>{artist.name}</p>
+                  <p className="text-black container" style={{ fontSize: isMobile ? 14 : 18 }}>
+                    {artist.text}
+                  </p>
+                </div>
+                <div className="artist-content-img">
+                  <div className="circular">
+                    <img className="artist-img" alt="" src={artist.img}></img>
+                  </div>
+                </div>
+              </div>
+          })}
+
+          <div style={{ display: "flex", placeContent: "center", marginBottom: 40 }}>
+            {[...Array(9).keys()].slice(1).map(i =>
+              <button onClick={() => handlePaginationClick(i)} className={`pagination-btn ${i === currentIndex ? "pagination-btn-active" : ""}`} style={{}}>
+              </button>
+            )}
           </div>
+        </div>
       </div>
     </div>
   );

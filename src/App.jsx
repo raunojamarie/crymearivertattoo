@@ -153,11 +153,13 @@ const App = () => {
           <p className="big-title-orange">
             KONTAKT
           </p>
+
           <div style={{ position: "absolute", width: "100%", top: 30, zIndex: 1 }}></div>
           <div style={{
             display: "flex", flexDirection: isTablet ? "column" : "row",
             width: "80%", maxWidth: 1200, margin: "0 auto", marginBottom: 40, alignItems: "center"
           }}>
+
 
             <div style={{ flex: 1, height: "100%", paddingTop: "20px" }}>
               <p className='sub-title'>
@@ -175,56 +177,30 @@ const App = () => {
               </iframe>
             </div>
           </div>
+          <div style={{ display: "grid", placeContent: "center", width: "100%", padding: "0 0", textAlign: "center", position: "relative", paddingBottom: 40, marginTop: -30 }}>
+              <div className="contact-icon" style={{ }}>
+                <a href="mailto:tartu.alternativearts@gmail.com" className="contact-icon icon" target="blank">
+                  <i class="fa-regular fa-envelope" style={{ fontSize: 80, padding: 20, paddingTop: 0, borderRadius: "50%" }}></i>
+                  <p style={{ margin: -10, opacity: 0.5 }}>tartu.alternativearts@gmail.com</p>
+                </a>
+              </div>
+          </div>
         </div>
       </div>
 
-      <div style={{ height: "100%", width: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
+      {/* <div style={{ height: "100%", width: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
         <div style={{ width: "100%", padding: "0 0", textAlign: "center", position: "relative" }}>
           <p className='sub-title'>
             KORDUMA KIPPUVAD KÜSIMUSED
           </p>
         </div>
 
-        <div className="accordion" style={{ width: "100%", maxWidth: "720px", margin: "15px 0px 45px 0px "}}>
+        <div className="accordion" style={{ width: "100%", maxWidth: "720px", margin: "15px 0px 45px 0px " }}>
           <Accordion title="Lühike küsimus" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
           <Accordion title="Üks hästi pikk küsimus mis tahab väga palju asju teada" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />
           <Accordion title="Keskmise pikkusega küsimus" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
         </div>
-      </div>
-
-
-      <div style={{ width: "100%", padding: "0 0", textAlign: "center", position: "relative" }}>
-        <p className='sub-title'>
-          KIRJUTA MEILE!
-        </p>
-
-        <div style={{
-          display: "flex", flexDirection: "row", width: "80%", maxWidth: 600,
-          margin: "0 auto", marginBottom: 60, alignItems: "center", height: 105
-        }}>
-          <div className="contact-icon" style={{ width: "200px" }}>
-
-            <a href="https://www.instagram.com/crymeariver.tartu/" className="contact-icon icon" target="blank">
-              <i class="fa-brands fa-instagram" style={{ fontSize: 60, padding: 20, borderRadius: "50%" }}></i>
-              @crymeariver.tartu
-            </a>
-          </div>
-
-          <div className="contact-icon" style={{ width: "300px" }}>
-            <a href="mailto:tartu.alternativearts@gmail.com" className="contact-icon icon" target="blank">
-              <i class="fa-regular fa-envelope" style={{ fontSize: 60, padding: 20, borderRadius: "50%" }}></i>
-              tartu.alternativearts@gmail.com
-            </a>
-          </div>
-          <div className="contact-icon" style={{ width: "200px" }}>
-            <a href="https://www.facebook.com/crymeariver.tattoofest" className="contact-icon icon" target="blank">
-              <i class="fa-brands fa-facebook" style={{ fontSize: 60, padding: 20, borderRadius: "50%" }}></i>
-              @crymeariver.tattoofest
-            </a>
-          </div>
-        </div>
-
-      </div>
+      </div> */}
 
       {/* FOOTER */}
       <Footer />

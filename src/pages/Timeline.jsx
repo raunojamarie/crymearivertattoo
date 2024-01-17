@@ -81,10 +81,10 @@ const Timeline = () => {
 
         <div style={{ position: "absolute", width: "100%", top: 30, zIndex: 1 }}></div>
       </div>
-      <div style={{ position: "relative", width: navbarCollapse ? isMobile ? "100%" : "90%" : width - 400, margin: "0 auto 0 auto", marginTop: 40, backgroundColor: GREEN_COLOR + "33", height: 980 }}>
+      <div style={{ position: "relative", width: navbarCollapse ? isMobile ? "100%" : "90%" : width - 400, margin: "0 auto 0 auto", marginTop: 40, backgroundColor: GREEN_COLOR + "33", height: 500 }}>
         <div style={{
           borderLeft: "6px solid " + GREEN_COLOR,
-          height: "80%",
+          height: 300,
           position: "absolute",
           left: "50%",
           marginLeft: -3,
@@ -92,13 +92,22 @@ const Timeline = () => {
         }}>
         </div>
 
-        <TimelineSlot width={width} left={false} top={60} time={"12:00"} title={"ürituse avapauk"} text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mauris massa, condimentum at consectetur ac, fermentum a libero."} />
-        <TimelineSlot width={width} left={true} top={180} time={"13:00"} title={"mingi asi"} text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mauris massa, condimentum at consectetur ac, fermentum a libero."} />
-        <TimelineSlot width={width} left={false} top={300} time={"14:00"} title={"tätoveerimine"} text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mauris massa, condimentum at consectetur ac, fermentum a libero."} />
-        <TimelineSlot width={width} left={true} top={420} time={"15:30"} title={"mingi neljas asi"} text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mauris massa, condimentum at consectetur ac, fermentum a libero."} />
-        <TimelineSlot width={width} left={false} top={540} time={"17:45"} title={"mingi muu asi"} text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mauris massa, condimentum at consectetur ac, fermentum a libero."} />
-        <TimelineSlot width={width} left={true} top={660} time={"19:30"} title={"pidu"} text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mauris massa, condimentum at consectetur ac, fermentum a libero."} />
-        <TimelineSlot width={width} left={false} top={780} time={"23:30"} title={"afterparty"} text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mauris massa, condimentum at consectetur ac, fermentum a libero."} />
+        {day === 1 && <>
+          <TimelineSlot width={width} left={false} top={60} time={"11:00"} title={"ürituse avamine"} text={""} />
+          <TimelineSlot width={width} left={true} top={180} time={"20:00"} title={"esimese päeva lõpp"} text={""} />
+          <TimelineSlot width={width} left={false} top={300} time={"20:00"} title={"afterparty Kivi baaris"} text={""} />          
+        </>}
+        {day === 2 && <>
+          <TimelineSlot width={width} left={false} top={60} time={"11:00"} title={"uksed"} text={""} />
+          <TimelineSlot width={width} left={true} top={180} time={"20:00"} title={"teise päeva lõpp"} text={""} />
+          <TimelineSlot width={width} left={false} top={300} time={"20:00"} title={"afterparty Kivi baaris"} text={""} />          
+        </>}
+        {day === 3 && <>
+          <TimelineSlot width={width} left={false} top={60} time={"11:00"} title={"uksed"} text={""} />
+          <TimelineSlot width={width} left={true} top={180} time={"13:00"} title={"autasustamine"} text={""} />
+          <TimelineSlot width={width} left={false} top={300} time={"15:00"} title={"ürituse lõpp"} text={""} />          
+        </>}
+
       </div>
     </div>
   );
@@ -119,7 +128,6 @@ export const TimelineSlot = ({ width, left, top, title, text, time }) => {
         top: top,
         marginLeft: -31,
         borderRadius: "50%",
-
         border: "6px solid rgb(0,0,0,0)",
       }}>
         <div className="timeline-inner-circle" style={{
@@ -150,13 +158,13 @@ export const TimelineSlot = ({ width, left, top, title, text, time }) => {
           height: 25,
           width: 25,
           position: "absolute",
-          left: left ? -5 : "auto",
+          left: left ? -2 : "auto",
           right: left ? "auto" : -5,
           top: -15,
           borderRadius: "50%",
           backgroundColor: GREEN_COLOR,
         }}>
-          <p className="color-white" style={{ margin: 0, marginLeft: left ? -75 : 35, marginTop: -10, fontSize: 28, fontWeight: 800, fontFamily: 'Kanit'  }}>{time}</p>
+          <p className="color-white" style={{ margin: 0, marginLeft: left ? -85 : 32, marginTop: -10, fontSize: 28, fontWeight: 800, fontFamily: 'Kanit'  }}>{time}</p>
         </div>
         <div style={{
           overflow: "hidden",
@@ -165,7 +173,7 @@ export const TimelineSlot = ({ width, left, top, title, text, time }) => {
           left: left ? -75 : "auto",
           right: left ? "auto" : -75,
           top: 20,
-          width: isMobile ? "150%" : navbarCollapse ? "100%" : "70%",
+          width: isMobile ? "150%" : navbarCollapse ? "100%" : "90%",
           height: 110
         }}>
           <div style={{ backgroundColor: GREEN_COLOR }}>
