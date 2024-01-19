@@ -20,7 +20,7 @@ const Timeline = () => {
   return (
     <div className="black-bacgkround" style={{ paddingBottom: 80}}>
       <div style={{ position: "relative"}}>
-        <p  className="big-title-green">AJAKAVA</p>
+        <p  className="big-title-green timeline-title">AJAKAVA</p>
         <div style={{ display: "flex", justifyContent: "center", alignContent: "center", gap: 10 }}>
           <button onClick={() => handleDayClick(1)} className={`timeline-btn ${day === 1 ? "timeline-btn-active" : ""}`}>
             <p style={{ }}>24.05</p>
@@ -170,14 +170,14 @@ export const TimelineSlot = ({ width, left, top, title, text, time }) => {
           overflow: "hidden",
           textAlign: left ? "left" : "right",
           position: "absolute",
-          left: left ? -75 : "auto",
-          right: left ? "auto" : -75,
+          left: left ? -85 : "auto",
+          right: left ? "auto" : -85,
           top: 20,
-          width: isMobile ? "150%" : navbarCollapse ? "100%" : "90%",
+          width: isMobile ? "180%" : navbarCollapse ? "100%" : "90%",
           height: 110
         }}>
           <div style={{ backgroundColor: GREEN_COLOR }}>
-            <p className="color-white" style={{ margin: 0, fontSize: isMobile ? 16 : 24, padding: "6px 6px", fontFamily: "Kanit", fontWeight: 900, }}>{title}</p>
+            <p className="color-white timeline-box-title" style={{ margin: 0, fontSize: isMobile ? 20 : 24, padding: "6px 6px", fontFamily: "Kanit", fontWeight: 900 }}>{title}</p>
           </div>
           <div style={{ padding: 4 }}>
             <p className="color-white" style={{ margin: 0, fontSize: 18, fontFamily: "Kanit" }}>{text}</p>

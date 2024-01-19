@@ -6,13 +6,13 @@ const Haaletus = () => {
     <>
 
       <div style={{ width: "100%", padding: "0 0", textAlign: "center", position: "relative" }}>
-        <p className="big-title-orange">
+        <p className="big-title-orange rahvahaaletus-title">
           rahvahääletus
         </p>
       </div>
 
-      <div className="align" style={{ position: "relative"}}>
-        <p className="text-black" style={{ fontSize: 28, fontWeight:"500", position: "absolute", top: "calc(50% - 80px)", left:"calc(50% - 100px)"}}>
+      <div className="content-wrapper align" style={{ position: "relative"}}>
+        <p className="text-black" style={{ fontSize: 28, fontWeight:"500", position: "absolute", top: "calc(50% - 80px)", left: "calc(50% - 100px)"}}>
             Info peagi tulekul!
         </p>
         <p className="text-black blur disabled">

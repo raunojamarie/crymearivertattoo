@@ -131,7 +131,7 @@ const Artists = () => {
 
   return (
     <div style={{ padding: "0px 0" }}>
-      <p className="big-title-orange" style={{ paddingBottom: 20 }}>artistid</p>
+      <p className="big-title-orange artists-title" style={{ paddingBottom: 20 }}>artistid</p>
 
 
       <div className="align " style={{ position: "relative" }}>
@@ -147,7 +147,7 @@ const Artists = () => {
           </button>
           {ARTISTS_DATA.slice(currentPage, currentPage + 2).map((artist, index) => {
             return index % 2 === 0
-              ? <div className="artist-content">
+              ? <div className="artist-content artist-content-img-left">
                 <div className="artist-content-img">
                   <div className="circular">
                     <img className="artist-img" alt="" src={artist.img}></img>
@@ -160,7 +160,7 @@ const Artists = () => {
                   </p>
                 </div>
               </div>
-              : <div className="artist-content">
+              : <div className="artist-content artist-content-img-right">
                 <div className="artist-content-text" style={{ textAlign: "right" }}>
                   <p className="artists-sub-title" style={{ fontSize: isMobile ? 24 : 24 }}>{artist.name}</p>
                   <p className="text-black container" style={{ fontSize: isMobile ? 14 : 18 }}>

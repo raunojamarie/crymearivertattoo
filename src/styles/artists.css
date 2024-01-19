@@ -12,14 +12,6 @@
   margin: 0 auto;
 }
 
-.text-black {
-  font-weight: 300;
-  font-size: 18px;
-  color: var(--black);
-  width: 720px;
-  margin: 20px 0px 45px 0px;
-}
-
 .artists-sub-title {
   font-size: 24px;
   margin: 0;
@@ -72,12 +64,6 @@
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-}
-@media only screen and (max-width: 850px) {
-  .circular {
-    width: 200px;
-    height: 200px;
-  }
 }
 
 .container {

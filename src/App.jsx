@@ -1,4 +1,5 @@
 import './styles/App.css';
+import './styles/responsive.css';
 import headerText from "./assets/logo.png";
 import tattooFest from "./assets/tattoofest.png";
 import barbwire from "./assets/barbwire.png";
@@ -48,7 +49,6 @@ const App = () => {
         paddingLeft: 40,
         paddingRight: 40,
         zIndex: 999,
-        opacity: isMobile ? 0 : 1
       }}>
         <div className="navbar-menu color-white" style={{
           display: "flex",
@@ -59,7 +59,7 @@ const App = () => {
         }}>
           {navbarCollapse
             ? <div className="navbar-logo" style={{
-              height: 100, display: "flex", color: ORANGE_COLOR, margin: 0
+              height: 100, display: "flex", color: ORANGE_COLOR, margin: 0,
             }}>
               <p style={{ fontSize: 24 }}>crymearivertattoo</p>
             </div>
@@ -150,25 +150,25 @@ const App = () => {
 
       <div id="kontakt">
         <div style={{ width: "100%", padding: "0 0", textAlign: "center", position: "relative" }}>
-          <p className="big-title-orange">
+          <p className="big-title-orange contact-title">
             KONTAKT
           </p>
 
           <div style={{ position: "absolute", width: "100%", top: 30, zIndex: 1 }}></div>
-          <div style={{
+          <div className="contact-wrapper" style={{
             display: "flex", flexDirection: isTablet ? "column" : "row",
             width: "80%", maxWidth: 1200, margin: "0 auto", marginBottom: 40, alignItems: "center"
           }}>
-
-
-            <div style={{ flex: 1, height: "100%", paddingTop: "20px" }}>
-              <p className='sub-title'>
-                KUS ME ASUME?
+            <div style={{ width: "100%", flex: 1, height: "100%", paddingTop: "20px" }}>
+              <p className='sub-title contact-sub-title'>
+                <span>KUS</span>
+                <span className="conctact-sub-title-space" style={{padding: "0 20px"}}>ME</span>
+                <span>ASUME?</span>
               </p>
               <iframe
                 width="100%"
                 height={450}
-                style={{ border: "6px solid rgb(0,0,0,0)" }}
+                style={{ border: "none" }}
                 loading="lazy"
                 allowfullscreen
                 referrerpolicy="no-referrer-when-downgrade"
@@ -180,8 +180,8 @@ const App = () => {
           <div style={{ display: "grid", placeContent: "center", width: "100%", padding: "0 0", textAlign: "center", position: "relative", paddingBottom: 40, marginTop: -30 }}>
               <div className="contact-icon" style={{ }}>
                 <a href="mailto:tartu.alternativearts@gmail.com" className="contact-icon icon" target="blank">
-                  <i class="fa-regular fa-envelope" style={{ fontSize: 80, padding: 20, paddingTop: 0, borderRadius: "50%" }}></i>
-                  <p style={{ margin: -10, opacity: 0.5 }}>tartu.alternativearts@gmail.com</p>
+                  <i class="fa-regular fa-envelope contact-icon-i" style={{ fontSize: 80, padding: 20, paddingTop: 0, borderRadius: "50%" }}></i>
+                  <p className="contact-icon-text" style={{ margin: -10, opacity: 0.5 }}>tartu.alternativearts@gmail.com</p>
                 </a>
               </div>
           </div>

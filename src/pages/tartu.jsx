@@ -18,8 +18,8 @@ const Tartu = () => {
           </p>
         </div>
 
-        <div className="align" style={{ position: "relative"}}>
-        <p className="text-white" style={{ fontSize: 28, color:"white", fontWeight:"500", position: "absolute", top: "calc(50% - 80px)", left:"calc(50% - 100px)"}}>
+        <div className="align content-wrapper" style={{ position: "relative"}}>
+        <p className="text-white" style={{ width: "fit-content", fontSize: 28, color:"white", fontWeight:"500", position: "absolute", top: "calc(50% - 80px)", left:"calc(50% - 100px)"}}>
             Info peagi tulekul!
         </p>
           <p className="text-white blur disabled">
