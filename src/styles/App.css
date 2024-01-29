@@ -397,3 +397,14 @@
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
 }
+
+.burger-option {
+  color: white;
+  text-decoration: none;
+  font-family: 'Rubik Mono One', monospace;
+  padding-top: 30px;
+  text-transform: lowercase;
+}
+
+.burger-menu {
+}

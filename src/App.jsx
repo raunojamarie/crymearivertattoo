@@ -1,6 +1,7 @@
 import './styles/App.css';
 import './styles/responsive.css';
 import headerText from "./assets/logo.png";
+import nimi from "./assets/nimi.png";
 import tattooFest from "./assets/tattoofest.png";
 import barbwire from "./assets/barbwire.png";
 import kett from "./assets/kett.png";
@@ -18,8 +19,9 @@ import Live from './pages/Live.jsx';
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import Haaletus from './pages/Haaletus.jsx';
 import Tartu from './pages/Tartu.jsx';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Accordion from './components/accordion.jsx';
+import { AnimatePresence, motion } from "framer-motion";
 
 export const ORANGE_COLOR = "#ef880e";
 export const GREEN_COLOR = "#7d922b";
@@ -39,16 +41,60 @@ const App = () => {
   const isBreakpoint2 = width <= 540;
   const navbarCollapse = width <= 990;
 
+  const [burgerOpen, setBurgerOpen] = useState(false);
+
+  const sidebar = {
+    open: (height = 1000) => ({
+      clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
+      transition: {
+        type: "spring",
+        stiffness: 20,
+        restDelta: 2
+      }
+    }),
+    closed: {
+      clipPath: "circle(30px at 40px 40px)",
+      transition: {
+        delay: 0.5,
+        type: "spring",
+        stiffness: 400,
+        damping: 40
+      }
+    }
+  };
+
   return (
     <div id="home" className="app-root" style={{ height: "100%", width: "100%" }}>
+      <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 70, backgroundColor: "black" }}>
+      </div>
+      {burgerOpen &&
+          <motion.nav
+          initial={false}
+          animate={burgerOpen ? "open" : "closed"}
+          custom={200}
+        >
+          <motion.div className="background" variants={sidebar} />
+      <div className="burger-menu" style={{ display: "flex", flexDirection: "column", position: "fixed", paddingLeft: 20, fontSize: 20, justifyContent: "center", top: 70, left: 0, right: 0, backgroundColor: "black", zIndex: 999, borderBottom: "4px solid " + GREEN_COLOR, borderTop: "none", opacity: 0.95 }}>
+          <AnchorLink onClick={() => setBurgerOpen(!burgerOpen)} offset={70} className="burger-option" style={{}} href='#info'>INFO JA PILETID</AnchorLink>
+          <AnchorLink onClick={() => setBurgerOpen(!burgerOpen)} offset={70} className="burger-option" style={{}} href='#live'>LIVE</AnchorLink>
+          <AnchorLink onClick={() => setBurgerOpen(!burgerOpen)} offset={70} className="burger-option" style={{}} href='#artistid'>ARTISTID</AnchorLink>
+          <AnchorLink onClick={() => setBurgerOpen(!burgerOpen)} offset={70} className="burger-option" style={{}} href='#ajakava'>AJAKAVA</AnchorLink>
+          <AnchorLink onClick={() => setBurgerOpen(!burgerOpen)} offset={70} className="burger-option" style={{}} href='#rahvahaaletus'>RAHVAHÄÄLETUS</AnchorLink>
+          <AnchorLink onClick={() => setBurgerOpen(!burgerOpen)} offset={70} className="burger-option" style={{}} href='#tartu'>TARTU 2024</AnchorLink>
+          <AnchorLink onClick={() => setBurgerOpen(!burgerOpen)} offset={70} className="burger-option" style={{}} href='#kontakt'>KONTAKT</AnchorLink>
+          <a>X</a>
+        </div>
+        </motion.nav>
+      }
       <div className="navbar black-bacgkround" style={{
         position: "fixed",
         top: 0, right: 0, left: 0,
-        height: 100,
+        height: isMobile ? 66 : 90,
         display: "flex",
-        paddingLeft: 40,
-        paddingRight: 40,
+        borderBottom: isMobile ? !burgerOpen ? "4px solid #7d922b" : "4px solid black" : "none",
         zIndex: 999,
+        placeContent: "center",
+        opacity: 0.95
       }}>
         <div className="navbar-menu color-white" style={{
           display: "flex",
@@ -59,13 +105,23 @@ const App = () => {
         }}>
           {navbarCollapse
             ? <div className="navbar-logo" style={{
-              height: 100, display: "flex", color: ORANGE_COLOR, margin: 0,
+              height: "100%", display: "flex", gap: 40, color: ORANGE_COLOR, margin: 0, width: "100%"
             }}>
-              <p style={{ fontSize: 24 }}>crymearivertattoo</p>
+              <div style={{ paddingLeft: 20, height: "100%", display: "grid", placeContent: "center" }}>
+                <img style={{ height: 40, margin: "0 auto" }} src={nimi}></img>
+              </div>
+              <div style={{ display: "grid", justifyContent: "end", alignItems: "center", paddingRight: 10, height: "100%", width: "100%" }}>
+                <button onClick={() => setBurgerOpen(!burgerOpen)} style={{ display: "grid", placeContent: "center", outline: "none", height: 50, width: 50, borderRadius: "50%", border: "none", backgroundColor: "black" }}>
+                  {burgerOpen
+                    ? <i style={{ color: "white", fontSize: 34}} class="fa-solid fa-close"></i>
+                    : <i style={{ color: "white", fontSize: 34}} class="fa-solid fa-burger"></i>
+                  }
+                </button>
+              </div>
             </div>
             : <AnchorLink offset={90} className="nav-option navbar-logo" style={{ color: ORANGE_COLOR }} href='#home'>crymearivertattoo</AnchorLink>
           }
-          <div className="navbar-menu-options" style={{ }}>
+          <div className="navbar-menu-options" style={{ paddingRight: 10 }}>
             <AnchorLink offset={90} className="nav-option" style={{}} href='#info'>INFO JA PILETID</AnchorLink>
             <AnchorLink offset={90} className="nav-option" style={{}} href='#live'>LIVE</AnchorLink>
             <AnchorLink offset={90} className="nav-option" style={{}} href='#artistid'>ARTISTID</AnchorLink>
@@ -83,18 +139,32 @@ const App = () => {
         <div style={{
           display: "flex",
           flexDirection: isMobile ? "column" : "row",
-          height: "calc(100% - 100px)",
+          height: isMobile ? "calc(100% - 70px)" : "calc(100% - 90px)",
           margin: "0 auto",
-          marginTop: isMobile ? 0 : 100,
+          marginTop: isMobile ? 70 : 90,
           width: isBreakpoint ? width - 20 : width - 200
         }}>
           <div style={{ flex: 1, display: "grid", justifyContent: "center", alignContent: "center", zIndex: 3 }}>
-            <div style={{ width: "100%" }}>
-              <img style={{ width: "100%" }} src={headerText}></img>
+            <div style={{ width: "100%", display: "grid", placeContent: "center", paddingTop: 20 }}>
+              <img style={{ width: "90%", margin: "0 auto" }} src={headerText}></img>
             </div>
           </div>
           <div className="" style={{ position: "relative", flex: 1, display: "grid", justifyContent: "center", alignContent: isMobile ? "" : "center", zIndex: 3 }}>
-            <img src={loss} style={{ width: "calc(100%)", opacity: 0.5, marginTop: -40 }}></img>
+            <img src={loss} style={{ width: "100%", margin: "0 auto", paddingTop: 60, opacity: 0.5, marginTop: -40 }}></img>
+            <div style={{
+              position: "absolute",
+              marginLeft: "auto",
+              marginRight: "auto",
+              top: 30,
+              left: 0,
+              right: 0,
+              display: "grid",
+              placeContent: "center"
+            }}>
+              <div style={{ width: 60, height: 60, borderRadius: "50%", display: "grid", placeContent: "center" }}>
+                <i style={{ fontSize: 40, color: "white", opacity: 0 }}class="fa-solid fa-chevron-down"></i>
+              </div>
+            </div>
             <div className="counter-wrapper" style={{
               position: "absolute",
               marginLeft: "auto",

@@ -1,3 +1,16 @@
+.centered-absolute-text {
+  position: absolute;
+  font-size: 28px;
+  color: white;
+  width: fit-content;
+  top: 140px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: calc(50% - 50px);
+  z-index: 99;
+}
+
 
 /* TABLET */
 @media only screen and (max-width: 768px) {
@@ -66,13 +79,8 @@
     height: 200px !important;
   }
 
-  .live-starts-text {
+  .centered-absolute-text {
     font-size: 16px !important;
-    width: 260px !important;
-    top: 140px !important;
-    left: 0 !important;
-    right: 0 !important;
-    margin: 0 auto !important;
   }
 
   .container {
