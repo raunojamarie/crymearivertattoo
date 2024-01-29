@@ -11,7 +11,6 @@
   z-index: 99;
 }
 
-
 /* TABLET */
 @media only screen and (max-width: 768px) {
   .big-title-green {
@@ -105,5 +104,12 @@
 @media only screen and (max-width: 425px) {
   .video {
     height: 220px !important;
+  }
+}
+
+/* VERY SMALL MOBILE */
+@media only screen and (max-width: 768px) {
+  .info-title {
+    font-size: 28px !important;
   }
 }

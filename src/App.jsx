@@ -65,7 +65,7 @@ const App = () => {
 
   return (
     <div id="home" className="app-root" style={{ height: "100%", width: "100%" }}>
-      <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 70, backgroundColor: "black" }}>
+      <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: isMobile ? 70 : 90, backgroundColor: "black" }}>
       </div>
       {burgerOpen &&
           <motion.nav
@@ -150,7 +150,7 @@ const App = () => {
             </div>
           </div>
           <div className="" style={{ position: "relative", flex: 1, display: "grid", justifyContent: "center", alignContent: isMobile ? "" : "center", zIndex: 3 }}>
-            <img src={loss} style={{ width: "100%", margin: "0 auto", paddingTop: 60, opacity: 0.5, marginTop: -40 }}></img>
+            <img src={loss} style={{ width: "100%", margin: "0 auto", paddingTop: isMobile ? 60 : 0, opacity: 0.5, marginTop: -40 }}></img>
             <div style={{
               position: "absolute",
               marginLeft: "auto",

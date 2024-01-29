@@ -4,8 +4,7 @@ import { ORANGE_COLOR } from "../App";
 const Info = () => {
   return (
     <>
-
-      <div style={{ width: "100%", padding: "0 0", textAlign: "center", position: "relative" }}>
+      <div>
         <p className="big-title-orange info-title">
           <span>
             <span>
@@ -37,11 +36,10 @@ const Info = () => {
 
       <div style={{ display: "grid", placeContent: "center", width: "100%", padding: "0 0", textAlign: "center", position: "relative" }}>
         <div style={{
-          display: "flex", flexDirection: "row", gap: 20, width: "80%", maxWidth: 600,
+          display: "flex", flexDirection: "row", gap: 40, width: "80%", maxWidth: 600,
           margin: "0 auto", marginBottom: 60, alignItems: "center", height: 105, placeContent: "center"
         }}>
           <div className="contact-icon">
-
             <a href="https://www.instagram.com/crymeariver.tartu/" className="contact-icon icon" target="blank">
               <i class="fa-brands fa-instagram contact-icon-i" style={{ fontSize: 80, padding: 20, borderRadius: "50%" }}></i>
               <p className="contact-icon-text" style={{ margin: -10, opacity: 0.5 }}>@crymeariver.tartu</p>
@@ -54,7 +52,6 @@ const Info = () => {
             </a>
           </div>
         </div>
-
       </div>
 
       <div className="video-wrapper">
