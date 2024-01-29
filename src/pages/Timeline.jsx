@@ -21,6 +21,11 @@ const Timeline = () => {
     <div className="black-bacgkround" style={{ paddingBottom: 80}}>
       <div style={{ position: "relative"}}>
         <p  className="big-title-green timeline-title">AJAKAVA</p>
+        <div className="align content-wrapper">
+        <p className="text-white">
+          Ajakava täieneb jooksvalt
+        </p>
+      </div>
         <div style={{ display: "flex", justifyContent: "center", alignContent: "center", gap: 10 }}>
           <button onClick={() => handleDayClick(1)} className={`timeline-btn ${day === 1 ? "timeline-btn-active" : ""}`}>
             <p style={{ }}>24.05</p>
