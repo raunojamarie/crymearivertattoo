@@ -19,7 +19,7 @@ import Live from './pages/Live.jsx';
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import Haaletus from './pages/Haaletus.jsx';
 import Tartu from './pages/Tartu.jsx';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState,  } from 'react';
 import Accordion from './components/accordion.jsx';
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -32,6 +32,27 @@ const dripEnabled = () => {
   return urlParams.toString().includes("drip");
 }
 
+const useOutsideClick = (callback) => {
+  const ref = useRef();
+
+  useEffect(() => {
+    const handleClick = (event) => {
+      if (ref.current && !ref.current.contains(event.target)) {
+        event.stopPropagation();
+        callback();
+      }
+    };
+
+    document.addEventListener('click', handleClick, true);
+
+    return () => {
+      document.removeEventListener('click', handleClick, true);
+    };
+  }, [ref]);
+
+  return ref;
+};
+
 const App = () => {
   const { height, width } = useWindowDimensions();
 
@@ -42,6 +63,12 @@ const App = () => {
   const navbarCollapse = width <= 990;
 
   const [burgerOpen, setBurgerOpen] = useState(false);
+
+  const handleClickOutside = () => {
+    setBurgerOpen(false);
+  };
+
+  const ref = useOutsideClick(handleClickOutside);
 
   const sidebar = {
     open: (height = 1000) => ({
@@ -74,16 +101,16 @@ const App = () => {
           custom={200}
         >
           <motion.div className="background" variants={sidebar} />
-      <div className="burger-menu" style={{ display: "flex", flexDirection: "column", position: "fixed", paddingLeft: 20, fontSize: 20, justifyContent: "center", top: 70, left: 0, right: 0, backgroundColor: "black", zIndex: 999, borderBottom: "4px solid " + GREEN_COLOR, borderTop: "none", opacity: 0.95 }}>
-          <AnchorLink onClick={() => setBurgerOpen(!burgerOpen)} offset={70} className="burger-option" style={{}} href='#info'>INFO JA PILETID</AnchorLink>
-          <AnchorLink onClick={() => setBurgerOpen(!burgerOpen)} offset={70} className="burger-option" style={{}} href='#live'>LIVE</AnchorLink>
-          <AnchorLink onClick={() => setBurgerOpen(!burgerOpen)} offset={70} className="burger-option" style={{}} href='#artistid'>ARTISTID</AnchorLink>
-          <AnchorLink onClick={() => setBurgerOpen(!burgerOpen)} offset={70} className="burger-option" style={{}} href='#ajakava'>AJAKAVA</AnchorLink>
-          <AnchorLink onClick={() => setBurgerOpen(!burgerOpen)} offset={70} className="burger-option" style={{}} href='#rahvahaaletus'>RAHVAHÄÄLETUS</AnchorLink>
-          <AnchorLink onClick={() => setBurgerOpen(!burgerOpen)} offset={70} className="burger-option" style={{}} href='#tartu'>TARTU 2024</AnchorLink>
-          <AnchorLink onClick={() => setBurgerOpen(!burgerOpen)} offset={70} className="burger-option" style={{}} href='#kontakt'>KONTAKT</AnchorLink>
-          <a>X</a>
-        </div>
+          <div ref={ref} className="burger-menu" style={{ display: "flex", flexDirection: "column", position: "fixed", paddingLeft: 20, fontSize: 20, justifyContent: "center", top: 70, left: 0, right: 0, backgroundColor: "black", zIndex: 999, borderBottom: "4px solid " + GREEN_COLOR, borderTop: "none", opacity: 0.95 }}>
+            <AnchorLink onClick={() => setBurgerOpen(!burgerOpen)} offset={70} className="burger-option" style={{}} href='#info'>INFO JA PILETID</AnchorLink>
+            <AnchorLink onClick={() => setBurgerOpen(!burgerOpen)} offset={70} className="burger-option" style={{}} href='#live'>LIVE</AnchorLink>
+            <AnchorLink onClick={() => setBurgerOpen(!burgerOpen)} offset={70} className="burger-option" style={{}} href='#artistid'>ARTISTID</AnchorLink>
+            <AnchorLink onClick={() => setBurgerOpen(!burgerOpen)} offset={70} className="burger-option" style={{}} href='#ajakava'>AJAKAVA</AnchorLink>
+            <AnchorLink onClick={() => setBurgerOpen(!burgerOpen)} offset={70} className="burger-option" style={{}} href='#rahvahaaletus'>RAHVAHÄÄLETUS</AnchorLink>
+            <AnchorLink onClick={() => setBurgerOpen(!burgerOpen)} offset={70} className="burger-option" style={{}} href='#tartu'>TARTU 2024</AnchorLink>
+            <AnchorLink onClick={() => setBurgerOpen(!burgerOpen)} offset={70} className="burger-option" style={{}} href='#kontakt'>KONTAKT</AnchorLink>
+            <a>X</a>
+          </div>
         </motion.nav>
       }
       <div className="navbar black-bacgkround" style={{
@@ -107,14 +134,16 @@ const App = () => {
             ? <div className="navbar-logo" style={{
               height: "100%", display: "flex", gap: 40, color: ORANGE_COLOR, margin: 0, width: "100%"
             }}>
-              <div style={{ paddingLeft: 20, height: "100%", display: "grid", placeContent: "center" }}>
-                <img style={{ height: 40, margin: "0 auto" }} src={nimi}></img>
-              </div>
+              <AnchorLink offset={90} className="nav-option navbar-logo" style={{ color: ORANGE_COLOR }} href='#home'>
+                <div style={{ paddingLeft: 0, height: "100%", display: "grid", placeContent: "center" }}>
+                  <img style={{ height: 40, margin: "0 auto" }} src={nimi}></img>
+                </div>
+              </AnchorLink>
               <div style={{ display: "grid", justifyContent: "end", alignItems: "center", paddingRight: 10, height: "100%", width: "100%" }}>
                 <button onClick={() => setBurgerOpen(!burgerOpen)} style={{ display: "grid", placeContent: "center", outline: "none", height: 50, width: 50, borderRadius: "50%", border: "none", backgroundColor: "black" }}>
                   {burgerOpen
-                    ? <i style={{ color: "white", fontSize: 34}} class="fa-solid fa-close"></i>
-                    : <i style={{ color: "white", fontSize: 34}} class="fa-solid fa-burger"></i>
+                    ? <i style={{ color: "#7d922b", fontSize: 34}} class="fa-solid fa-close"></i>
+                    : <i style={{ color: "#7d922b", fontSize: 34}} class="fa-solid fa-bars"></i>
                   }
                 </button>
               </div>

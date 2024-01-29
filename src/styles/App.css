@@ -363,7 +363,8 @@
   margin: 20px 0px 45px 0px;
 }
 .text-center-white {
-  position: "relative";
+  position: relative;
+  text-align: center;
   z-index: 4;
   display: grid;
   justify-content: center;
@@ -399,7 +400,4 @@
   font-family: 'Rubik Mono One', monospace;
   padding-top: 30px;
   text-transform: lowercase;
-}
-
-.burger-menu {
 }

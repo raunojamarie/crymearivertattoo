@@ -110,6 +110,10 @@
 /* VERY SMALL MOBILE */
 @media only screen and (max-width: 768px) {
   .info-title {
-    font-size: 28px !important;
+    font-size: 26px !important;
   }
+  .rahvahaaletus-title {
+    font-size: 26px !important;
+  }
+
 }

@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <>
       <div className="color-white black-bacgkround" style={{ width: "100%", height: 100, display: "grid", justifyContent: "center", alignContent: "center" }}>
-        <p className="color-white" style={{ fontSize: 14, fontFamily: 'Rubik Mono One'}}> &copy; Tartu Alternative Arts MTÜ </p>
+        <p className="color-white" style={{ fontSize: 14, fontFamily: 'Rubik Mono One', textAlign: "center"}}> &copy; Tartu Alternative Arts MTÜ </p>
       </div>
     </>
   )
