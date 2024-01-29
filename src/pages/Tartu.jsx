@@ -27,10 +27,6 @@ const Tartu = () => {
             Possimus debitis, impedit quos libero, voluptate doloremque eos expedita,
             iste beatae quam totam itaque laborum sint iusto modi. Perferendis ducimus quod doloremque.
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Possimus debitis, impedit quos libero, voluptate doloremque eos expedita, iste beatae quam totam itaque laborum sint iusto modi.
-            Perferendis ducimus quod doloremque.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Possimus debitis, impedit quos libero, voluptate doloremque eos expedita, iste beatae quam totam itaque laborum sint iusto modi.
-            Perferendis ducimus quod doloremque.
           </p>
           <div className="align padding-bottom">
 
