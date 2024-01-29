@@ -119,7 +119,11 @@ const App = () => {
                 </button>
               </div>
             </div>
-            : <AnchorLink offset={90} className="nav-option navbar-logo" style={{ color: ORANGE_COLOR }} href='#home'>crymearivertattoo</AnchorLink>
+            : <AnchorLink offset={90} className="nav-option navbar-logo" style={{ color: ORANGE_COLOR }} href='#home'>
+                <div style={{ paddingLeft: 0, height: "100%", display: "grid", placeContent: "center" }}>
+                  <img style={{ height: 60, margin: "0 auto" }} src={nimi}></img>
+                </div>
+              </AnchorLink>
           }
           <div className="navbar-menu-options" style={{ paddingRight: 10 }}>
             <AnchorLink offset={90} className="nav-option" style={{}} href='#info'>INFO JA PILETID</AnchorLink>
