@@ -109,6 +109,7 @@ const App = () => {
             <AnchorLink onClick={() => setBurgerOpen(!burgerOpen)} offset={70} className="burger-option" style={{}} href='#rahvahaaletus'>RAHVAHÄÄLETUS</AnchorLink>
             <AnchorLink onClick={() => setBurgerOpen(!burgerOpen)} offset={70} className="burger-option" style={{}} href='#tartu'>TARTU 2024</AnchorLink>
             <AnchorLink onClick={() => setBurgerOpen(!burgerOpen)} offset={70} className="burger-option" style={{}} href='#kontakt'>KONTAKT</AnchorLink>
+            <a>X</a>
           </div>
         </motion.nav>
       }
