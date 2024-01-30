@@ -11,8 +11,8 @@ export default function InitApp() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route exact path="/" element={<AppProd />} />
-        <Route exact path="dev" element={<App />} />
+        <Route exact path="/" element={<App />} />
+        {/* <Route exact path="dev" element={<App />} /> */}
       </Routes>
     </BrowserRouter>
   );
