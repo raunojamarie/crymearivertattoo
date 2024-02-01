@@ -2,13 +2,8 @@ import './styles/App.css';
 import './styles/responsive.css';
 import headerText from "./assets/logo.png";
 import nimi from "./assets/nimi.png";
-import tattooFest from "./assets/tattoofest.png";
-import barbwire from "./assets/barbwire.png";
-import kett from "./assets/kett.png";
 import loss from "./assets/loss.png"
 import drip from "./assets/drip.png";
-import needleLeft from "./assets/needle_left.png";
-import needleRight from "./assets/needle_right.png";
 import { FlipDate } from './components/FlipDate';
 import useWindowDimensions from './useWindowDimensions.jsx';
 import Artists from './pages/Artists';
@@ -20,8 +15,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 import Haaletus from './pages/Haaletus.jsx';
 import Tartu from './pages/Tartu.jsx';
 import { useEffect, useRef, useState,  } from 'react';
-import Accordion from './components/accordion.jsx';
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 export const ORANGE_COLOR = "#ef880e";
 export const GREEN_COLOR = "#7d922b";
