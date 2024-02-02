@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { GREEN_COLOR, ORANGE_COLOR } from "../App";
+import { GREEN_COLOR } from "../App";
 import useWindowDimensions from "../useWindowDimensions";
 import '../styles/timeline.css';
 
