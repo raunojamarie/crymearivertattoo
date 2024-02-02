@@ -19,9 +19,6 @@
   .big-title-green {
       font-size: 50px !important;
   }
-  .timeline-title {
-    padding-bottom: 20px !important;
-  }
   .big-title-orange {
     font-size: 50px !important;
   }
@@ -109,6 +106,9 @@
   }
   .big-title-green {
     font-size: 30px !important;
+  }
+  .timeline-title {
+    font-size: 40px !important;
   }
   .video {
     height: 240px !important;
