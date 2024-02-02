@@ -6,7 +6,7 @@ import '../styles/flipdate.css';
 export const FlipDate = ({ value }) => {
   const divRef = useRef();
   const tickRef = useRef();
-  const [tickValue, setTickValue] = useState(value);
+  const [tickValue, setTickValue] = useState("");
 
   useEffect(() => {
     const didInit = (tick) => {
