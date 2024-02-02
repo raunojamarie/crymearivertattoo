@@ -101,13 +101,6 @@
 }
 
 /* MOBILE */
-@media only screen and (max-width: 425px) {
-  .video {
-    height: 220px !important;
-  }
-}
-
-/* VERY SMALL MOBILE */
 @media only screen and (max-width: 768px) {
   .info-title {
     font-size: 26px !important;
@@ -116,4 +109,34 @@
     font-size: 26px !important;
   }
 
+}
+
+/* MOBILE SMALLER */
+@media only screen and (max-width: 560px) {
+  .video {
+    height: 240px !important;
+  }
+}
+
+/* VERY SMALL MOBILE */
+@media only screen and (max-width: 425px) {
+  .info-title {
+    font-size: 22px !important;
+  }
+  .rahvahaaletus-title {
+    font-size: 22px !important;
+  }
+  .video {
+    height: 180px !important;
+  }
+  #ajakava {
+    zoom: 0.8 !important;
+  }
+}
+
+/* SUPER SMALL MOBILE */
+@media only screen and (max-width: 340px) {
+  .nav-logo-mobile div img {
+    height: 30px !important;
+  }
 }

@@ -125,7 +125,7 @@ const App = () => {
           justifyContent: "center",
         }}>
           {navbarCollapse
-            ? <div className="navbar-logo" style={{
+            ? <div className="navbar-logo nav-logo-mobile" style={{
               height: "100%", display: "flex", gap: 40, color: ORANGE_COLOR, margin: 0, width: "100%"
             }}>
               <AnchorLink offset={90} className="nav-option navbar-logo" style={{ color: ORANGE_COLOR }} href='#home'>
@@ -161,7 +161,7 @@ const App = () => {
         </div>
       </div>
 
-      <div className="main-header" style={{ position: "relative", height: "100vh" }}>
+      <div className="main-header" style={{ overflow: "hidden", position: "relative", height: "100vh" }}>
         {dripEnabled() && <img src={drip} alt="" style={{ position: "absolute", width: "100%", height: 268, bottom: -268, left: 0, zIndex: 1 }}></img>}
         <div style={{
           display: "flex",
@@ -176,7 +176,7 @@ const App = () => {
               <img style={{ width: "90%", margin: "0 auto" }} src={headerText}></img>
             </div>
           </div>
-          <div className="" style={{ position: "relative", flex: 1, display: "grid", justifyContent: "center", alignContent: isMobile ? "" : "center", zIndex: 3 }}>
+          <div className="" style={{ position: "relative", flex: 1, display: height < 550 && isMobile ? "none" : "grid", justifyContent: "center", alignContent: isMobile ? "" : "center", zIndex: 3 }}>
             <img src={loss} style={{ width: "100%", margin: "0 auto", paddingTop: isMobile ? 60 : 0, opacity: 0.5, marginTop: -40 }}></img>
             <div style={{
               position: "absolute",
