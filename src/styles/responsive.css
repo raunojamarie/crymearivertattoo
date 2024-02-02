@@ -15,7 +15,7 @@
 @media only screen and (max-height: 570px) {
   .main-header {
     height: 100% !important;
-    padding: 60px 0 !important;
+    padding: 20px 0 20px 0 !important;
   }
 }
 
