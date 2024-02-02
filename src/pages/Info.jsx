@@ -30,7 +30,7 @@ const Info = () => {
         </p>
       </div>
 
-      <div className="align padding-bottom">
+      <div className="align padding-bottom mobile-padding-bottom" style={{  }}>
         <a href="https://www.piletilevi.ee/est/piletid/festival/mitmesugust2/cry-me-a-river-tattoo-ja-elustiilifestival-89403/?design&shop_provider=tartu2024&fbclid=IwAR2lfN8GSvV-PKPlQVJYCRgSTnM80l52hpm4JZQaenF-Vb_GRkUJT2MFGFc" target="blank" className="button-orange">Piletid</a>
       </div>
 

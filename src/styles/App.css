@@ -122,29 +122,17 @@
   color: var(--orange);
 }
 
-.main-header::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 100;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 1);
-  /* Change the color and opacity as needed */
-  z-index: 1;
-}
-
 .main-header {
-  /*background-image: url("https://www.gannett-cdn.com/-mm-/05e97d16e7fb53439a4222e53dcba47d4d31dde8/c=0-97-1280-584/local/-/media/USATODAY/USATODAY/2014/06/04/1401911998000-AP-Color-Cosmos.jpg?width=3200&height=1680&fit=crop");
-  */
-  background-color: #202124;
+  background-color: black;
   top: 100%;
   background-position: center;
   color: var(--black);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
 }
 
 .header-right-side {

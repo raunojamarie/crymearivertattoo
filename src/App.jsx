@@ -161,7 +161,7 @@ const App = () => {
         </div>
       </div>
 
-      <div className="main-header" style={{ overflow: "hidden", position: "relative", height: "100vh" }}>
+      <div className="main-header" style={{ height: isMobile ? "100%" : "100vh", paddingBottom: isMobile ? 40 : 0 }}>
         {dripEnabled() && <img src={drip} alt="" style={{ position: "absolute", width: "100%", height: 268, bottom: -268, left: 0, zIndex: 1 }}></img>}
         <div style={{
           display: "flex",
@@ -176,7 +176,7 @@ const App = () => {
               <img style={{ width: "90%", margin: "0 auto" }} src={headerText}></img>
             </div>
           </div>
-          <div className="" style={{ position: "relative", flex: 1, display: height < 550 && isMobile ? "none" : "grid", justifyContent: "center", alignContent: isMobile ? "" : "center", zIndex: 3 }}>
+          <div className="" style={{ position: "relative", flex: 1, display: "grid", justifyContent: "center", alignContent: isMobile ? "" : "center", zIndex: 3 }}>
             <img src={loss} style={{ width: "100%", margin: "0 auto", paddingTop: isMobile ? 60 : 0, opacity: 0.5, marginTop: -40 }}></img>
             <div style={{
               position: "absolute",
