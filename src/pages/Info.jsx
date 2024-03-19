@@ -58,6 +58,10 @@ const Info = () => {
         <iframe className="video" src="https://www.youtube.com/embed/7LYlaOOkzW4?si=1tNNdf-OnBzVtu7i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
         </iframe>
       </div>
+      <div className="video-wrapper">
+        <iframe className="video" src="https://www.youtube.com/embed/orvT8pvP-eI?si=nCPGV9qelH_GKmOm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+        </iframe>
+      </div>
     </>
   )
 }
