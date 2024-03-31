@@ -1,5 +1,5 @@
 import React from "react";
-import { ORANGE_COLOR } from "../App";
+import { t } from "../components/translation/translation";
 
 const Info = () => {
   return (
@@ -8,13 +8,13 @@ const Info = () => {
         <p className="big-title-orange info-title">
           <span>
             <span>
-              info
+              {t("info-title-0")}
             </span>
             <span className="mobile-title-padding" style={{ padding: "0px 20px" }}>
-              ja
+              {t("info-title-1")}
             </span>
             <span>
-              piletid
+              {t("info-title-2")}
             </span>
           </span>
 
@@ -23,15 +23,12 @@ const Info = () => {
 
       <div className="align content-wrapper">
         <p className="text-black">
-          Tere tulemast esimesele CRY ME A RIVER tattoofestivalile Tartu Sadamateatris!
-          Ürituse kolmel päeval teevad pilte tätoveerijaid Eestist ning naaberriikidest.
-          Pop-up poed, tänavatoit, alternatiivkunst ja esinejad Sadamateatris ning Kivi baaris!
-          Piletid Piletilevist ning kohapealt.
+          {t("info-text")}
         </p>
       </div>
 
       <div className="align padding-bottom mobile-padding-bottom" style={{  }}>
-        <a href="https://www.piletilevi.ee/est/piletid/festival/mitmesugust2/cry-me-a-river-tattoo-ja-elustiilifestival-89403/?design&shop_provider=tartu2024&fbclid=IwAR2lfN8GSvV-PKPlQVJYCRgSTnM80l52hpm4JZQaenF-Vb_GRkUJT2MFGFc" target="blank" className="button-orange">Piletid</a>
+        <a href="https://www.piletilevi.ee/est/piletid/festival/mitmesugust2/cry-me-a-river-tattoo-ja-elustiilifestival-89403/?design&shop_provider=tartu2024&fbclid=IwAR2lfN8GSvV-PKPlQVJYCRgSTnM80l52hpm4JZQaenF-Vb_GRkUJT2MFGFc" target="blank" className="button-orange">{t("tickets")}</a>
       </div>
 
       <div style={{ display: "grid", placeContent: "center", width: "100%", padding: "0 0", textAlign: "center", position: "relative" }}>

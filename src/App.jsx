@@ -16,6 +16,8 @@ import Haaletus from './pages/Haaletus.jsx';
 import Tartu from './pages/Tartu.jsx';
 import { useEffect, useRef, useState,  } from 'react';
 import { motion } from "framer-motion";
+import { t } from './components/translation/translation';
+import { useNavigate } from 'react-router-dom';
 
 export const ORANGE_COLOR = "#ef880e";
 export const GREEN_COLOR = "#7d922b";
@@ -57,6 +59,7 @@ const App = () => {
   const navbarCollapse = width <= 990;
 
   const [burgerOpen, setBurgerOpen] = useState(false);
+  const navigate = useNavigate();
 
   const handleClickOutside = () => {
     setBurgerOpen(false);
@@ -84,6 +87,22 @@ const App = () => {
     }
   };
 
+  const handleLanguageChange = () => {
+    if (window.location.href.includes('/en')) {
+      navigate("/")
+    } else {
+      navigate("/en")
+    }  
+  }
+
+  const renderLanguageText = () => {
+    if (window.location.href.includes('/en')) {
+      return "EN";
+    } else {
+      return "ET";
+    }  
+  }
+
   return (
     <div id="home" className="app-root" style={{ height: "100%", width: "100%" }}>
       <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: isMobile ? 70 : 90, backgroundColor: "black" }}>
@@ -96,13 +115,13 @@ const App = () => {
         >
           <motion.div className="background" variants={sidebar} />
           <div ref={ref} className="burger-menu" style={{ display: "flex", flexDirection: "column", position: "fixed", paddingLeft: 20, fontSize: 20, justifyContent: "center", top: 70, left: 0, right: 0, backgroundColor: "black", zIndex: 999, borderBottom: "4px solid " + GREEN_COLOR, borderTop: "none", opacity: 0.95 }}>
-            <AnchorLink onClick={() => setBurgerOpen(!burgerOpen)} offset={70} className="burger-option" style={{}} href='#info'>INFO JA PILETID</AnchorLink>
-            <AnchorLink onClick={() => setBurgerOpen(!burgerOpen)} offset={70} className="burger-option" style={{}} href='#live'>LIVE</AnchorLink>
-            <AnchorLink onClick={() => setBurgerOpen(!burgerOpen)} offset={70} className="burger-option" style={{}} href='#artistid'>ARTISTID</AnchorLink>
-            <AnchorLink onClick={() => setBurgerOpen(!burgerOpen)} offset={70} className="burger-option" style={{}} href='#ajakava'>AJAKAVA</AnchorLink>
-            <AnchorLink onClick={() => setBurgerOpen(!burgerOpen)} offset={70} className="burger-option" style={{}} href='#rahvahaaletus'>RAHVAHÄÄLETUS</AnchorLink>
-            <AnchorLink onClick={() => setBurgerOpen(!burgerOpen)} offset={70} className="burger-option" style={{}} href='#tartu'>TARTU 2024</AnchorLink>
-            <AnchorLink onClick={() => setBurgerOpen(!burgerOpen)} offset={70} className="burger-option" style={{}} href='#kontakt'>KONTAKT</AnchorLink>
+            <AnchorLink onClick={() => setBurgerOpen(!burgerOpen)} offset={70} className="burger-option" style={{}} href='#info'>{t("info")}</AnchorLink>
+            <AnchorLink onClick={() => setBurgerOpen(!burgerOpen)} offset={70} className="burger-option" style={{}} href='#live'>{t("live")}</AnchorLink>
+            <AnchorLink onClick={() => setBurgerOpen(!burgerOpen)} offset={70} className="burger-option" style={{}} href='#artistid'>{t("artistid")}</AnchorLink>
+            <AnchorLink onClick={() => setBurgerOpen(!burgerOpen)} offset={70} className="burger-option" style={{}} href='#ajakava'>{t("ajakava")}</AnchorLink>
+            <AnchorLink onClick={() => setBurgerOpen(!burgerOpen)} offset={70} className="burger-option" style={{}} href='#rahvahaaletus'>{t("rahvahaaletus")}</AnchorLink>
+            <AnchorLink onClick={() => setBurgerOpen(!burgerOpen)} offset={70} className="burger-option" style={{}} href='#tartu'>{t("tartu")}</AnchorLink>
+            <AnchorLink onClick={() => setBurgerOpen(!burgerOpen)} offset={70} className="burger-option" style={{}} href='#kontakt'>{t("kontakt")}</AnchorLink>
             <a>X</a>
           </div>
         </motion.nav>
@@ -149,14 +168,14 @@ const App = () => {
               </AnchorLink>
           }
           <div className="navbar-menu-options" style={{ paddingRight: 10 }}>
-            <AnchorLink offset={90} className="nav-option" style={{}} href='#info'>INFO JA PILETID</AnchorLink>
-            <AnchorLink offset={90} className="nav-option" style={{}} href='#live'>LIVE</AnchorLink>
-            <AnchorLink offset={90} className="nav-option" style={{}} href='#artistid'>ARTISTID</AnchorLink>
-            <AnchorLink offset={90} className="nav-option" style={{}} href='#ajakava'>AJAKAVA</AnchorLink>
-            <AnchorLink offset={90} className="nav-option" style={{}} href='#rahvahaaletus'>RAHVAHÄÄLETUS</AnchorLink>
-            <AnchorLink offset={90} className="nav-option" style={{}} href='#tartu'>TARTU 2024</AnchorLink>
-            <AnchorLink offset={90} className="nav-option" style={{}} href='#kontakt'>KONTAKT</AnchorLink>
-            <p className="nav-option">ET</p>
+            <AnchorLink offset={90} className="nav-option" style={{}} href='#info'>{t("info")}</AnchorLink>
+            <AnchorLink offset={90} className="nav-option" style={{}} href='#live'>{t("live")}</AnchorLink>
+            <AnchorLink offset={90} className="nav-option" style={{}} href='#artistid'>{t("artistid")}</AnchorLink>
+            <AnchorLink offset={90} className="nav-option" style={{}} href='#ajakava'>{t("ajakava")}</AnchorLink>
+            <AnchorLink offset={90} className="nav-option" style={{}} href='#rahvahaaletus'>{t("rahvahaaletus")}</AnchorLink>
+            <AnchorLink offset={90} className="nav-option" style={{}} href='#tartu'>{t("tartu")}</AnchorLink>
+            <AnchorLink offset={90} className="nav-option" style={{}} href='#kontakt'>{t("kontakt")}</AnchorLink>
+            <p className="nav-option" onClick={handleLanguageChange}>{renderLanguageText()}</p>
           </div>
         </div>
       </div>
@@ -202,20 +221,20 @@ const App = () => {
               textAlign: "center",
               width: "fit-content"
             }}>
-              <p className='color-white' style={{ textAlign: "left", paddingLeft: 12, padding: 0, margin: 0, fontSize: 24, fontWeight: 800 }}>ALGUSENI ON JÄÄNUD</p>
+              <p className='color-white' style={{ textAlign: "left", paddingLeft: 12, padding: 0, margin: 0, fontSize: 24, fontWeight: 800 }}>{t('countdown')}</p>
               <FlipDate />
               <div style={{ display: "flex", height: 30, width: "100%", fontSize: 18, color: ORANGE_COLOR, textTransform: "lowercase", fontWeight: 800 }}>
                 <div style={{ flex: 1, margin: 4, display: "grid", alignContent: "center", justifyContent: "center" }}>
-                  <p style={{ margin: 0 }}>PÄEVA</p>
+                  <p style={{ margin: 0 }}>{t('days')}</p>
                 </div>
                 <div style={{ flex: 1, margin: 4, display: "grid", alignContent: "center", justifyContent: "center" }}>
-                  <p style={{ margin: 0 }}>TUNDI</p>
+                  <p style={{ margin: 0 }}>{t('hours')}</p>
                 </div>
                 <div style={{ flex: 1, margin: 4, display: "grid", alignContent: "center", justifyContent: "center" }}>
-                  <p style={{ margin: 0 }}>MINUTIT</p>
+                  <p style={{ margin: 0 }}>{t('minutes')}</p>
                 </div>
                 <div style={{ flex: 1, margin: 4, display: "grid", alignContent: "center", justifyContent: "center" }}>
-                  <p style={{ margin: 0 }}>SEKUNDIT</p>
+                  <p style={{ margin: 0 }}>{t('seconds')}</p>
                 </div>
               </div>
             </div>
@@ -248,7 +267,7 @@ const App = () => {
       <div id="kontakt">
         <div style={{ width: "100%", padding: "0 0", textAlign: "center", position: "relative" }}>
           <p className="big-title-orange contact-title">
-            KONTAKT
+            {t("contact-title")}
           </p>
 
           <div style={{ position: "absolute", width: "100%", top: 30, zIndex: 1 }}></div>
@@ -258,9 +277,9 @@ const App = () => {
           }}>
             <div style={{ width: "100%", flex: 1, height: "100%", paddingTop: "20px" }}>
               <p className='sub-title contact-sub-title'>
-                <span>KUS</span>
-                <span className="conctact-sub-title-space" style={{padding: "0 20px"}}>ME</span>
-                <span>ASUME?</span>
+                <span>{t("contact-sub-title-0")}</span>
+                <span className="conctact-sub-title-space" style={{padding: "0 20px"}}>{t("contact-sub-title-1")}</span>
+                <span>{t("contact-sub-title-2")}</span>
               </p>
               <iframe
                 width="100%"

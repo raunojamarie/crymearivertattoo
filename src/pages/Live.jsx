@@ -1,4 +1,5 @@
 import React from "react";
+import { t } from "../components/translation/translation";
 
 const Live = () => {
   return (
@@ -12,13 +13,13 @@ const Live = () => {
 
         <div>
           <p className="text-center-white">
-            Vaata ürituse otseülekannet Sadamateatrist!
+            {t("live-text")}
           </p>
         </div>
 
         <div className="align" style={{ paddingBottom: 40, position: "relative" }}>
         <p className="centered-absolute-text">
-              Otseülekanne algab 24.05 kell 11:00
+              {t("live-text-countdown")}
             </p>
           <div className="video-wrapper video-blur disabled" style={{ position: "relative", zIndex: 0 }}>
             <iframe className="video" src="https://www.youtube.com/embed/7LYlaOOkzW4?si=1tNNdf-OnBzVtu7i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>

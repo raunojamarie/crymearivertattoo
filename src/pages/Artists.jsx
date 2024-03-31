@@ -8,6 +8,7 @@ import img5 from "../assets/Janis-Korkjas.JPG"
 import useWindowDimensions from "../useWindowDimensions";
 import '../styles/artists.css';
 import { useState } from "react";
+import { t } from "../components/translation/translation"
 
 const ARTISTS_DATA = [
 
@@ -307,11 +308,11 @@ const Artists = () => {
 
   return (
     <div style={{ padding: "0px 0" }}>
-      <p className="big-title-orange artists-title" style={{ paddingBottom: 40 }}>artistid</p>
+      <p className="big-title-orange artists-title" style={{ paddingBottom: 40 }}>{t("artists-title")}</p>
 
       <div style={{ position: 'relative' }}>
         <p className="centered-absolute-text" style={{ color: "black"}}>
-          Kuulutatakse peagi välja!
+          {t("announced-soon-text")}
         </p>
         <div className="align artist-blur disabled" style={{ position: "relative" }}>
 

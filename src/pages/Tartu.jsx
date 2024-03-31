@@ -1,5 +1,5 @@
 import React from "react";
-import { ORANGE_COLOR } from "../App";
+import { t } from "../components/translation/translation";
 
 const Tartu = () => {
   return (
@@ -20,13 +20,10 @@ const Tartu = () => {
 
         <div className="align content-wrapper" style={{ position: "relative"}}>
         <p className="centered-absolute-text">
-            Info peagi tulekul!
+            {t("tartu-2024-announced-soon")}
         </p>
           <p className="text-white blur disabled">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Possimus debitis, impedit quos libero, voluptate doloremque eos expedita,
-            iste beatae quam totam itaque laborum sint iusto modi. Perferendis ducimus quod doloremque.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            {t("tartu-2024-text")}
           </p>
           <div className="align padding-bottom">
 

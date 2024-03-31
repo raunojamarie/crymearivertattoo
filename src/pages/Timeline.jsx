@@ -2,6 +2,7 @@ import { useState } from "react";
 import { GREEN_COLOR } from "../App";
 import useWindowDimensions from "../useWindowDimensions";
 import '../styles/timeline.css';
+import { t } from "../components/translation/translation";
 
 const Timeline = () => {
   const { height, width } = useWindowDimensions();
@@ -20,10 +21,10 @@ const Timeline = () => {
   return (
     <div className="black-bacgkround" style={{ paddingBottom: 80}}>
       <div style={{ position: "relative"}}>
-        <p  className="big-title-green timeline-title">AJAKAVA</p>
+        <p  className="big-title-green timeline-title">{t("timeline-title")}</p>
         <div className="align content-wrapper">
         <p className="text-white">
-          Ajakava täieneb jooksvalt
+          {t("timeline-text")}
         </p>
       </div>
         <div style={{ display: "flex", justifyContent: "center", alignContent: "center", gap: 10 }}>
@@ -86,7 +87,7 @@ const Timeline = () => {
 
         <div style={{ position: "absolute", width: "100%", top: 30, zIndex: 1 }}></div>
       </div>
-      <div style={{ position: "relative", width: navbarCollapse ? isMobile ? "100%" : "90%" : width - 400, margin: "0 auto 0 auto", marginTop: 40, backgroundColor: GREEN_COLOR + "33", height: 500 }}>
+      <div style={{ position: "relative", width: navbarCollapse ? isMobile ? "95%" : "90%" : "60%", margin: "0 auto 0 auto", marginTop: 40, backgroundColor: GREEN_COLOR + "33", height: 500 }}>
         <div style={{
           borderLeft: "6px solid " + GREEN_COLOR,
           height: 300,
@@ -98,19 +99,19 @@ const Timeline = () => {
         </div>
 
         {day === 1 && <>
-          <TimelineSlot width={width} left={false} top={60} time={"11:00"} title={"ürituse avamine"} text={""} />
-          <TimelineSlot width={width} left={true} top={180} time={"20:00"} title={"esimese päeva lõpp"} text={""} />
-          <TimelineSlot width={width} left={false} top={300} time={"20:00"} title={"afterparty Kivi baaris"} text={""} />          
+          <TimelineSlot width={width} left={false} top={60} time={"11:00"} title={t("timeline-slot-0")} text={""} />
+          <TimelineSlot width={width} left={true} top={180} time={"20:00"} title={t("timeline-slot-1")} text={""} />
+          <TimelineSlot width={width} left={false} top={300} time={"20:00"} title={t("timeline-slot-2")} text={""} />          
         </>}
         {day === 2 && <>
-          <TimelineSlot width={width} left={false} top={60} time={"11:00"} title={"uksed"} text={""} />
-          <TimelineSlot width={width} left={true} top={180} time={"20:00"} title={"teise päeva lõpp"} text={""} />
-          <TimelineSlot width={width} left={false} top={300} time={"20:00"} title={"afterparty Kivi baaris"} text={""} />          
+          <TimelineSlot width={width} left={false} top={60} time={"11:00"} title={t("timeline-slot-3")} text={""} />
+          <TimelineSlot width={width} left={true} top={180} time={"20:00"} title={t("timeline-slot-4")} text={""} />
+          <TimelineSlot width={width} left={false} top={300} time={"20:00"} title={t("timeline-slot-5")} text={""} />          
         </>}
         {day === 3 && <>
-          <TimelineSlot width={width} left={false} top={60} time={"11:00"} title={"uksed"} text={""} />
-          <TimelineSlot width={width} left={true} top={180} time={"13:00"} title={"autasustamine"} text={""} />
-          <TimelineSlot width={width} left={false} top={300} time={"15:00"} title={"ürituse lõpp"} text={""} />          
+          <TimelineSlot width={width} left={false} top={60} time={"11:00"} title={t("timeline-slot-6")} text={""} />
+          <TimelineSlot width={width} left={true} top={180} time={"13:00"} title={t("timeline-slot-7")} text={""} />
+          <TimelineSlot width={width} left={false} top={300} time={"15:00"} title={t("timeline-slot-8")} text={""} />          
         </>}
 
       </div>
