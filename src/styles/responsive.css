@@ -9,6 +9,7 @@
   margin: 0 auto;
   top: calc(50% - 50px);
   z-index: 99;
+  text-align: center;
 }
 
 /* HEIGHT */

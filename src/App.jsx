@@ -97,9 +97,9 @@ const App = () => {
 
   const renderLanguageText = () => {
     if (window.location.href.includes('/en')) {
-      return "EN";
-    } else {
       return "ET";
+    } else {
+      return "EN";
     }  
   }
 
@@ -122,7 +122,7 @@ const App = () => {
             <AnchorLink onClick={() => setBurgerOpen(!burgerOpen)} offset={70} className="burger-option" style={{}} href='#rahvahaaletus'>{t("rahvahaaletus")}</AnchorLink>
             <AnchorLink onClick={() => setBurgerOpen(!burgerOpen)} offset={70} className="burger-option" style={{}} href='#tartu'>{t("tartu")}</AnchorLink>
             <AnchorLink onClick={() => setBurgerOpen(!burgerOpen)} offset={70} className="burger-option" style={{}} href='#kontakt'>{t("kontakt")}</AnchorLink>
-            <a>X</a>
+            <div onClick={handleLanguageChange} offset={70} className="burger-option" style={{ paddingBottom: 30 }} href='#info'>{renderLanguageText()}</div>
           </div>
         </motion.nav>
       }

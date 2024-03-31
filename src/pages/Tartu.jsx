@@ -11,9 +11,9 @@ const Tartu = () => {
               <span>
                 TARTU
               </span>
-            <span style={{ padding: "0px 20px"}}>
-            2024
-          </span>
+              <span style={{ padding: "0px 20px"}}>
+                2024
+              </span>
             </span>
           </p>
         </div>

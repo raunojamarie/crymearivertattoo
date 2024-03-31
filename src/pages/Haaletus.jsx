@@ -6,7 +6,17 @@ const Haaletus = () => {
     <>
       <div style={{ width: "100%", padding: "0 0", textAlign: "center", position: "relative" }}>
         <p className="big-title-orange rahvahaaletus-title">
-          {t("public-vote-title")}
+          {window.location.href.includes("/en")
+            ? <span>
+                <span>
+                  PUBLIC
+                </span>
+                <span style={{ paddingLeft: 20}}>
+                  VOTE
+                </span>
+              </span>
+            : <span>rahvahääletus</span>
+          }
         </p>
       </div>
 
