@@ -291,7 +291,9 @@ const Artists = () => {
   }
 
   const handleClickRight = () => {
+    if (currentPage < totalPages - 1) {
       setCurrentPage(currentPage + 1);
+    }
   }
 
   const renderPaginationButtons = () => {
