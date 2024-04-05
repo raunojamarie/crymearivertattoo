@@ -273,60 +273,57 @@ const Artists = () => {
   const isBreakpoint2 = width <= 540;
   const navbarCollapse = width <= 990;
 
+  const itemsPerPage = 4;
+  const totalPages = Math.ceil(ARTISTS_DATA.length / itemsPerPage);
   const [currentPage, setCurrentPage] = useState(0);
-  const [currentIndex, setCurrentIndex] = useState(1);
+
+  const startIndex = currentPage * itemsPerPage;
+  const endIndex = Math.min(startIndex + itemsPerPage, ARTISTS_DATA.length);
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
 
   const handleClickLeft = () => {
     if (currentPage !== 0) {
-      setCurrentPage(currentPage - 2);
-      setCurrentIndex(currentIndex - 1);
+      setCurrentPage(currentPage - 1);
     }
   }
 
   const handleClickRight = () => {
-    if (currentPage < 14) {
-      setCurrentPage(currentPage + 2);
-      setCurrentIndex(currentIndex + 1);
-    }
+      setCurrentPage(currentPage + 1);
   }
 
-  const handlePaginationClick = (i) => {
-    setCurrentIndex(i);
-    switch (i) {
-      case 1: setCurrentPage(0); break;
-      case 2: setCurrentPage(2); break;
-      case 3: setCurrentPage(4); break;
-      case 4: setCurrentPage(6); break;
-      case 5: setCurrentPage(8); break;
-      case 6: setCurrentPage(10); break;
-      case 7: setCurrentPage(12); break;
-      case 8: setCurrentPage(14); break;
-      default: break;
-    }
-    console.log(i)
-  }
+  const renderPaginationButtons = () => {
+    return [...Array(totalPages).keys()].map((page) => (
+      <button
+        key={page}
+        className={`pagination-btn ${currentPage === page ? "pagination-btn-active" : ""}`}
+        onClick={() => handlePageChange(page)}
+      >
+      </button>
+    ));
+  };
 
   return (
     <div style={{ padding: "0px 0" }}>
       <p className="big-title-orange artists-title" style={{ paddingBottom: 40 }}>{t("artists-title")}</p>
 
       <div style={{ position: 'relative' }}>
-        <p className="centered-absolute-text" style={{ color: "black"}}>
-          {t("announced-soon-text")}
-        </p>
-        <div className="align artist-blur disabled" style={{ position: "relative" }}>
 
-          <div>
+        <div className="align " style={{ position: "relative" }}>
 
-            {/* <button className="carousel-btn" onClick={handleClickLeft} style={{ left: -150 }}>
+          <div style={{ position: 'relative' }}>
+
+          <button className="carousel-btn" onClick={handleClickLeft} style={{ left: -150 }}>
             <i className="fas fa-chevron-left" style={{ fontSize: 40 }}></i>
           </button>
           <button className="carousel-btn" onClick={handleClickRight} style={{ right: -150 }}>
             <i className="fas fa-chevron-right" style={{ fontSize: 40 }}></i>
-          </button> */}
+          </button>
 
-            <div className="artist-blur disabled" style={{ display: 'flex', overflowX: 'hidden' }}>
-              {ARTISTS_DATA.slice(currentPage, isMobile ? currentPage + 1 : currentPage + 4).map((artist, index) => {
+            <div className="" style={{ display: 'flex', overflowX: 'hidden' }}>
+              {ARTISTS_DATA.slice(startIndex, endIndex).map((artist, index) => {
                 return (
                   <div style={{ width: '200px', margin: '0 20px' }}>
                     <div style={{ display: 'flex', flexDirection: 'column', width: '200px' }}>
@@ -345,12 +342,8 @@ const Artists = () => {
               })}
             </div>
 
-            <div style={{ display: "flex", placeContent: "center", marginBottom: 40 }}>
-              {[...Array(9).keys()].slice(1).map(i =>
-                <button onClick={() => handlePaginationClick(i)} className={`pagination-btn ${i === currentIndex ? "pagination-btn-active" : ""}`} style={{}}>
-                </button>
-              )}
-            </div>
+            <div className="pagination">{renderPaginationButtons()}</div>
+
           </div>
         </div>
       </div>
