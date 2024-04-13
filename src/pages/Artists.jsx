@@ -29,6 +29,16 @@ import img26 from "../assets/Darjapxl.jpg"
 import img27 from "../assets/Hatsu.jpg"
 import img28 from "../assets/Emilia-Sabirova.jpeg"
 import img29 from "../assets/Darius.jpg"
+import img30 from "../assets/Maria-Liisa-Leonidov.jpeg"
+import img31 from "../assets/Sigrit-Villido.jpg"
+import img32 from "../assets/Tilda.jpg"
+import img33 from "../assets/Aurika-Kotyn.JPG"
+import img34 from "../assets/Oleksandra-Prepiialo.png"
+import img35 from "../assets/Oskar-Poll.JPG"
+import img36 from "../assets/piretvaldna.jpg"
+import img37 from "../assets/rainexart.jpeg"
+import img38 from "../assets/Sean-Meade.jpeg"
+import img39 from "../assets/Villu-Koger.jpg"
 import useWindowDimensions from "../useWindowDimensions";
 import '../styles/artists.css';
 import { useState } from "react";
@@ -182,6 +192,56 @@ const ARTISTS_DATA = [
     img: img29
   },
   {
+    name: "Maria-Liisa Leonidov",
+    link: <a href="https://www.instagram.com/marialeonidov" target="blank" className="link">@marialeonidov</a>,
+    img: img30
+  },
+  {
+    name: "Sigrit Villido",
+    link: <a href="https://www.instagram.com/sigritvillido" target="blank" className="link">@sigritvillido</a>,
+    img: img31
+  },
+  {
+    name: "Tilda Mae",
+    link: <a href="https://www.instagram.com/tildatattoo" target="blank" className="link">@tildatattoo</a>,
+    img: img32
+  },
+  {
+    name: "Aurika Kotyn",
+    link: <a href="https://www.instagram.com/kotyns" target="blank" className="link">@kotyns</a>,
+    img: img33
+  },
+  {
+    name: "Oleksandra Prepiialo",
+    link: <a href="https://www.instagram.com/aliaska_tattoo" target="blank" className="link">@aliaska_tattoo</a>,
+    img: img34
+  },
+  {
+    name: "Oskar Poll",
+    link: <a href="https://www.instagram.com/kuraditosin13" target="blank" className="link">@kuraditosin13</a>,
+    img: img35
+  },
+  {
+    name: "Piret Valdna",
+    link: <a href="https://www.instagram.com/piretvaldna" target="blank" className="link">@piretvaldna</a>,
+    img: img36
+  },
+  {
+    name: "Raine Kapp",
+    link: <a href="https://www.instagram.com/rainexart" target="blank" className="link">@rainexart</a>,
+    img: img37
+  },
+  {
+    name: "Sean Meade",
+    link: <a href="https://www.instagram.com/spirit_and_ink" target="blank" className="link">@spirit_and_ink</a>,
+    img: img38
+  },
+  {
+    name: "Villu Koger",
+    link: <a href="https://www.instagram.com/villukoger" target="blank" className="link">@villukoger</a>,
+    img: img39
+  },
+  {
     name: "Ants Rauba",
     link: <a href="https://www.instagram.com/antsrauba" target="blank" className="link">@antsrauba</a>,
     img: stock1
@@ -212,41 +272,6 @@ const ARTISTS_DATA = [
     img: stock2
   },
   {
-    name: "Piret Valdna",
-    link: <a href="https://www.instagram.com/piretvaldna" target="blank" className="link">@piretvaldna</a>,
-    img: stock2
-  },
-  {
-    name: "Raine Kapp",
-    link: <a href="https://www.instagram.com/rainexart" target="blank" className="link">@rainexart</a>,
-    img: stock2
-  },
-  {
-    name: "Villu Koger",
-    link: <a href="https://www.instagram.com/villukoger" target="blank" className="link">@villukoger</a>,
-    img: stock2
-  },
-  {
-    name: "Oskar Poll",
-    link: <a href="https://www.instagram.com/kuraditosin13" target="blank" className="link">@kuraditosin13</a>,
-    img: stock2
-  },
-  {
-    name: "Sean Meade",
-    link: <a href="https://www.instagram.com/spirit_and_ink" target="blank" className="link">@spirit_and_ink</a>,
-    img: stock2
-  },
-  {
-    name: "Aurika Kotyn",
-    link: <a href="https://www.instagram.com/kotyns" target="blank" className="link">@kotyns</a>,
-    img: stock2
-  },
-  {
-    name: "Oleksandra Prepiialo",
-    link: <a href="https://www.instagram.com/aliaska_tattoo" target="blank" className="link">@aliaska_tattoo</a>,
-    img: stock2
-  },
-  {
     name: "Kristiina Nikolajeva",
     link: <a href="https://www.instagram.com/kryysaa/" target="blank" className="link">@kryysaa</a>,
     img: stock2
@@ -254,16 +279,6 @@ const ARTISTS_DATA = [
   {
     name: "Sten-Martin Sinisaar",
     link: <a href="https://www.instagram.com/stensinisaar" target="blank" className="link">@stensinisaar</a>,
-    img: stock2
-  },
-  {
-    name: "Maria-Liisa Leonidov",
-    link: <a href="https://www.instagram.com/marialeonidov" target="blank" className="link">@marialeonidov</a>,
-    img: stock2
-  },
-  {
-    name: "Sigrit Villido",
-    link: <a href="https://www.instagram.com/sigritvillido" target="blank" className="link">@sigritvillido</a>,
     img: stock2
   },
   {
@@ -289,11 +304,6 @@ const ARTISTS_DATA = [
   {
     name: "Merili Mägi",
     link: <a href="https://www.instagram.com/illusiooniline" target="blank" className="link">@illusiooniline</a>,
-    img: stock2
-  },
-  {
-    name: "Tilda Mae",
-    link: <a href="https://www.instagram.com/tildatattoo" target="blank" className="link">@tildatattoo</a>,
     img: stock2
   },
   {
