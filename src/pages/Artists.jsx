@@ -40,7 +40,7 @@ import img38 from "../assets/artists/Sean-Meade.jpg"
 import img39 from "../assets/artists/Villu-Koger.jpg"
 import useWindowDimensions from "../useWindowDimensions";
 import '../styles/artists.css';
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { t } from "../components/translation/translation"
 import { motion } from "framer-motion";
 
@@ -241,6 +241,7 @@ const ARTISTS_DATA = [
     link: <a href="https://www.instagram.com/villukoger" target="blank" className="link">@villukoger</a>,
     img: img39
   },
+  /*
   {
     name: "Ants Rauba",
     link: <a href="https://www.instagram.com/antsrauba" target="blank" className="link">@antsrauba</a>,
@@ -306,7 +307,6 @@ const ARTISTS_DATA = [
     link: <a href="https://www.instagram.com/illusiooniline" target="blank" className="link">@illusiooniline</a>,
     img: placeholderImg
   },
-  /*
   {
     name: "",
     link: <a href="" target="blank" className="link">@</a>,
@@ -408,15 +408,13 @@ const Artists = () => {
         { firstArtistsListBreakpoint && isSmallerMobile
           ? <p>{currentPage + 1}/{totalPages}</p>
           : [...Array(totalPages).keys()].map((page, index) => 
-            <>
               <button
-              style={{ margin: "auto 0" }}
+                style={{ margin: "auto 0" }}
                 key={page}
                 className={`pagination-btn ${currentPage === page ? "pagination-btn-active" : ""}`}
                 onClick={() => handlePageChange(page)}
               >
               </button>
-            </>
           )
         }
         <button className="carousel-btn" onClick={handleClickRight}>
@@ -472,6 +470,7 @@ const Artists = () => {
                         delay: 8
                       }
                     }} 
+                    key={artist + i}
                     className="artist-card" onClick={(e) => e.stopPropagation()}>
                     <div style={{ width: '200px', margin: flexDirectionBreakpoint ? '10px auto' : '0 20px' }}>
                       <div style={{ display: 'flex', flexDirection: 'column', width: '200px' }}>

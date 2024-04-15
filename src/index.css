@@ -11,3 +11,7 @@ code {
   font-family: 'Rubik Mono One', monospace;
   font-family: 'Kanit', sans-serif;
 }
+
+iframe {
+  border: 0;
+}

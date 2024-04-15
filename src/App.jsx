@@ -148,8 +148,8 @@ const App = () => {
               <div style={{ display: "grid", justifyContent: "end", alignItems: "center", paddingRight: 10, height: "100%", width: "100%" }}>
                 <button onClick={() => setBurgerOpen(!burgerOpen)} style={{ display: "grid", placeContent: "center", outline: "none", height: 50, width: 50, borderRadius: "50%", border: "none", backgroundColor: "black" }}>
                   {burgerOpen
-                    ? <i style={{ color: "#7d922b", fontSize: 34}} class="fa-solid fa-close"></i>
-                    : <i style={{ color: "#7d922b", fontSize: 34}} class="fa-solid fa-bars"></i>
+                    ? <i style={{ color: "#7d922b", fontSize: 34}} className="fa-solid fa-close"></i>
+                    : <i style={{ color: "#7d922b", fontSize: 34}} className="fa-solid fa-bars"></i>
                   }
                 </button>
               </div>
@@ -184,11 +184,11 @@ const App = () => {
         }}>
           <div style={{ flex: 1, display: "grid", justifyContent: "center", alignContent: "center", zIndex: 3 }}>
             <div style={{ width: "100%", display: "grid", placeContent: "center", paddingTop: 20 }}>
-              <img style={{ width: "90%", margin: "0 auto" }} src={headerText}></img>
+              <img style={{ width: "90%", margin: "0 auto" }} src={headerText} alt=""></img>
             </div>
           </div>
           <div className="" style={{ position: "relative", flex: 1, display: "grid", justifyContent: "center", alignContent: isMobile ? "" : "center", zIndex: 3 }}>
-            <img src={loss} style={{ width: "100%", margin: "0 auto", paddingTop: isMobile ? 60 : 0, opacity: 0.5, marginTop: -40 }}></img>
+            <img src={loss} alt="" style={{ width: "100%", margin: "0 auto", paddingTop: isMobile ? 60 : 0, opacity: 0.5, marginTop: -40 }}></img>
             <div style={{
               position: "absolute",
               marginLeft: "auto",
@@ -200,7 +200,7 @@ const App = () => {
               placeContent: "center"
             }}>
               <div style={{ width: 60, height: 60, borderRadius: "50%", display: "grid", placeContent: "center" }}>
-                <i style={{ fontSize: 40, color: "white", opacity: 0 }}class="fa-solid fa-chevron-down"></i>
+                <i style={{ fontSize: 40, color: "white", opacity: 0 }} className="fa-solid fa-chevron-down"></i>
               </div>
             </div>
             <div className="counter-wrapper" style={{
@@ -274,12 +274,13 @@ const App = () => {
                 <span>{t("contact-sub-title-2")}</span>
               </p>
               <iframe
+                title="Contact map"
                 width="100%"
                 height={450}
                 style={{ border: "none" }}
                 loading="lazy"
-                allowfullscreen
-                referrerpolicy="no-referrer-when-downgrade"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
                 src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCS0QexUfZnKgG0siTOuOwlVCFGmOSVfwI
                   &q=Harbour+Theatre,Tartu+Estonia">
               </iframe>
@@ -288,7 +289,7 @@ const App = () => {
           <div style={{ display: "grid", placeContent: "center", width: "100%", padding: "0 0", textAlign: "center", position: "relative", paddingBottom: 40, marginTop: -30 }}>
               <div className="contact-icon" style={{ }}>
                 <a href="mailto:tartu.alternativearts@gmail.com" className="contact-icon icon" target="blank">
-                  <i class="fa-regular fa-envelope contact-icon-i" style={{ fontSize: 80, padding: 20, paddingTop: 0, borderRadius: "50%" }}></i>
+                  <i className="fa-regular fa-envelope contact-icon-i" style={{ fontSize: 80, padding: 20, paddingTop: 0, borderRadius: "50%" }}></i>
                   <p className="contact-icon-text" style={{ margin: -10, opacity: 0.5 }}>tartu.alternativearts@gmail.com</p>
                 </a>
               </div>

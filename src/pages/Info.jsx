@@ -38,13 +38,13 @@ const Info = () => {
         }}>
           <div className="contact-icon">
             <a href="https://www.instagram.com/crymeariver.tartu/" className="contact-icon icon" target="blank">
-              <i class="fa-brands fa-instagram contact-icon-i" style={{ fontSize: 80, padding: 20, borderRadius: "50%" }}></i>
+              <i className="fa-brands fa-instagram contact-icon-i" style={{ fontSize: 80, padding: 20, borderRadius: "50%" }}></i>
               <p className="contact-icon-text" style={{ margin: -10, opacity: 0.5 }}>@crymeariver.tartu</p>
             </a>
           </div>
           <div className="contact-icon">
             <a href="https://www.facebook.com/crymeariver.tattoofest" className="contact-icon icon" target="blank">
-              <i class="fa-brands fa-facebook contact-icon-i" style={{ fontSize: 80, padding: 20, borderRadius: "50%" }}></i>
+              <i className="fa-brands fa-facebook contact-icon-i" style={{ fontSize: 80, padding: 20, borderRadius: "50%" }}></i>
               <p className="contact-icon-text" style={{ margin: -10, opacity: 0.5 }}>@crymeariver.tattoofest</p>
             </a>
           </div>
@@ -52,11 +52,11 @@ const Info = () => {
       </div>
 
       <div className="video-wrapper">
-        <iframe className="video" src="https://www.youtube.com/embed/7LYlaOOkzW4?si=1tNNdf-OnBzVtu7i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+        <iframe className="video" src="https://www.youtube.com/embed/7LYlaOOkzW4?si=1tNNdf-OnBzVtu7i" title="CRY ME A RIVER kutse" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen>
         </iframe>
       </div>
       <div className="video-wrapper">
-        <iframe className="video" src="https://www.youtube.com/embed/orvT8pvP-eI?si=nCPGV9qelH_GKmOm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+        <iframe className="video" src="https://www.youtube.com/embed/orvT8pvP-eI?si=nCPGV9qelH_GKmOm" title="CRY ME A RIVER afterparty" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen>
         </iframe>
       </div>
     </>

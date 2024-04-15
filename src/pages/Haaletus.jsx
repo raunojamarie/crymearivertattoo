@@ -28,8 +28,8 @@ const Haaletus = () => {
           {t("public-vote-text")}
         </p>
         <div className="align padding-bottom blur">
-        <a href="#" class="disabled button-orange">{t("public-vote-here")}</a>
-          {/* <a href="https://forms.gle/AfQhmC5nWPsQsLqJ7" target="blank" className="button-orange">Hääleta siin!</a> */}
+        <a href="https://forms.gle/AfQhmC5nWPsQsLqJ7" target="blank" className="disabled button-orange">Hääleta siin!</a>
+          {/* <a href="https://forms.gle/AfQhmC5nWPsQsLqJ7" target="blank" className="button-orange"{t("public-vote-here")}</a> */}
         </div>
       </div>
     </>
