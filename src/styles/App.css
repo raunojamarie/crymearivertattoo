@@ -218,6 +218,13 @@
   color: var(--white);
   margin: 20px 0px 45px 0px;
 }
+.tartu-text {
+  font-weight: 300;
+  font-size: 18px;
+  color: var(--white);
+  margin: 20px 0px 45px 0px;
+  text-align: center;
+}
 
 .text-black {
   font-weight: 300;

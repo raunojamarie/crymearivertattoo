@@ -11,26 +11,22 @@ const Tartu = () => {
               <span>
                 TARTU
               </span>
-              <span style={{ padding: "0px 20px"}}>
+              <span style={{ padding: "0px 20px" }}>
                 2024
               </span>
             </span>
           </p>
         </div>
 
-        <div className="align content-wrapper" style={{ position: "relative"}}>
-        <p className="centered-absolute-text">
-            {t("tartu-2024-announced-soon")}
-        </p>
-          <p className="text-white blur disabled">
+        <div className="align content-wrapper" style={{ position: "relative" }}>
+          <p className="tartu-text">
             {t("tartu-2024-text")}
           </p>
           <div className="align padding-bottom">
 
-          {/* <a href="https://tartu2024.ee/" disabled target="blank" className="button-green">Link</a> */}
-          <a href="#" class="disabled button-green blur">link</a>
+            <a href="https://tartu2024.ee/" disabled target="blank" className="button-green">vaata lisa</a>
           </div>
-          </div>
+        </div>
       </div>
     </>
   )
