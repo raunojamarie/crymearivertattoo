@@ -145,16 +145,6 @@
   width: 100%;
 }
 
-.chain {
-  background-image: url("../assets/barbwire.png");
-  top: 100%;
-  background-position: center;
-  color: var(--black);
-  background-repeat: repeat;
-  background-size: cover;
-  width: 100%;
-}
-
 .main-header-text>p {
   margin: 0;
   padding: 0;

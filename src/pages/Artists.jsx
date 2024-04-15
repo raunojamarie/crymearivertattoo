@@ -1,48 +1,48 @@
-import stock1 from "../assets/stock-photo-1.jpg"
-import stock2 from "../assets/stock-photo-1.jpg"
-import img1 from "../assets/Deniss-Suhhanov.jpeg"
-import img2 from "../assets/Marta-Liisa.jpg"
-import img3 from "../assets/Santo-Sueno.JPG"
-import img4 from "../assets/Michael-Stade.JPG"
-import img5 from "../assets/Janis-Korkjas.JPG"
-import img6 from "../assets/Arina.jpeg"
-import img7 from "../assets/Blackgoat- Daughter.jpg"
-import img8 from "../assets/Doris-Rosenberg.JPG"
-import img9 from "../assets/Ele-Helina- Sein.jpg"
-import img10 from "../assets/Elvo-Grimm.jpg"
-import img11 from "../assets/Iisak.jpg"
-import img12 from "../assets/Janina.jpeg"
-import img13 from "../assets/Kerli-Laidna.jpg"
-import img14 from "../assets/Kerli-Redfern.JPG"
-import img15 from "../assets/Krall.jpg"
-import img16 from "../assets/Laura-glassd0ll.jpg"
-import img17 from "../assets/Mari-murikaz.jpg"
-import img18 from "../assets/Nico.jpeg"
-import img19 from "../assets/Paul-Eerik Rosenberg.jpeg"
-import img20 from "../assets/Ramon-Rattasep.JPG"
-import img21 from "../assets/silvia_tattoos.JPG"
-import img22 from "../assets/Kristjan-Aosaar.jpeg"
-import img23 from "../assets/Ulrike.jpg"
-import img24 from "../assets/Valerie.jpg"
-import img25 from "../assets/valuhaldjas.jpg"
-import img26 from "../assets/Darjapxl.jpg"
-import img27 from "../assets/Hatsu.jpg"
-import img28 from "../assets/Emilia-Sabirova.jpeg"
-import img29 from "../assets/Darius.jpg"
-import img30 from "../assets/Maria-Liisa-Leonidov.jpeg"
-import img31 from "../assets/Sigrit-Villido.jpg"
-import img32 from "../assets/Tilda.jpg"
-import img33 from "../assets/Aurika-Kotyn.JPG"
-import img34 from "../assets/Oleksandra-Prepiialo.png"
-import img35 from "../assets/Oskar-Poll.JPG"
-import img36 from "../assets/piretvaldna.jpg"
-import img37 from "../assets/rainexart.jpeg"
-import img38 from "../assets/Sean-Meade.jpeg"
-import img39 from "../assets/Villu-Koger.jpg"
+import placeholderImg from "../assets/artists/no-image.jpeg"
+import img1 from "../assets/artists/Deniss-Suhhanov.jpg"
+import img2 from "../assets/artists/Marta-Liisa.jpg"
+import img3 from "../assets/artists/Santo-Sueno.jpg"
+import img4 from "../assets/artists/Michael-Stade.jpg"
+import img5 from "../assets/artists/Janis-Korkjas.jpg"
+import img6 from "../assets/artists/Arina.jpg"
+import img7 from "../assets/artists/Blackgoat- Daughter.jpg"
+import img8 from "../assets/artists/Doris-Rosenberg.jpg"
+import img9 from "../assets/artists/Ele-Helina- Sein.jpg"
+import img10 from "../assets/artists/Elvo-Grimm.jpg"
+import img11 from "../assets/artists/Iisak.jpg"
+import img12 from "../assets/artists/Janina.jpg"
+import img13 from "../assets/artists/Kerli-Laidna.jpg"
+import img14 from "../assets/artists/Kerli-Redfern.jpg"
+import img15 from "../assets/artists/Krall.jpg"
+import img16 from "../assets/artists/Laura-glassd0ll.jpg"
+import img17 from "../assets/artists/Mari-murikaz.jpg"
+import img18 from "../assets/artists/Nico.jpg"
+import img19 from "../assets/artists/Paul-Eerik Rosenberg.jpg"
+import img20 from "../assets/artists/Ramon-Rattasep.jpg"
+import img21 from "../assets/artists/silvia_tattoos.jpg"
+import img22 from "../assets/artists/Kristjan-Aosaar.jpg"
+import img23 from "../assets/artists/Ulrike.jpg"
+import img24 from "../assets/artists/Valerie.jpg"
+import img25 from "../assets/artists/valuhaldjas.jpg"
+import img26 from "../assets/artists/Darjapxl.jpg"
+import img27 from "../assets/artists/Hatsu.jpg"
+import img28 from "../assets/artists/Emilia-Sabirova.jpg"
+import img29 from "../assets/artists/Darius.jpg"
+import img30 from "../assets/artists/Maria-Liisa-Leonidov.jpg"
+import img31 from "../assets/artists/Sigrit-Villido.jpg"
+import img32 from "../assets/artists/Tilda.jpg"
+import img33 from "../assets/artists/Aurika-Kotyn.jpg"
+import img34 from "../assets/artists/Oleksandra-Prepiialo.png"
+import img35 from "../assets/artists/Oskar-Poll.jpg"
+import img36 from "../assets/artists/piretvaldna.jpg"
+import img37 from "../assets/artists/rainexart.jpg"
+import img38 from "../assets/artists/Sean-Meade.jpg"
+import img39 from "../assets/artists/Villu-Koger.jpg"
 import useWindowDimensions from "../useWindowDimensions";
 import '../styles/artists.css';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { t } from "../components/translation/translation"
+import { motion } from "framer-motion";
 
 const ARTISTS_DATA = [
 
@@ -244,90 +244,144 @@ const ARTISTS_DATA = [
   {
     name: "Ants Rauba",
     link: <a href="https://www.instagram.com/antsrauba" target="blank" className="link">@antsrauba</a>,
-    img: stock1
+    img: placeholderImg
   },
   {
     name: "Edmar Sulaoja",
     link: <a href="https://www.instagram.com/etstattoo" target="blank" className="link">@etstattoo</a>,
-    img: stock2
+    img: placeholderImg
   },
   {
     name: "Vitaly Makurin",
     link: <a href="https://www.instagram.com/vitaly_makurin" target="blank" className="link">@vitaly_makurin</a>,
-    img: stock1
+    img: placeholderImg
   },
   {
     name: "Roman Sestakov",
     link: <a href="https://www.instagram.com/romansestakov" target="blank" className="link">@romansestakov</a>,
-    img: stock2
+    img: placeholderImg
   },
   {
     name: "Priit Salusoo",
     link: <a href="https://www.instagram.com/priitsalusooart" target="blank" className="link">@priitsalusooart</a>,
-    img: stock2
+    img: placeholderImg
   },
   {
     name: "Kairi Matt",
     link: <a href="https://www.instagram.com/mairikatt/" target="blank" className="link">@mairikatt</a>,
-    img: stock2
+    img: placeholderImg
   },
   {
     name: "Kristiina Nikolajeva",
     link: <a href="https://www.instagram.com/kryysaa/" target="blank" className="link">@kryysaa</a>,
-    img: stock2
+    img: placeholderImg
   },
   {
     name: "Sten-Martin Sinisaar",
     link: <a href="https://www.instagram.com/stensinisaar" target="blank" className="link">@stensinisaar</a>,
-    img: stock2
+    img: placeholderImg
   },
   {
     name: "Mihkel Kosk",
     link: <a href="https://www.instagram.com/mihkelkosk" target="blank" className="link">@mihkelkosk</a>,
-    img: stock2
+    img: placeholderImg
   },
   {
     name: "Nathan Norma",
     link: <a href="https://www.instagram.com/northfrytats" target="blank" className="link">@northfrytats</a>,
-    img: stock2
+    img: placeholderImg
   },
   {
     name: "Lorenzo Gentil ",
     link: <a href="https://www.instagram.com/lorenzogentil" target="blank" className="link">@lorenzogentil</a>,
-    img: stock2
+    img: placeholderImg
   },
   {
     name: "Anatoliy Tovarnytskyy",
     link: <a href="https://www.instagram.com/tattoosbytovarnytskyy" target="blank" className="link">@tattoosbytovarnytskyy</a>,
-    img: stock2
+    img: placeholderImg
   },
   {
     name: "Merili Mägi",
     link: <a href="https://www.instagram.com/illusiooniline" target="blank" className="link">@illusiooniline</a>,
-    img: stock2
+    img: placeholderImg
   },
+  /*
   {
     name: "",
     link: <a href="" target="blank" className="link">@</a>,
-    img: stock2
+    img: placeholderImg
   },
+  */
 ]
+
+function shuffle(array) {
+  let currentIndex = array.length;
+
+  // While there remain elements to shuffle...
+  while (currentIndex !== 0) {
+
+    // Pick a remaining element...
+    let randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+  return array;
+}
+
+shuffle(ARTISTS_DATA)
 
 const Artists = () => {
   const { width } = useWindowDimensions();
+  const [data, setData] = useState(ARTISTS_DATA);
 
   const isMobile = width <= 1000;
-  const isTablet = width <= 768;
-  const isBreakpoint = width <= 1100;
-  const isBreakpoint2 = width <= 540;
-  const navbarCollapse = width <= 990;
+  const isSmallerMobile = width <= 750;
 
-  const itemsPerPage = 4;
+  const firstArtistsListBreakpoint = width <= 1100;
+  const paginationBreakpoint = width <= 360;
+  const flexDirectionBreakpoint = width <= 520;
+
+  const itemsPerPage = firstArtistsListBreakpoint ? isSmallerMobile ? 2 : 3 : 4;
   const totalPages = Math.ceil(ARTISTS_DATA.length / itemsPerPage);
   const [currentPage, setCurrentPage] = useState(0);
 
   const startIndex = currentPage * itemsPerPage;
   const endIndex = Math.min(startIndex + itemsPerPage, ARTISTS_DATA.length);
+
+  const [touchStart, setTouchStart] = useState(null)
+  const [touchEnd, setTouchEnd] = useState(null)
+
+  const [swipeDirection, setSwipeDirection] = useState(null);
+
+  // the required distance between touchStart and touchEnd to be detected as a swipe
+  const minSwipeDistance = 50
+
+  const onTouchStart = (e) => {
+    setTouchEnd(null) // otherwise the swipe is fired even with usual touch events
+    setTouchStart(e.targetTouches[0].clientX)
+  }
+
+  const onTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  }
+  
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return
+    const distance = touchStart - touchEnd
+    const isLeftSwipe = distance > minSwipeDistance
+    const isRightSwipe = distance < -minSwipeDistance
+    setSwipeDirection(isLeftSwipe ? "next" : "prev");
+    if (isLeftSwipe) {
+      handleClickRight();
+    }
+    if (isRightSwipe) {
+      handleClickLeft();
+    }
+  }
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
@@ -346,14 +400,30 @@ const Artists = () => {
   }
 
   const renderPaginationButtons = () => {
-    return [...Array(totalPages).keys()].map((page) => (
-      <button
-        key={page}
-        className={`pagination-btn ${currentPage === page ? "pagination-btn-active" : ""}`}
-        onClick={() => handlePageChange(page)}
-      >
-      </button>
-    ));
+    return (
+      <div style={{ display: "flex", gap: 10, placeContent: "center" }}>
+        <button className="carousel-btn" onClick={handleClickLeft}>
+          <i className="fas fa-chevron-left" style={{ fontSize: 30 }}></i>
+        </button>
+        { firstArtistsListBreakpoint && isSmallerMobile
+          ? <p>{currentPage + 1}/{totalPages}</p>
+          : [...Array(totalPages).keys()].map((page, index) => 
+            <>
+              <button
+              style={{ margin: "auto 0" }}
+                key={page}
+                className={`pagination-btn ${currentPage === page ? "pagination-btn-active" : ""}`}
+                onClick={() => handlePageChange(page)}
+              >
+              </button>
+            </>
+          )
+        }
+        <button className="carousel-btn" onClick={handleClickRight}>
+          <i className="fas fa-chevron-right" style={{ fontSize: 30 }}></i>
+        </button>
+      </div>
+    );
   };
 
   return (
@@ -365,35 +435,68 @@ const Artists = () => {
         <div className="align " style={{ position: "relative" }}>
 
           <div style={{ position: 'relative' }}>
-
-          <button className="carousel-btn" onClick={handleClickLeft} style={{ left: -150 }}>
-            <i className="fas fa-chevron-left" style={{ fontSize: 40 }}></i>
-          </button>
-          <button className="carousel-btn" onClick={handleClickRight} style={{ right: -150 }}>
-            <i className="fas fa-chevron-right" style={{ fontSize: 40 }}></i>
-          </button>
-
-            <div className="" style={{ display: 'flex', overflowX: 'hidden' }}>
-              {ARTISTS_DATA.slice(startIndex, endIndex).map((artist, index) => {
+            <motion.section key={currentPage} className="" onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd} style={{
+                display: 'flex',
+                flexDirection: flexDirectionBreakpoint ? 'column' : 'row',
+                justifyContent: 'center',
+                overflow: 'hidden',
+                marginTop: flexDirectionBreakpoint ? -30 : -10,
+                height: isMobile ? flexDirectionBreakpoint ? 'initial' : 300 : 330,
+                paddingTop: 10
+            }}
+              variants={{
+                hidden: {opacity: 0, x: 0 },
+                show: {
+                  opacity: 1,
+                  x: 0,
+                  transition: {
+                    staggerChildren: 0.25,
+                  }
+                }
+              }}
+              initial="hidden"
+              animate="show">
+              {data.slice(startIndex, endIndex).map((artist, i) => {
                 return (
-                  <div style={{ width: '200px', margin: '0 20px' }}>
-                    <div style={{ display: 'flex', flexDirection: 'column', width: '200px' }}>
-                      <div className="circular" style={{ display: 'flex', flexDirection: 'column' }}>
-                        <img className="artist-img" alt="" src={artist.img}></img>
-                      </div>
-                      <p className="artists-sub-title" style={{ fontSize: isMobile ? '18px' : '18px', marginTop: '20px', display: 'flex', justifyContent: 'center' }}>{artist.name}</p>
-                      <div>
-                        <p className="text-black container" style={{ fontSize: isMobile ? '14px' : '18px', marginTop: '10px', width: '200px', display: 'flex', justifyContent: 'center' }}>
-                          {artist.link}
-                        </p>
+                  <motion.div
+                    variants={{
+                      hidden: {
+                        opacity: 0,
+                        y: 100
+                      },
+                      show: {
+                        opacity: 1,
+                        y: 0
+                      },
+                      transition: {
+                        delay: 8
+                      }
+                    }} 
+                    className="artist-card" onClick={(e) => e.stopPropagation()}>
+                    <div style={{ width: '200px', margin: flexDirectionBreakpoint ? '10px auto' : '0 20px' }}>
+                      <div style={{ display: 'flex', flexDirection: 'column', width: '200px' }}>
+                        <div className="circular" style={{ display: 'flex', flexDirection: 'column' }}>
+                          <img className="artist-img" alt="" src={artist.img}></img>
+                        </div>
+                        <p className="artists-sub-title" style={{
+                          fontSize: '18px',
+                          marginTop: flexDirectionBreakpoint ? 10 : 20,
+                          display: 'flex',
+                          justifyContent: 'center'
+                        }}>{artist.name}</p>
+                        <div>
+                          <p className="text-black container" style={{ fontSize: isMobile ? '14px' : '18px', marginTop: '2px', width: '200px', display: 'flex', justifyContent: 'center' }}>
+                            {artist.link}
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </motion.div>
                 )
               })}
-            </div>
+            </motion.section>
 
-            <div className="pagination">{renderPaginationButtons()}</div>
+            <div className="pagination" style={{ marginTop: flexDirectionBreakpoint ? 20 : 'initial' }}>{renderPaginationButtons()}</div>
 
           </div>
         </div>

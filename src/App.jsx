@@ -3,7 +3,6 @@ import './styles/responsive.css';
 import headerText from "./assets/logo.png";
 import nimi from "./assets/nimi.png";
 import loss from "./assets/loss.png"
-import drip from "./assets/drip.png";
 import { FlipDate } from './components/FlipDate';
 import useWindowDimensions from './useWindowDimensions.jsx';
 import Artists from './pages/Artists';
@@ -21,12 +20,6 @@ import { useNavigate } from 'react-router-dom';
 
 export const ORANGE_COLOR = "#ef880e";
 export const GREEN_COLOR = "#7d922b";
-
-const dripEnabled = () => {
-  const queryString = window.location.search;
-  const urlParams = new URLSearchParams(queryString);
-  return urlParams.toString().includes("drip");
-}
 
 const useOutsideClick = (callback) => {
   const ref = useRef();
@@ -129,9 +122,9 @@ const App = () => {
       <div className="navbar black-bacgkround" style={{
         position: "fixed",
         top: 0, right: 0, left: 0,
-        height: isMobile ? 66 : 90,
+        height: isMobile ? 70 : 90,
         display: "flex",
-        borderBottom: isMobile ? !burgerOpen ? "4px solid #7d922b" : "4px solid black" : "none",
+        borderBottom: isMobile ? !burgerOpen ? "none" : "4px solid black" : "none",
         zIndex: 999,
         placeContent: "center",
         opacity: 0.95
@@ -181,7 +174,6 @@ const App = () => {
       </div>
 
       <div className="main-header" style={{ height: isMobile ? "100%" : "100vh", paddingBottom: isMobile ? 40 : 0 }}>
-        {dripEnabled() && <img src={drip} alt="" style={{ position: "absolute", width: "100%", height: 268, bottom: -268, left: 0, zIndex: 1 }}></img>}
         <div style={{
           display: "flex",
           flexDirection: isMobile ? "column" : "row",
