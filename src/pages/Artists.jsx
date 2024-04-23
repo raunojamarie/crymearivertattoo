@@ -38,6 +38,17 @@ import img36 from "../assets/artists/piretvaldna.jpg"
 import img37 from "../assets/artists/rainexart.jpg"
 import img38 from "../assets/artists/Sean-Meade.jpg"
 import img39 from "../assets/artists/Villu-Koger.jpg"
+import img40 from "../assets/artists/Desiree.jpg"
+import img41 from "../assets/artists/Maila-Veske.jpg"
+import img42 from "../assets/artists/Fatima.JPG"
+import img43 from "../assets/artists/Mihkel-Kosk.jpeg"
+import img44 from "../assets/artists/Regina-K.jpg"
+import img45 from "../assets/artists/sinisaar.jpeg"
+import img46 from "../assets/artists/Vitaly-Makurin.JPG"
+import img47 from "../assets/artists/Ulla.jpg"
+import img48 from "../assets/artists/Anatoliy-Tovarnytskyy.jpeg"
+import img49 from "../assets/artists/ants-rauba.jpeg"
+import img50 from "../assets/artists/Edmar-Sulaoja.jpg"
 import useWindowDimensions from "../useWindowDimensions";
 import '../styles/artists.css';
 import { useState } from "react";
@@ -241,22 +252,62 @@ const ARTISTS_DATA = [
     link: <a href="https://www.instagram.com/villukoger" target="blank" className="link">@villukoger</a>,
     img: img39
   },
-  /*
   {
-    name: "Ants Rauba",
-    link: <a href="https://www.instagram.com/antsrauba" target="blank" className="link">@antsrauba</a>,
-    img: placeholderImg
+    name: "Desiree",
+    link: <a href="https://www.instagram.com/desupoke" target="blank" className="link">@desupoke</a>,
+    img: img40
   },
   {
-    name: "Edmar Sulaoja",
-    link: <a href="https://www.instagram.com/etstattoo" target="blank" className="link">@etstattoo</a>,
-    img: placeholderImg
+    name: "Maila Veske",
+    link: <a href="https://www.instagram.com/mailushkaa" target="blank" className="link">@mailushkaa</a>,
+    img: img41
+  },
+  {
+    name: "Fatima Susanna",
+    link: <a href="https://www.instagram.com/fatimasusanna" target="blank" className="link">@fatimasusanna</a>,
+    img: img42
+  },
+  {
+    name: "Mihkel Kosk",
+    link: <a href="https://www.instagram.com/mihkelkosk" target="blank" className="link">@mihkelkosk</a>,
+    img: img43
+  },
+  {
+    name: "Regina Kuznetsova",
+    link: <a href="https://www.instagram.com/reginatattoos" target="blank" className="link">@reginatattoos</a>,
+    img: img44
+  },
+  {
+    name: "Sten-Martin Sinisaar",
+    link: <a href="https://www.instagram.com/stensinisaar" target="blank" className="link">@stensinisaar</a>,
+    img: img45
   },
   {
     name: "Vitaly Makurin",
     link: <a href="https://www.instagram.com/vitaly_makurin" target="blank" className="link">@vitaly_makurin</a>,
-    img: placeholderImg
+    img: img46
   },
+  {
+    name: "Ulla-Mari",
+    link: <a href="https://www.instagram.com/ullamari.tattoo" target="blank" className="link">@ullamari.tattoo</a>,
+    img: img47
+  },
+  {
+    name: "Anatoliy Tovarnytskyy",
+    link: <a href="https://www.instagram.com/tattoosbytovarnytskyy" target="blank" className="link">@tattoosbytovarnytskyy</a>,
+    img: img48
+  },
+  {
+    name: "Ants Rauba",
+    link: <a href="https://www.instagram.com/antsrauba" target="blank" className="link">@antsrauba</a>,
+    img: img49
+  },
+  {
+    name: "Edmar Sulaoja",
+    link: <a href="https://www.instagram.com/etstattoo" target="blank" className="link">@etstattoo</a>,
+    img: img50
+  },
+  /*
   {
     name: "Roman Sestakov",
     link: <a href="https://www.instagram.com/romansestakov" target="blank" className="link">@romansestakov</a>,
@@ -278,16 +329,6 @@ const ARTISTS_DATA = [
     img: placeholderImg
   },
   {
-    name: "Sten-Martin Sinisaar",
-    link: <a href="https://www.instagram.com/stensinisaar" target="blank" className="link">@stensinisaar</a>,
-    img: placeholderImg
-  },
-  {
-    name: "Mihkel Kosk",
-    link: <a href="https://www.instagram.com/mihkelkosk" target="blank" className="link">@mihkelkosk</a>,
-    img: placeholderImg
-  },
-  {
     name: "Nathan Norma",
     link: <a href="https://www.instagram.com/northfrytats" target="blank" className="link">@northfrytats</a>,
     img: placeholderImg
@@ -298,14 +339,15 @@ const ARTISTS_DATA = [
     img: placeholderImg
   },
   {
-    name: "Anatoliy Tovarnytskyy",
-    link: <a href="https://www.instagram.com/tattoosbytovarnytskyy" target="blank" className="link">@tattoosbytovarnytskyy</a>,
-    img: placeholderImg
-  },
-  {
     name: "Merili Mägi",
     link: <a href="https://www.instagram.com/illusiooniline" target="blank" className="link">@illusiooniline</a>,
     img: placeholderImg
+  },
+  {
+    name: "Allan Tuul",
+    link: <a href="https://www.instagram.com/zero.kaos" target="blank" className="link">@zero.kaos</a>,
+    img: placeholderImg
+  },
   },
   {
     name: "",
@@ -315,7 +357,7 @@ const ARTISTS_DATA = [
   */
 ]
 
-function shuffle(array) {
+ function shuffle(array) {
   let currentIndex = array.length;
 
   // While there remain elements to shuffle...
