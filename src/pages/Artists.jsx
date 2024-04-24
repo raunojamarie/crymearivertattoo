@@ -49,6 +49,9 @@ import img47 from "../assets/artists/Ulla.jpg"
 import img48 from "../assets/artists/Anatoliy-Tovarnytskyy.jpeg"
 import img49 from "../assets/artists/ants-rauba.jpeg"
 import img50 from "../assets/artists/Edmar-Sulaoja.jpg"
+import img51 from "../assets/artists/Kairi-Matt.jpeg"
+import img52 from "../assets/artists/Priit-Salusoo.jpg"
+import img53 from "../assets/artists/Roman-Šestakov.jpg"
 import useWindowDimensions from "../useWindowDimensions";
 import '../styles/artists.css';
 import { useState } from "react";
@@ -307,22 +310,22 @@ const ARTISTS_DATA = [
     link: <a href="https://www.instagram.com/etstattoo" target="blank" className="link">@etstattoo</a>,
     img: img50
   },
-  /*
   {
-    name: "Roman Sestakov",
-    link: <a href="https://www.instagram.com/romansestakov" target="blank" className="link">@romansestakov</a>,
-    img: placeholderImg
+    name: "Kairi Matt",
+    link: <a href="https://www.instagram.com/mairikatt/" target="blank" className="link">@mairikatt</a>,
+    img: img51
   },
   {
     name: "Priit Salusoo",
     link: <a href="https://www.instagram.com/priitsalusooart" target="blank" className="link">@priitsalusooart</a>,
-    img: placeholderImg
+    img: img52
   },
   {
-    name: "Kairi Matt",
-    link: <a href="https://www.instagram.com/mairikatt/" target="blank" className="link">@mairikatt</a>,
-    img: placeholderImg
+    name: "Roman Šestakov",
+    link: <a href="https://www.instagram.com/romansestakov" target="blank" className="link">@romansestakov</a>,
+    img: img53
   },
+  /*
   {
     name: "Kristiina Nikolajeva",
     link: <a href="https://www.instagram.com/kryysaa/" target="blank" className="link">@kryysaa</a>,
