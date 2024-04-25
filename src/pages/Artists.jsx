@@ -52,6 +52,7 @@ import img50 from "../assets/artists/Edmar-Sulaoja.jpg"
 import img51 from "../assets/artists/Kairi-Matt.jpeg"
 import img52 from "../assets/artists/Priit-Salusoo.jpg"
 import img53 from "../assets/artists/Roman-Šestakov.jpg"
+import img54 from "../assets/artists/Nathan-Norma.jpeg"
 import useWindowDimensions from "../useWindowDimensions";
 import '../styles/artists.css';
 import { useState } from "react";
@@ -325,15 +326,15 @@ const ARTISTS_DATA = [
     link: <a href="https://www.instagram.com/romansestakov" target="blank" className="link">@romansestakov</a>,
     img: img53
   },
+  {
+    name: "Nathan Norma",
+    link: <a href="https://www.instagram.com/northfrytats" target="blank" className="link">@northfrytats</a>,
+    img: img54
+  },
   /*
   {
     name: "Kristiina Nikolajeva",
     link: <a href="https://www.instagram.com/kryysaa/" target="blank" className="link">@kryysaa</a>,
-    img: placeholderImg
-  },
-  {
-    name: "Nathan Norma",
-    link: <a href="https://www.instagram.com/northfrytats" target="blank" className="link">@northfrytats</a>,
     img: placeholderImg
   },
   {
