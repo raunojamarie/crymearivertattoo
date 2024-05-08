@@ -51,9 +51,9 @@ import img49 from "../assets/artists/ants-rauba.jpeg"
 import img50 from "../assets/artists/Edmar-Sulaoja.jpg"
 import img51 from "../assets/artists/Kairi-Matt.jpeg"
 import img52 from "../assets/artists/Priit-Salusoo.jpg"
-import img53 from "../assets/artists/Roman-Šestakov.jpg"
+import img53 from "../assets/artists/Roman-s.jpg"
 import img54 from "../assets/artists/Nathan-Norma.jpeg"
-import useWindowDimensions from "../useWindowDimensions";
+import useWindowDimensions from "../useWindowDimensions"
 import '../styles/artists.css';
 import { useState } from "react";
 import { t } from "../components/translation/translation"
