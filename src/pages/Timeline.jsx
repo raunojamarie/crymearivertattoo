@@ -24,7 +24,7 @@ const Timeline = () => {
       <div style={{ position: "relative" }}>
         <p className="big-title-green timeline-title">{t("timeline-title")}</p>
         <div className="align content-wrapper">
-          <p className="text-white">{t("timeline-text")}</p>
+          <p style={{ textAlign: "center" }} className="text-white">{t("timeline-text")}</p>
         </div>
         <div
           style={{
@@ -132,7 +132,7 @@ const Timeline = () => {
           margin: "0 auto 0 auto",
           marginTop: 40,
           backgroundColor: GREEN_COLOR + "33",
-          height: 1000,
+          height: day === 2 ? 1120 : day === 3 ? 600 : 860,
         }}
       >
         <div
@@ -142,7 +142,7 @@ const Timeline = () => {
             left: "50%",
             marginLeft: -3,
             top: 34,
-            bottom: 200,
+            bottom: day === 3 ? 360 : 200,
           }}
         ></div>
 
@@ -155,43 +155,44 @@ const Timeline = () => {
               top={60}
               time={"11:00"}
               title={t("timeline-slot-0")}
-              text={
-                <>
-
-                </>
-              }
+              text={t("timeline-slot-0-text")}
             />
             <TimelineSlot
+              larger
               width={width}
               left={true}
-              top={280}
+              top={200}
               time={"13:00"}
               title={t("timeline-slot-1")}
-              text={"Kleepsude tegemise töötuba: Victoria Käesel."}
+              text={t("timeline-slot-1-text")}
             />
             <TimelineSlot
+              larger
               width={width}
               left={false}
-              top={440}
+              top={340}
               time={"15:00"}
               title={t("timeline-slot-2")}
-              text={"Madude joonistamise töötuba (ingliskeelne): Lorenzo Gentil."}
+              text={t("timeline-slot-2-text")}
             />
             <TimelineSlot
+              larger
               width={width}
               left={true}
-              top={600}
+              top={480}
               time={"17:00"}
               title={t("timeline-slot-3")}
-              text={"Animatsiooni töötuba: Roland Seer. Vajalik kaameraga nutitelefon."}
+              text={t("timeline-slot-3-text")}
             />
             <TimelineSlot
+              larger
+              isWide
               width={width}
               left={false}
-              top={760}
+              top={620}
               time={"20:00"}
               title={t("timeline-slot-4")}
-              text={"Rüütli 13, uksed. Hukk, Kannabinõid."}
+              text={t("timeline-slot-4-text")}
             />
           </>
         )}
@@ -202,24 +203,57 @@ const Timeline = () => {
               left={false}
               top={60}
               time={"11:00"}
-              title={t("timeline-slot-3")}
-              text={""}
+              title={t("timeline-slot-5")}
+              text={t("timeline-slot-5-text")}
             />
             <TimelineSlot
               width={width}
               left={true}
-              top={180}
-              time={"20:00"}
-              title={t("timeline-slot-4")}
-              text={""}
+              top={200}
+              time={"13:00"}
+              title={t("timeline-slot-6")}
+              text={t("timeline-slot-6-text")}
             />
             <TimelineSlot
               width={width}
               left={false}
-              top={300}
+              top={340}
+              time={"13:00"}
+              title={t("timeline-slot-7")}
+              text={t("timeline-slot-7-text")}
+            />
+            <TimelineSlot
+              width={width}
+              left={true}
+              top={480}
+              time={"15:30"}
+              title={t("timeline-slot-8")}
+              text={t("timeline-slot-8-text")}
+            />
+            <TimelineSlot
+              width={width}
+              left={false}
+              top={620}
+              time={"18:00"}
+              title={t("timeline-slot-9")}
+              text={t("timeline-slot-9-text")}
+            />
+            <TimelineSlot
+              width={width}
+              left={true}
+              top={760}
+              time={"19:00"}
+              title={t("timeline-slot-10")}
+              text={t("timeline-slot-10-text")}
+            />
+            <TimelineSlot
+              isWide
+              width={width}
+              left={false}
+              top={900}
               time={"20:00"}
-              title={t("timeline-slot-5")}
-              text={""}
+              title={t("timeline-slot-11")}
+              text={t("timeline-slot-11-text")}
             />
           </>
         )}
@@ -229,25 +263,17 @@ const Timeline = () => {
               width={width}
               left={false}
               top={60}
-              time={"11:00"}
-              title={t("timeline-slot-6")}
-              text={""}
+              time={"11:30"}
+              title={t("timeline-slot-12")}
+              text={t("timeline-slot-12-text")}
             />
             <TimelineSlot
               width={width}
               left={true}
-              top={180}
-              time={"13:00"}
-              title={t("timeline-slot-7")}
-              text={""}
-            />
-            <TimelineSlot
-              width={width}
-              left={false}
-              top={300}
-              time={"15:00"}
-              title={t("timeline-slot-8")}
-              text={""}
+              top={200}
+              time={"14:00"}
+              title={t("timeline-slot-13")}
+              text={t("timeline-slot-13-text")}
             />
           </>
         )}
@@ -257,7 +283,7 @@ const Timeline = () => {
 }
 
 
-export const TimelineSlot = ({ width, left, top, title, text, time, larger }) => {
+export const TimelineSlot = ({ width, left, top, title, text, time, larger, isWide }) => {
   const isMobile = width <= 600;
   const navbarCollapse = width <= 990;
   return (
@@ -305,7 +331,7 @@ export const TimelineSlot = ({ width, left, top, title, text, time, larger }) =>
           borderRadius: "50%",
           backgroundColor: GREEN_COLOR,
         }}>
-          <p className="color-white" style={{ margin: 0, marginLeft: left ? -85 : 32, marginTop: -10, fontSize: 28, fontWeight: 800, fontFamily: 'Kanit' }}>{time}</p>
+          <p className="color-white" style={{ margin: 0, marginLeft: left ? -85 : isWide ? 30 : 38, marginTop: -10, fontSize: 28, fontWeight: 800, fontFamily: 'Kanit' }}>{time}</p>
         </div>
         <div style={left ? {
           overflow: "hidden",
@@ -314,7 +340,7 @@ export const TimelineSlot = ({ width, left, top, title, text, time, larger }) =>
           left: -85,
           right: isMobile ? 20 : 40,
           top: 20,
-          height: larger ? 310 : 110,
+          height: 310,
           overflowY: "auto"
         } :
         {
@@ -324,7 +350,7 @@ export const TimelineSlot = ({ width, left, top, title, text, time, larger }) =>
           left: isMobile ? 20 : 40,
           right: -85,
           top: 20,
-          height: larger ? 310 : 110,
+          height: 310,
           overflowY: "auto"
         }}>
           <div style={{ backgroundColor: GREEN_COLOR }}>
