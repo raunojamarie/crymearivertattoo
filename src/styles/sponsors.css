@@ -1,0 +1,57 @@
+.sponsors {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 33%;
+  padding: 40px 200px;
+  gap: 20px;
+}
+
+.sponsors-col-flex {
+  flex: 1;
+  display: grid;
+  place-content: center;
+}
+
+.sponsors-col { 
+  display: grid;
+  place-content: center;
+}
+
+.bigmishka {
+  width: 500px !important;
+}
+
+@media screen and (min-width: 720px) {
+  .sponsors-col {
+    flex: 1;
+    display: grid;
+    place-content: center;
+  }
+  .cheyenne {
+    padding-left: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .bigmishka {
+    width: 400px !important;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .sponsors {
+    padding: 20px 40px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .sponsors {
+    padding: 20px 20px;
+  }
+}
+
+.sponsors-col img {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}

@@ -106,11 +106,6 @@ const ARTISTS_DATA = [
     img: img9
   },
   {
-    name: "Elvo Grimm",
-    link: <a href="https://www.instagram.com/grimme87" target="blank" className="link">@grimme87</a>,
-    img: img10
-  },
-  {
     name: "Iisak Pilli",
     link: <a href="https://www.instagram.com/impossible_son" target="blank" className="link">@impossible_son</a>,
     img: img11
