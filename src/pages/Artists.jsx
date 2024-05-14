@@ -95,11 +95,11 @@ const ARTISTS_DATA = [
     link: <a href="https://www.instagram.com/blackgoatsdaughter" target="blank" className="link">@blackgoatsdaughter</a>,
     img: img7
   },
-  {
+/*   {
     name: "Doris Rosenberg",
     link: <a href="https://www.instagram.com/dorisrosenberg_tattoo" target="blank" className="link">@dorisrosenberg_tattoo</a>,
     img: img8
-  },
+  }, */
   {
     name: "Ele-Helina Sein",
     link: <a href="https://www.instagram.com/redserpenttats" target="blank" className="link">@redserpenttats</a>,
@@ -145,11 +145,11 @@ const ARTISTS_DATA = [
     link: <a href="https://www.instagram.com/nicogrind_tattoo" target="blank" className="link">@Nicogrind_tattoo </a>,
     img: img18
   },
-  {
+/*   {
     name: "Paul-Eerik Rosenberg",
     link: <a href="https://www.instagram.com/rosenbergpaul_tattoo" target="blank" className="link">@rosenbergpaul_tattoo</a>,
     img: img19
-  },
+  }, */
   {
     name: "Ramon Rattasep",
     link: <a href="https://www.instagram.com/rottenbonestattoo" target="blank" className="link">@rottenbonestattoo</a>,
@@ -211,8 +211,8 @@ const ARTISTS_DATA = [
     img: img31
   },
   {
-    name: "Tilda Mae",
-    link: <a href="https://www.instagram.com/tildatattoo" target="blank" className="link">@tildatattoo</a>,
+    name: "Tilda",
+    link: <a href="https://www.instagram.com/tildatattuu" target="blank" className="link">@tildatattuu</a>,
     img: img32
   },
   {
