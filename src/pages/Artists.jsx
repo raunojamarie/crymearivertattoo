@@ -52,6 +52,8 @@ import img51 from "../assets/artists/Kairi-Matt.jpeg"
 import img52 from "../assets/artists/Priit-Salusoo.jpg"
 import img53 from "../assets/artists/Roman-s.jpg"
 import img54 from "../assets/artists/Nathan-Norma.jpeg"
+import img55 from "../assets/artists/Lorenzo.JPG"
+import img56 from "../assets/artists/Zahhar.jpg"
 import useWindowDimensions from "../useWindowDimensions"
 import '../styles/artists.css';
 import { useState } from "react";
@@ -95,11 +97,6 @@ const ARTISTS_DATA = [
     link: <a href="https://www.instagram.com/blackgoatsdaughter" target="blank" className="link">@blackgoatsdaughter</a>,
     img: img7
   },
-/*   {
-    name: "Doris Rosenberg",
-    link: <a href="https://www.instagram.com/dorisrosenberg_tattoo" target="blank" className="link">@dorisrosenberg_tattoo</a>,
-    img: img8
-  }, */
   {
     name: "Ele-Helina Sein",
     link: <a href="https://www.instagram.com/redserpenttats" target="blank" className="link">@redserpenttats</a>,
@@ -145,11 +142,6 @@ const ARTISTS_DATA = [
     link: <a href="https://www.instagram.com/nicogrind_tattoo" target="blank" className="link">@Nicogrind_tattoo </a>,
     img: img18
   },
-/*   {
-    name: "Paul-Eerik Rosenberg",
-    link: <a href="https://www.instagram.com/rosenbergpaul_tattoo" target="blank" className="link">@rosenbergpaul_tattoo</a>,
-    img: img19
-  }, */
   {
     name: "Ramon Rattasep",
     link: <a href="https://www.instagram.com/rottenbonestattoo" target="blank" className="link">@rottenbonestattoo</a>,
@@ -325,15 +317,21 @@ const ARTISTS_DATA = [
     link: <a href="https://www.instagram.com/northfrytats" target="blank" className="link">@northfrytats</a>,
     img: img54
   },
-  /*
-  {
-    name: "Kristiina Nikolajeva",
-    link: <a href="https://www.instagram.com/kryysaa/" target="blank" className="link">@kryysaa</a>,
-    img: placeholderImg
-  },
   {
     name: "Lorenzo Gentil ",
     link: <a href="https://www.instagram.com/lorenzogentil" target="blank" className="link">@lorenzogentil</a>,
+    img: img55
+  },
+  {
+    name: "Zahhar",
+    link: <a href="https://www.instagram.com/vizion_tatt" target="blank" className="link">@vizion_tatt</a>,
+    img: img56
+  },
+
+/* 
+  {
+    name: "Kristiina Nikolajeva",
+    link: <a href="https://www.instagram.com/kryysaa/" target="blank" className="link">@kryysaa</a>,
     img: placeholderImg
   },
   {
@@ -346,11 +344,6 @@ const ARTISTS_DATA = [
     link: <a href="https://www.instagram.com/zero.kaos" target="blank" className="link">@zero.kaos</a>,
     img: placeholderImg
   },
-  },
-  {
-    name: "",
-    link: <a href="" target="blank" className="link">@</a>,
-    img: placeholderImg
   },
   */
 ]
