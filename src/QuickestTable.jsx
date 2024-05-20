@@ -74,10 +74,7 @@ const QuickestTable = () => {
 
         </div>
       </div>
-
-      <div className="main-header" style={{
-        height: isMobile ? "100%" : "100vh", paddingTop: 40, backgroundColor: "#fff"
-      }}>
+      <div style={{ padding: "40px 0 200px 0" }}>
         <table style={{ margin: "auto" }}>
           <tr style={{ backgroundColor: ORANGE_COLOR }}>
             <th style={{ padding: "20px 40px" }}>#</th>
