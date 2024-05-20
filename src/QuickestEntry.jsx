@@ -41,7 +41,7 @@ const QuickestEntry = () => {
       setSavedMessageVisible(true); // Show the saved message
       setTimeout(() => {
         setSavedMessageVisible(false); // Hide the saved message after 3 seconds
-      }, 5000);
+      }, 3000);
     }
     clear();
   }
@@ -62,7 +62,7 @@ const QuickestEntry = () => {
       </div>
       <div style={{ display: "flex", gap: 20 }}>
         <input value={time} onChange={(e) => setTime(e.target.value)} style={{ flex: 1, height: 60 }} id="foo" name="foo" type="time" min="0:00"></input>
-        <input value={timeMs} onChange={(e) => setTimeMs(e.target.value)} style={{ flex: 1, height: 50 }} type="text"></input>
+        <input value={timeMs} onChange={(e) => setTimeMs(e.target.value)} style={{ flex: 1, height: 60 }} type="text"></input>
       </div>
       <button onClick={handleSave} style={{ width: 300, height: 60, backgroundColor: ORANGE_COLOR, fontSize: 18, fontWeight: 900, marginTop: 60, color: "black" }}>Salvesta</button>
       {savedMessageVisible && <div style={{ display: "flex", placeContent: "center", color: 'green', backgroundColor: ORANGE_COLOR + 63, height: 60, marginTop: 20, fontSize: 22, fontWeight: 800 }}>

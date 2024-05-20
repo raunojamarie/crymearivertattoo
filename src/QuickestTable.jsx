@@ -42,7 +42,7 @@ const QuickestTable = () => {
   }, []);
 
   return (
-    <div id="home" className="app-root" style={{ height: "100%", width: "100%" }}>
+    <div id="home" className="app-root" style={{ height: "100%", width: "100%", minHeight: "100vh" }}>
       <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 90, backgroundColor: "black" }}>
       </div>
       <div className="navbar black-bacgkround" style={{
