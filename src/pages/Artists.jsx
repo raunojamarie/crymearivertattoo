@@ -60,7 +60,7 @@ import { useState } from "react";
 import { t } from "../components/translation/translation"
 import { motion } from "framer-motion";
 
-const ARTISTS_DATA = [
+export const ARTISTS_DATA = [
 
   {
     name: "Deniss Suhhanov",

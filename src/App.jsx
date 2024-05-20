@@ -17,6 +17,7 @@ import { useEffect, useRef, useState,  } from 'react';
 import { motion } from "framer-motion";
 import { t } from './components/translation/translation';
 import { useNavigate } from 'react-router-dom';
+import './components/firebase.js';
 
 export const ORANGE_COLOR = "#ef880e";
 export const GREEN_COLOR = "#7d922b";

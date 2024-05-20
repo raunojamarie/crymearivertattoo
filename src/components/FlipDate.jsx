@@ -25,7 +25,7 @@ export const FlipDate = ({ value }) => {
 
   useEffect(() => {
     const offset = new Date();
-    const date2 = new Date("2024-05-24T14:00:00")
+    const date2 = new Date("2024-05-24T11:00:00")
     var diff = date2.valueOf() - new Date().valueOf();
     var diffInHours = diff/1000/60/60;
     const timeDuration = Tick.helper.duration(diffInHours, "hours");
