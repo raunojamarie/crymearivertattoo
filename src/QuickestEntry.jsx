@@ -47,7 +47,7 @@ const QuickestEntry = () => {
   }
 
   return (
-    <div style={{ width: 300, margin: "auto", padding: "40px 0", minHeight: "100vh" }}>
+    <div style={{ width: 300, margin: "auto", paddingTop: 40, minHeight: "100vh" }}>
       <p style={{ fontWeight: 800, fontSize: 22 }}>Artisti nimi</p>
       <select value={name} onChange={(e) => setName(e.target.value)} style={{ width: 300, height: 60 }} name="artists" id="artists">
         <option value={""}>-</option>
