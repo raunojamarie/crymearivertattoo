@@ -54,6 +54,7 @@ import img53 from "../assets/artists/Roman-s.jpg"
 import img54 from "../assets/artists/Nathan-Norma.jpeg"
 import img55 from "../assets/artists/Lorenzo.JPG"
 import img56 from "../assets/artists/Zahhar.jpg"
+import img57 from "../assets/artists/Andrew.jpg"
 import useWindowDimensions from "../useWindowDimensions"
 import '../styles/artists.css';
 import { useState } from "react";
@@ -161,11 +162,6 @@ export const ARTISTS_DATA = [
     name: "Ulrike Brett Uukkivi",
     link: <a href="https://www.instagram.com/uuk.kivi" target="blank" className="link">@uuk.kivi</a>,
     img: img23
-  },
-  {
-    name: "Valeriya Gilimson",
-    link: <a href="https://www.instagram.com/bitethegatto" target="blank" className="link">@bitethegatto</a>,
-    img: img24
   },
   {
     name: "Liisa Kivimäe",
@@ -327,23 +323,18 @@ export const ARTISTS_DATA = [
     link: <a href="https://www.instagram.com/vizion_tatt" target="blank" className="link">@vizion_tatt</a>,
     img: img56
   },
+  {
+    name: "Andy Lap",
+    link: <a href="https://www.instagram.com/lapa.tatts" target="blank" className="link">@lapa.tatts</a>,
+    img: img57
+  },
 
 /* 
-  {
-    name: "Kristiina Nikolajeva",
-    link: <a href="https://www.instagram.com/kryysaa/" target="blank" className="link">@kryysaa</a>,
-    img: placeholderImg
-  },
+  
   {
     name: "Merili Mägi",
     link: <a href="https://www.instagram.com/illusiooniline" target="blank" className="link">@illusiooniline</a>,
     img: placeholderImg
-  },
-  {
-    name: "Allan Tuul",
-    link: <a href="https://www.instagram.com/zero.kaos" target="blank" className="link">@zero.kaos</a>,
-    img: placeholderImg
-  },
   },
   */
 ]
