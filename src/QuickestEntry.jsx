@@ -70,7 +70,7 @@ const QuickestEntry = () => {
       <p style={{ fontWeight: 800, fontSize: 22 }}>Artisti nimi</p>
       <select value={name} onChange={(e) => setName(e.target.value)} style={{ width: 300, height: 60, fontSize: 18 }} name="artists" id="artists">
         <option value={""}>-</option>
-        {[...ARTISTS_DATA, {name: "Samowar"}].map((artist) =>
+        {[...ARTISTS_DATA, {name: "Samowar"}].sort((a, b) => a.name.localeCompare(b.name)).map((artist) =>
           <option key={artist.name} value={artist.name}>{artist.name}</option>
         )}
       </select>
