@@ -101,7 +101,7 @@ const QuickestTable = () => {
                 }}>
                   <td style={{ padding: "18px 40px" }}>{index + 1}</td>
                   <td>{entry.name}</td>
-                  <td>{entry.time}</td>
+                  <td>{renderTime(entry.time)}</td>
                 </tr>
               : <tr key={entry.name} style={{
                     backgroundColor:
@@ -120,6 +120,15 @@ const QuickestTable = () => {
       </div>
     </div>
   );
+}
+
+const renderTime = (time) => {
+  const timeStr = String(time);
+  const ms = timeStr.split(",")[1];
+  if (ms === "000") {
+    return timeStr.substring(0, 8);
+  }
+  return timeStr.substring(0, 8);
 }
 
 export default QuickestTable;
