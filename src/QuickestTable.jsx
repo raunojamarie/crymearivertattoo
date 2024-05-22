@@ -85,11 +85,14 @@ const QuickestTable = () => {
       </div>
       <div style={{ padding: "20px 0 200px 0", position: "relative" }}>
         <table className="absolute-centered" style={{ margin: "auto", position: "absolute", zIndex: 9999, backgroundColor: "#000" }}>
+          <thead>
           <tr style={{ backgroundColor: GREEN_COLOR }}>
             <th className='big-title-black' style={{ padding: "18px 40px" }}>#</th>
             <th className='big-title-black'>Artist</th>
             <th className='big-title-black'>Aeg</th>
           </tr>
+          </thead>
+          <tbody>
           {entries.slice(0, 11).map((entry, index) =>
             <tr key={entry.name} style={{
               color: entry.name === "Samowar" ?
@@ -110,12 +113,13 @@ const QuickestTable = () => {
                       <img className="artist-img" alt="" src={ARTISTS_DATA.find(e => e.name === entry.name)?.img}></img>
                     </div>
                   }
-                  {entry.name}
+                  {String(entry.name).toLowerCase().replace("š", "š")}
                 </div>
               </td>
               <td style={{ color: entry.name === "Samowar" ? ORANGE_COLOR : "#000", fontSize: 24, fontWeight: 800 }}>{renderTime(entry.time)}</td>
             </tr>
           )}
+          </tbody>
         </table>
       </div>
     </div>

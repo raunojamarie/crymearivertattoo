@@ -37,7 +37,6 @@ export const getAllFiles = async () => {
       const res = await fetch(url);
       const data = await res.json();
       result.push(data);
-      console.log(data);
     });
     await Promise.all(promises);
     return result;
