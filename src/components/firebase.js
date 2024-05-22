@@ -15,12 +15,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 export const storage = getStorage(app);
 
-var json = {
-  "name": "John",
-  "age": 30, 
-  "car": "BMW" 
-}
-
 export const uploadJson = (data) => {
 
   var jsonString = JSON.stringify(data);
