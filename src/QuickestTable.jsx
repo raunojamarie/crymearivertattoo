@@ -5,6 +5,8 @@ import useWindowDimensions from './useWindowDimensions.jsx';
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { useEffect, useState,  } from 'react';
 import { getAllFiles } from './components/firebase.js';
+import headerText from "./assets/logo.png";
+import loss from "./assets/loss.png"
 import './quickest.css';
 
 export const ORANGE_COLOR = "#ef880e";
@@ -23,7 +25,6 @@ const QuickestTable = () => {
   const fetchData = async () => {
     try {
       const res = await getAllFiles();
-
       setEntries(res.sort(cmp));
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -42,8 +43,8 @@ const QuickestTable = () => {
   }, []);
 
   return (
-    <div id="home" className="app-root" style={{ height: "100%", width: "100%", minHeight: "100vh" }}>
-      <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 90, backgroundColor: "black" }}>
+    <div id="home" className="app-root" style={{ height: "100%", width: "100%", minHeight: "100vh", backgroundColor: "#000" }}>
+      <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 90 }}>
       </div>
       <div className="navbar black-bacgkround" style={{
         position: "fixed",
@@ -56,7 +57,7 @@ const QuickestTable = () => {
         opacity: 0.95,
         position: "relative"
       }}>
-        <div style={{ position: "absolute", left: "43%", top: "22%", color: "white", fontSize: 30, fontWeight: 800 }}>
+        <div style={{ position: "absolute", left: "43%", top: "25%", color: "white", fontSize: 34, fontWeight: 800 }}>
           Quickest Tattoo
         </div>
         <div className="navbar-menu color-white" style={{
@@ -71,22 +72,49 @@ const QuickestTable = () => {
               <img style={{ height: 60, margin: "0 auto" }} src={nimi}></img>
             </div>
           </AnchorLink>
-
+        </div>
+        <div style={{ display: "flex", marginTop: 180, position: "absolute", zIndex: 1 }}>
+          <div className="" style={{ position: "relative", flex: 1, display: "grid", justifyContent: "center", alignContent: isMobile ? "" : "center" }}>
+            <img src={loss} alt="" style={{ width: "100%", margin: "0 auto", paddingTop: isMobile ? 60 : 0, opacity: 0.5, marginTop: -40 }}></img>
+          </div>
+          <div className="" style={{ position: "relative", flex: 1, display: "grid", justifyContent: "center", alignContent: isMobile ? "" : "center" }}>
+            <img src={loss} alt="" style={{ width: "100%", margin: "0 auto", paddingTop: isMobile ? 60 : 0, opacity: 0.5, marginTop: -40 }}></img>
+          </div>
         </div>
       </div>
-      <div style={{ padding: "40px 0 200px 0" }}>
-        <table style={{ margin: "auto" }}>
+      <div style={{ padding: "20px 0 200px 0", position: "relative" }}>
+        <table className="absolute-centered" style={{ margin: "auto", position: "absolute", zIndex: 9999, backgroundColor: "#000" }}>
           <tr style={{ backgroundColor: ORANGE_COLOR }}>
-            <th style={{ padding: "20px 40px" }}>#</th>
+            <th style={{ padding: "18px 40px" }}>#</th>
             <th>Artist</th>
             <th>Aeg</th>
           </tr>
-          {entries.map((entry, index) =>
-            <tr key={entry.name} style={{ backgroundColor: index % 2 === 0 ? ORANGE_COLOR + 33 : ORANGE_COLOR + 63 }}>
-              <td style={{ padding: "20px 40px" }}>{index + 1}</td>
-              <td>{entry.name}</td>
-              <td>{entry.time}</td>
-            </tr>
+          {entries.slice(0, 12).map((entry, index) =>
+            true
+              ? <tr key={entry.name} style={{
+                    backgroundColor:
+                      entry.name === "Samowar" || index === 0
+                        ? GREEN_COLOR
+                        : index % 2 === 0
+                        ? "#f0f0f0"
+                        : "lightgrey"
+                }}>
+                  <td style={{ padding: "18px 40px" }}>{index + 1}</td>
+                  <td>{entry.name}</td>
+                  <td>{entry.time}</td>
+                </tr>
+              : <tr key={entry.name} style={{
+                    backgroundColor:
+                      entry.name === "Samowar" || index === 0
+                        ? GREEN_COLOR
+                        : index % 2 === 0
+                        ? ORANGE_COLOR
+                        : "#BF6D0B",
+                }}>
+                  <td style={{ padding: "18px 40px" }}>{index + 1}</td>
+                  <td>{entry.name}</td>
+                  <td>{entry.time}</td>
+                </tr>            
           )}
         </table>
       </div>
