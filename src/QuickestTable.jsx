@@ -3,11 +3,12 @@ import './styles/responsive.css';
 import nimi from "./assets/nimi.png";
 import useWindowDimensions from './useWindowDimensions.jsx';
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-import { useEffect, useState,  } from 'react';
+import { useEffect, useState, } from 'react';
 import { getAllFiles } from './components/firebase.js';
 import headerText from "./assets/logo.png";
 import loss from "./assets/loss.png"
 import './quickest.css';
+import { ARTISTS_DATA } from './pages/Artists';
 
 export const ORANGE_COLOR = "#ef880e";
 export const GREEN_COLOR = "#7d922b";
@@ -84,37 +85,36 @@ const QuickestTable = () => {
       </div>
       <div style={{ padding: "20px 0 200px 0", position: "relative" }}>
         <table className="absolute-centered" style={{ margin: "auto", position: "absolute", zIndex: 9999, backgroundColor: "#000" }}>
-          <tr style={{ backgroundColor: ORANGE_COLOR }}>
-            <th style={{ padding: "18px 40px" }}>#</th>
-            <th>Artist</th>
-            <th>Aeg</th>
+          <tr style={{ backgroundColor: GREEN_COLOR }}>
+            <th className='big-title-black' style={{ padding: "18px 40px" }}>#</th>
+            <th className='big-title-black'>Artist</th>
+            <th className='big-title-black'>Aeg</th>
           </tr>
-          {entries.slice(0, 12).map((entry, index) =>
-            true
-              ? <tr key={entry.name} style={{
-                    backgroundColor:
-                      entry.name === "Samowar" || index === 0
-                        ? GREEN_COLOR
-                        : index % 2 === 0
-                        ? "#f0f0f0"
-                        : "lightgrey"
-                }}>
-                  <td style={{ padding: "18px 40px" }}>{index + 1}</td>
-                  <td>{entry.name}</td>
-                  <td>{renderTime(entry.time)}</td>
-                </tr>
-              : <tr key={entry.name} style={{
-                    backgroundColor:
-                      entry.name === "Samowar" || index === 0
-                        ? GREEN_COLOR
-                        : index % 2 === 0
-                        ? ORANGE_COLOR
-                        : "#BF6D0B",
-                }}>
-                  <td style={{ padding: "18px 40px" }}>{index + 1}</td>
-                  <td>{entry.name}</td>
-                  <td>{entry.time}</td>
-                </tr>            
+          {entries.slice(0, 11).map((entry, index) =>
+            <tr key={entry.name} style={{
+              color: entry.name === "Samowar" ?
+                "#ef880e !important" :
+                "#000",
+              backgroundColor:
+                index === 0
+                  ? "#95AD34" : index === 1 ? "#ACC743" : index === 2 ? "#BAD062"
+                    : index % 2 === 0
+                      ? "#f0f0f0"
+                      : "lightgrey"
+            }}>
+              <td style={{ padding: "18px 40px 18px 50px" }}>{index + 1}</td>
+              <td>
+                <div className='title-black' style={{ position: "relative", color: entry.name === "Samowar" ? ORANGE_COLOR : "#000" }}>
+                  {ARTISTS_DATA.filter(e => e.name === entry.name).length > 0 &&
+                    <div className="circular" style={{ position: "absolute", left: -160, top: -15, width: 60, height: 60 }}>
+                      <img className="artist-img" alt="" src={ARTISTS_DATA.find(e => e.name === entry.name)?.img}></img>
+                    </div>
+                  }
+                  {entry.name}
+                </div>
+              </td>
+              <td style={{ color: entry.name === "Samowar" ? ORANGE_COLOR : "#000", fontSize: 24, fontWeight: 800 }}>{renderTime(entry.time)}</td>
+            </tr>
           )}
         </table>
       </div>

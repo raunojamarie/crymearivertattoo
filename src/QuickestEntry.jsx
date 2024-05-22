@@ -10,10 +10,66 @@ function cmp(a, b) {
   return a.ms - b.ms;
 }
 
+const ARTISTS_NAMES = [
+  "Deniss Suhhanov",
+  "Marta Liisa",
+  "Santo Sueno",
+  "Michael Stade",
+  "Janis Kõrkjas",
+  "Arina Stretškova",
+  "Ave-Mari",
+  "Ele-Helina Sein",
+  "Iisak Pilli",
+  "Janina Jakobson",
+  "Kerli Laidna",
+  "Kerli Luure",
+  "Kaarel Krall",
+  "Laura Käst",
+  "Mari Uibo",
+  "Nico Fibbioli",
+  "Ramon Rattasep",
+  "Silvia Volmar",
+  "Kristjan Aosaar",
+  "Ulrike Brett Uukkivi",
+  "Liisa Kivimäe",
+  "Darja",
+  "Dmitri Hatsu",
+  "Emilia Sabirova",
+  "Darius Cloud",
+  "Maria-Liisa Leonidov",
+  "Sigrit Villido",
+  "Tilda",
+  "Aurika Kotyn",
+  "Oleksandra Prepiialo",
+  "Oskar Poll",
+  "Piret Valdna",
+  "Raine Kapp",
+  "Sean Meade",
+  "Villu Koger",
+  "Desiree",
+  "Maila Veske",
+  "Fatima Susanna",
+  "Mihkel Kosk",
+  "Regina Kuznetsova",
+  "Sten-Martin Sinisaar",
+  "Vitaly Makurin",
+  "Ulla-Mari",
+  "Anatoliy Tovarnytskyy",
+  "Ants Rauba",
+  "Edmar Sulaoja",
+  "Kairi Matt",
+  "Priit Salusoo",
+  "Roman Šestakov",
+  "Nathan Norma",
+  "Lorenzo Gentil",
+  "Zahhar",
+  "Andy Lap",
+  "Samowar"
+];
+
 const QuickestEntry = () => {
   const [name, setName] = useState("");
   const [time, setTime] = useState("00:00:000");
-  const [timeMs, setTimeMs] = useState("");
   const [savedMessageVisible, setSavedMessageVisible] = useState(false); // State for the visibility of the saved message
   const [entries, setEntries] = useState([]);
 
@@ -41,7 +97,6 @@ const QuickestEntry = () => {
   const clear = () => {
     setName("");
     setTime("00:00:000");
-    setTimeMs("");
   }
   const handleSave = () => {
     let min = Number(time.split(":")[0]);
@@ -70,8 +125,8 @@ const QuickestEntry = () => {
       <p style={{ fontWeight: 800, fontSize: 22 }}>Artisti nimi</p>
       <select value={name} onChange={(e) => setName(e.target.value)} style={{ width: 300, height: 60, fontSize: 18 }} name="artists" id="artists">
         <option value={""}>-</option>
-        {[...ARTISTS_DATA, {name: "Samowar"}].sort((a, b) => a.name.localeCompare(b.name)).map((artist) =>
-          <option key={artist.name} value={artist.name}>{artist.name}</option>
+        {ARTISTS_NAMES.sort((a, b) => a.localeCompare(b)).map((artist) =>
+          <option key={artist} value={artist}>{artist}</option>
         )}
       </select>
       {entries.filter(e => e.name === name).length > 0

@@ -14,3 +14,18 @@ th, td {
   margin-left: auto; 
   margin-right: auto; 
 }
+
+.big-title-black {
+  font-size: 40px;
+  color:var(--black);
+  font-family: 'Rubik Mono One', monospace;
+  z-index: 4;
+  margin: 0 auto;
+}
+.title-black {
+  font-size: 24px;
+  color:var(--black);
+  font-family: 'Rubik Mono One', monospace;
+  z-index: 4;
+  margin: 0 auto;
+}
