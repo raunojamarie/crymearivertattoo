@@ -58,7 +58,7 @@ const QuickestTable = () => {
         opacity: 0.95,
         position: "relative"
       }}>
-        <div style={{ position: "absolute", left: "43%", top: "25%", color: "white", fontSize: 34, fontWeight: 800 }}>
+        <div style={{ position: "absolute", left: "40%", top: "30%", color: "white", fontSize: 34, fontWeight: 800, fontFamily: "Rubik Mono One,monospace" }}>
           Quickest Tattoo
         </div>
         <div className="navbar-menu color-white" style={{
@@ -95,10 +95,11 @@ const QuickestTable = () => {
           <tbody>
           {entries.slice(0, 11).map((entry, index) =>
             <tr key={entry.name} style={{
-              color: entry.name === "Samowar" ?
+              color: entry.name === "Samöwar" ?
                 "#ef880e !important" :
                 "#000",
               backgroundColor:
+                entry.name === "Samöwar" ? ORANGE_COLOR :
                 index === 0
                   ? "#95AD34" : index === 1 ? "#ACC743" : index === 2 ? "#BAD062"
                     : index % 2 === 0
@@ -107,7 +108,7 @@ const QuickestTable = () => {
             }}>
               <td style={{ padding: "18px 40px 18px 50px" }}>{index + 1}</td>
               <td>
-                <div className='title-black' style={{ position: "relative", color: entry.name === "Samowar" ? ORANGE_COLOR : "#000" }}>
+                <div className='title-black' style={{ position: "relative", color: "#000" }}>
                   {ARTISTS_DATA.filter(e => e.name === entry.name).length > 0 &&
                     <div className="circular" style={{ position: "absolute", left: -160, top: -15, width: 60, height: 60 }}>
                       <img className="artist-img" alt="" src={ARTISTS_DATA.find(e => e.name === entry.name)?.img}></img>
@@ -116,7 +117,7 @@ const QuickestTable = () => {
                   {String(entry.name).toLowerCase().replace("š", "š")}
                 </div>
               </td>
-              <td style={{ color: entry.name === "Samowar" ? ORANGE_COLOR : "#000", fontSize: 24, fontWeight: 800 }}>{renderTime(entry.time)}</td>
+              <td style={{ fontSize: 24, fontWeight: 800 }}>{renderTime(entry.time)}</td>
             </tr>
           )}
           </tbody>

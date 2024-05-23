@@ -64,7 +64,7 @@ const ARTISTS_NAMES = [
   "Lorenzo Gentil",
   "Zahhar",
   "Andy Lap",
-  "Samowar"
+  "Samöwar"
 ];
 
 const QuickestEntry = () => {
