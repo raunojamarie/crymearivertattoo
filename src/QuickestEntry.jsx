@@ -36,7 +36,6 @@ const ARTISTS_NAMES = [
   "Dmitri Hatsu",
   "Emilia Sabirova",
   "Darius Cloud",
-  "Maria-Liisa Leonidov",
   "Sigrit Villido",
   "Tilda",
   "Aurika Kotyn",
@@ -64,7 +63,8 @@ const ARTISTS_NAMES = [
   "Lorenzo Gentil",
   "Zahhar",
   "Andy Lap",
-  "Samöwar"
+  "Samöwar",
+  "Merili Mägi"
 ];
 
 const QuickestEntry = () => {

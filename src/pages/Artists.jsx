@@ -187,11 +187,13 @@ export const ARTISTS_DATA = [
     link: <a href="https://www.instagram.com/tattoodarius" target="blank" className="link">@tattoodarius</a>,
     img: img29
   },
+  /*
   {
     name: "Maria-Liisa Leonidov",
     link: <a href="https://www.instagram.com/marialeonidov" target="blank" className="link">@marialeonidov</a>,
     img: img30
   },
+  */
   {
     name: "Sigrit Villido",
     link: <a href="https://www.instagram.com/sigritvillido" target="blank" className="link">@sigritvillido</a>,
