@@ -17,12 +17,12 @@ const Live = () => {
           </p>
         </div>
 
-        <div className="align" style={{ paddingBottom: 40, position: "relative" }}>
+        <div className="align" style={{ paddingBottom: 40, position: "relative" }}>{/* 
         <p className="centered-absolute-text">
               {t("live-text-countdown")}
-            </p>
-          <div className="video-wrapper video-blur disabled" style={{ position: "relative", zIndex: 0 }}>
-            <iframe className="video" src="https://www.youtube.com/embed/7LYlaOOkzW4?si=1tNNdf-OnBzVtu7i" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen>
+            </p> */}
+          <div className="video-wrapper" style={{ position: "relative", zIndex: 0 }}>
+            <iframe className="video" src="https://www.youtube.com/embed/6DjfM1ywV-w?si=2KxHLLwxa9XOIYaf&autoplay=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen>
             </iframe>
           </div>
         </div>
