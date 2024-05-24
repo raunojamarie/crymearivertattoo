@@ -22,7 +22,7 @@ const Live = () => {
               {t("live-text-countdown")}
             </p> */}
           <div className="video-wrapper" style={{ position: "relative", zIndex: 0 }}>
-            <iframe className="video" src="https://www.youtube.com/embed/6DjfM1ywV-w?si=KO8ClcaIX3tr4hNM&autoplay=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen>
+            <iframe className="video" src="https://www.youtube.com/embed/6DjfM1ywV-w?si=KO8ClcaIX3tr4hNM&autoplay=1&mute=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen>
             </iframe>
           </div>
         </div>
