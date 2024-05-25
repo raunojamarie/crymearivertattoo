@@ -132,7 +132,7 @@ const Timeline = () => {
           margin: "0 auto 0 auto",
           marginTop: 40,
           backgroundColor: GREEN_COLOR + "33",
-          height: day === 2 ? 1320 : day === 3 ? 600 : 860,
+          height: day === 2 ? 1420 : day === 3 ? 600 : 860,
         }}
       >
         <div
@@ -142,7 +142,7 @@ const Timeline = () => {
             left: "50%",
             marginLeft: -3,
             top: 34,
-            bottom: day === 3 ? 360 : day === 2 ? 240 : 200,
+            bottom: day === 3 ? 360 : 200,
           }}
         ></div>
 
@@ -250,6 +250,14 @@ const Timeline = () => {
               width={width}
               left={false}
               top={900}
+              time={"18:30"}
+              title={t("timeline-slot-88")}
+              text={t("timeline-slot-88-text")}
+            />
+            <TimelineSlot
+              width={width}
+              left={true}
+              top={1040}
               time={"19:00"}
               title={t("timeline-slot-10")}
               text={t("timeline-slot-10-text")}
@@ -257,8 +265,8 @@ const Timeline = () => {
             <TimelineSlot
               isWide
               width={width}
-              left={true}
-              top={1040}
+              left={false}
+              top={1180}
               time={"20:00"}
               title={t("timeline-slot-11")}
               text={t("timeline-slot-11-text")}
