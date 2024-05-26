@@ -22,14 +22,12 @@ const Haaletus = () => {
 
       <div className="content-wrapper align" style={{ position: "relative"}}>
         <p className="centered-absolute-text" style={{ color: "black" }}>
-          {t("public-vote-announced-soon")}
         </p>
-        <p className="text-black blur disabled">
+        <p className="text-black">
           {t("public-vote-text")}
         </p>
-        <div className="align padding-bottom blur">
-        <a href="https://forms.gle/AfQhmC5nWPsQsLqJ7" target="blank" className="disabled button-orange">Hääleta siin!</a>
-          {/* <a href="https://forms.gle/AfQhmC5nWPsQsLqJ7" target="blank" className="button-orange"{t("public-vote-here")}</a> */}
+        <div className="align padding-bottom">
+        <a href="https://pollunit.com/en/polls/crymeariver" target="blank" className="button-orange">{t("public-vote-btn")}</a>
         </div>
       </div>
     </>
